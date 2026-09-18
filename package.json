@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-douglas-pereira",
+  "version": "1.0.0",
+  "description": "Portfolio profissional de Douglas Pereira - Product Designer",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "serve": "http-server",
+    "build": "echo 'Static files ready'"
+  },
+  "keywords": [
+    "portfolio",
+    "product-design",
+    "ux-ui",
+    "design-systems",
+    "douglas-pereira"
+  ],
+  "author": "Douglas Pereira",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevDaps/portfolio.git"
+  },
+  "devDependencies": {}
+}

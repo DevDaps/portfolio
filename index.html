@@ -1,14 +1,438 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Douglas Pereira - Product Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Douglas Pereira - Portfolio</h1>
-    <p>Product Designer | UX/UI | Design Systems</p>
+    <!-- Accessibility Widget -->
+    <div id="accessibility-widget" class="accessibility-widget">
+        <button class="accessibility-toggle" aria-label="Abrir painel de acessibilidade">♿</button>
+        <div class="accessibility-panel" style="display: none;">
+            <div class="accessibility-header">
+                <h3>Acessibilidade</h3>
+                <button class="close-btn" aria-label="Fechar painel">&times;</button>
+            </div>
+            <div class="accessibility-content">
+                <div class="setting">
+                    <label>Tamanho de Fonte</label>
+                    <div class="font-controls">
+                        <button class="font-btn" id="font-decrease" aria-label="Diminuir fonte">−</button>
+                        <span id="font-display">100%</span>
+                        <button class="font-btn" id="font-increase" aria-label="Aumentar fonte">+</button>
+                        <button class="font-btn" id="font-reset" aria-label="Resetar fonte">↻</button>
+                    </div>
+                </div>
+                <div class="setting">
+                    <label>Alto Contraste</label>
+                    <div class="toggle-container">
+                        <input type="checkbox" id="contrast-toggle" class="toggle-input" aria-label="Ativar alto contraste">
+                        <label for="contrast-toggle" class="toggle-label"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Douglas Pereira</div>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="navigateToCase('home')" class="nav-link active">Home</a></li>
+                <li><a href="#" onclick="navigateToCase('refuturiza')" class="nav-link">Refuturiza</a></li>
+                <li><a href="#" onclick="navigateToCase('soulcode')" class="nav-link">SoulCode</a></li>
+                <li><a href="#" onclick="navigateToCase('petropolis')" class="nav-link">Petropólis</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Pages Container -->
+    <div class="pages-container">
+        
+        <!-- HOME PAGE -->
+        <div id="home-page" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Douglas Pereira</h1>
+                    <p class="hero-subtitle">Product Designer · UX/UI · Design Systems · UX Engineering</p>
+                    <p class="hero-description">
+                        Mais do que criar, eu gosto de entender. Transformo desafios complexos em soluções elegantes 
+                        e intuitivas, com foco em experiência do usuário e design systems escaláveis.
+                    </p>
+                    <div class="hero-badges">
+                        <span class="badge">Product Design</span>
+                        <span class="badge">Design Systems</span>
+                        <span class="badge">UX Engineering</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bio Section -->
+            <section class="bio-section">
+                <div class="bio-container">
+                    <h2>Sobre Mim</h2>
+                    <div class="bio-text">
+                        <p>
+                            Sou um designer de produtos apaixonado por criar interfaces intuitivas e sistemas de design escaláveis. 
+                            Com trajetória que vai desde Design Gráfico até Product Design, acumulei experiência em:
+                        </p>
+                        <ul class="skills-list">
+                            <li><strong>Product Design:</strong> Estratégia, research e conceituação de produtos</li>
+                            <li><strong>Design Systems:</strong> Criação e manutenção de systems profissionais</li>
+                            <li><strong>UX/UI Design:</strong> Interfaces modernas e acessíveis</li>
+                            <li><strong>UX Engineering:</strong> Prototipagem e implementação de designs</li>
+                        </ul>
+                        <p>
+                            Localizado em <strong>São Paulo, Brasil</strong>, trabalho com equipes multidisciplinares 
+                            para entregar soluções que combinam beleza, funcionalidade e performance.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cases Grid -->
+            <section class="cases-section">
+                <h2>Cases de Estudo</h2>
+                <div class="cases-grid">
+                    <!-- Case 1: Refuturiza -->
+                    <div class="case-card" onclick="navigateToCase('refuturiza')" style="cursor: pointer;">
+                        <div class="case-cover refuturiza-cover">
+                            <div class="case-cover-text">Refuturiza</div>
+                        </div>
+                        <div class="case-content">
+                            <h3>Refuturiza</h3>
+                            <p class="case-subtitle">Redesign da Home + Design System</p>
+                            <div class="case-tags">
+                                <span class="tag">Product Design</span>
+                                <span class="tag">Design System</span>
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">80+</span>
+                                    <span class="metric-label">Componentes</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">-40%</span>
+                                    <span class="metric-label">Tempo Dev</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case 2: SoulCode -->
+                    <div class="case-card" onclick="navigateToCase('soulcode')" style="cursor: pointer;">
+                        <div class="case-cover soulcode-cover">
+                            <div class="case-cover-text">SoulCode Academy</div>
+                        </div>
+                        <div class="case-content">
+                            <h3>SoulCode Academy LMS</h3>
+                            <p class="case-subtitle">Plataforma Educacional Mobile First</p>
+                            <div class="case-tags">
+                                <span class="tag">Product Design</span>
+                                <span class="tag">Mobile First</span>
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">6</span>
+                                    <span class="metric-label">Telas</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">A+</span>
+                                    <span class="metric-label">Performance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case 3: Petropólis -->
+                    <div class="case-card" onclick="navigateToCase('petropolis')" style="cursor: pointer;">
+                        <div class="case-cover petropolis-cover">
+                            <div class="case-cover-text">Grupo Petropólis</div>
+                        </div>
+                        <div class="case-content">
+                            <h3>Grupo Petropólis</h3>
+                            <p class="case-subtitle">Website Corporativo Responsivo</p>
+                            <div class="case-tags">
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Responsivo</span>
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">8+</span>
+                                    <span class="metric-label">Páginas</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">100%</span>
+                                    <span class="metric-label">Responsivo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section">
+                <h2>Vamos Trabalhar Juntos?</h2>
+                <p>Entre em contato para discutir seu próximo projeto</p>
+                <div class="contact-links">
+                    <a href="https://github.com/DevDaps" target="_blank" class="contact-btn github">GitHub</a>
+                    <a href="https://www.behance.net/douglaspereira" target="_blank" class="contact-btn behance">Behance</a>
+                    <a href="https://www.linkedin.com/in/douglaspereira/" target="_blank" class="contact-btn linkedin">LinkedIn</a>
+                    <a href="mailto:hello@douglaspereira.com" class="contact-btn email">Email</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- REFUTURIZA PAGE -->
+        <div id="refuturiza-page" class="page">
+            <div class="case-header">
+                <button class="back-btn" onclick="navigateToCase('home')">← Voltar</button>
+                <h1>Refuturiza</h1>
+                <p class="case-description">Redesign da Home + Design System</p>
+            </div>
+
+            <section class="case-hero">
+                <div class="case-info">
+                    <div class="info-group">
+                        <h3>Sobre o Projeto</h3>
+                        <p>
+                            Redesign completo da homepage de Refuturiza com a criação de um Design System profissional. 
+                            O projeto visava melhorar a experiência do usuário, padronizar componentes e acelerar o 
+                            desenvolvimento de novas features.
+                        </p>
+                    </div>
+                    <div class="info-group">
+                        <h3>Métricas Alcançadas</h3>
+                        <ul>
+                            <li>80+ componentes criados</li>
+                            <li>Redução de 40% no tempo de desenvolvimento</li>
+                            <li>Autonomia do time de Marketing aumentada</li>
+                            <li>Padrão consistente em todos os produtos</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-screens">
+                <h2>Telas do Projeto</h2>
+                <div class="screens-grid">
+                    <div class="screen-card">
+                        <div class="screen-placeholder refuturiza-1">Homepage Principal</div>
+                        <span class="screen-tag">Desktop</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder refuturiza-2">Seção de Serviços</div>
+                        <span class="screen-tag">Desktop</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder refuturiza-3">Design System</div>
+                        <span class="screen-tag">Componentes</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder refuturiza-4">Paleta de Cores</div>
+                        <span class="screen-tag">Tokens</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder refuturiza-5">Tipografia</div>
+                        <span class="screen-tag">Fontes</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder refuturiza-6">Padrões</div>
+                        <span class="screen-tag">Guidelines</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-tags-section">
+                <h3>Tags do Projeto</h3>
+                <div class="tags-list">
+                    <span class="tag-large">Product Design</span>
+                    <span class="tag-large">Design System</span>
+                    <span class="tag-large">UX/UI</span>
+                    <span class="tag-large">Handoff</span>
+                </div>
+            </section>
+        </div>
+
+        <!-- SOULCODE PAGE -->
+        <div id="soulcode-page" class="page">
+            <div class="case-header">
+                <button class="back-btn" onclick="navigateToCase('home')">← Voltar</button>
+                <h1>SoulCode Academy LMS</h1>
+                <p class="case-description">Plataforma Educacional Mobile First + Gamificação</p>
+            </div>
+
+            <section class="case-hero">
+                <div class="case-info">
+                    <div class="info-group">
+                        <h3>Sobre o Projeto</h3>
+                        <p>
+                            Redesign de uma plataforma educacional com abordagem Mobile First. O projeto incorpora 
+                            gamificação, Material Design 3 customizado e otimizações de performance. 
+                            Resultado: plataforma intuitiva e altamente engajante.
+                        </p>
+                    </div>
+                    <div class="info-group">
+                        <h3>Métricas Alcançadas</h3>
+                        <ul>
+                            <li>Design 100% Mobile First</li>
+                            <li>Material 3 Customizado</li>
+                            <li>Performance A+ (Lighthouse)</li>
+                            <li>Engajamento +60% em testes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="behance-link">
+                    <a href="https://www.behance.net/gallery/230846681/SoulCode-Academy-LMS-UXUI-Web-Development" target="_blank" class="behance-btn">
+                        Ver no Behance →
+                    </a>
+                </div>
+            </section>
+
+            <section class="case-screens">
+                <h2>Telas do Projeto</h2>
+                <div class="screens-grid">
+                    <div class="screen-card">
+                        <div class="screen-placeholder soulcode-1">Dashboard Principal</div>
+                        <span class="screen-tag">Mobile</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder soulcode-2">Tela de Aula</div>
+                        <span class="screen-tag">Mobile</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder soulcode-3">Conteúdo</div>
+                        <span class="screen-tag">Mobile</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder soulcode-4">Gamificação</div>
+                        <span class="screen-tag">Mobile</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder soulcode-5">Perfil</div>
+                        <span class="screen-tag">Mobile</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder soulcode-6">Design System</div>
+                        <span class="screen-tag">Componentes</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-tags-section">
+                <h3>Tags do Projeto</h3>
+                <div class="tags-list">
+                    <span class="tag-large">Product Design</span>
+                    <span class="tag-large">Mobile First</span>
+                    <span class="tag-large">Design System</span>
+                    <span class="tag-large">Gamificação</span>
+                    <span class="tag-large">Material Design 3</span>
+                </div>
+            </section>
+        </div>
+
+        <!-- PETROPOLIS PAGE -->
+        <div id="petropolis-page" class="page">
+            <div class="case-header">
+                <button class="back-btn" onclick="navigateToCase('home')">← Voltar</button>
+                <h1>Grupo Petropólis</h1>
+                <p class="case-description">Website Corporativo Responsivo</p>
+            </div>
+
+            <section class="case-hero">
+                <div class="case-info">
+                    <div class="info-group">
+                        <h3>Sobre o Projeto</h3>
+                        <p>
+                            Website corporativo completo para o Grupo Petropólis, cervejaria tradicional brasileira. 
+                            O design mantém a identidade visual forte da marca enquanto entrega uma experiência 
+                            responsiva e de alta performance em todos os dispositivos.
+                        </p>
+                    </div>
+                    <div class="info-group">
+                        <h3>Métricas Alcançadas</h3>
+                        <ul>
+                            <li>8+ páginas responsivas</li>
+                            <li>Performance A+ (Lighthouse)</li>
+                            <li>100% Responsivo (Mobile/Tablet/Desktop)</li>
+                            <li>Branding consistente</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-screens">
+                <h2>Telas do Projeto</h2>
+                <div class="screens-grid">
+                    <div class="screen-card">
+                        <div class="screen-placeholder petropolis-1">Homepage</div>
+                        <span class="screen-tag">Desktop</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder petropolis-2">Onde Estamos</div>
+                        <span class="screen-tag">Desktop</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder petropolis-3">Centro Cervejeiro</div>
+                        <span class="screen-tag">Desktop</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder petropolis-4">Mundo Cerveja</div>
+                        <span class="screen-tag">Desktop</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder petropolis-5">Itaipava</div>
+                        <span class="screen-tag">Desktop</span>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-placeholder petropolis-6">Design System</div>
+                        <span class="screen-tag">Componentes</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-tags-section">
+                <h3>Tags do Projeto</h3>
+                <div class="tags-list">
+                    <span class="tag-large">Web Design</span>
+                    <span class="tag-large">UX/UI</span>
+                    <span class="tag-large">Responsive</span>
+                    <span class="tag-large">Branding</span>
+                    <span class="tag-large">Performance</span>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Douglas Pereira. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="https://github.com/DevDaps" target="_blank">GitHub</a>
+                <a href="https://www.behance.net/douglaspereira" target="_blank">Behance</a>
+                <a href="https://www.linkedin.com/in/douglaspereira/" target="_blank">LinkedIn</a>
+                <a href="mailto:hello@douglaspereira.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeImageModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
