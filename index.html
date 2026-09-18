@@ -83,7 +83,6 @@
         }
 
         /* ===== HERO SECTION ===== */
-                /* ===== HERO SECTION ===== */
         .hero {
             margin-bottom: 96px;
             display: flex;
@@ -267,7 +266,7 @@
             flex-direction: column;
         }
 
-         .case-meta {
+        .case-meta {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -782,6 +781,27 @@
                 font-size: 48px;
                 max-width: 100%;
             }
+
+            .especialidades-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 48px;
+            }
+
+            .especialidade-card {
+                border-right: none;
+                border-bottom: 1px solid var(--black-800);
+                padding-right: 0;
+                padding-bottom: 48px;
+            }
+
+            .especialidade-card:nth-child(3),
+            .especialidade-card:nth-child(4) {
+                border-bottom: none;
+            }
+
+            .especialidades-title {
+                font-size: 40px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -814,6 +834,56 @@
             .hero-meta {
                 flex-direction: column;
                 gap: 16px;
+            }
+
+            .especialidades-section {
+                margin-bottom: 64px;
+                padding-top: 48px;
+            }
+
+            .especialidades-title {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+
+            .especialidades-intro {
+                margin-bottom: 48px;
+            }
+
+            .especialidades-intro p {
+                font-size: 15px;
+                margin-bottom: 12px;
+            }
+
+            .especialidades-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .especialidade-card {
+                border-right: none;
+                border-bottom: 1px solid var(--black-800);
+                padding-right: 0;
+                padding-bottom: 40px;
+            }
+
+            .especialidade-card:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            .especialidade-icon {
+                font-size: 40px;
+                margin-bottom: 16px;
+            }
+
+            .especialidade-title {
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+
+            .especialidade-description {
+                font-size: 14px;
             }
         }
 
@@ -1036,7 +1106,8 @@
                 padding: 16px;
             }
         }
-                /* ===== ESPECIALIDADES SECTION ===== */
+
+        /* ===== ESPECIALIDADES SECTION ===== */
         .especialidades-section {
             margin-bottom: 96px;
             border-top: 1px solid var(--black-800);
@@ -1124,83 +1195,6 @@
             transform: scale(1.1);
             transition: transform 0.3s ease;
         }
-
-        /* TABLET */
-        @media (max-width: 1024px) {
-            .especialidades-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 48px;
-            }
-
-            .especialidade-card {
-                border-right: none;
-                border-bottom: 1px solid var(--black-800);
-                padding-right: 0;
-                padding-bottom: 48px;
-            }
-
-            .especialidade-card:nth-child(3),
-            .especialidade-card:nth-child(4) {
-                border-bottom: none;
-            }
-
-            .especialidades-title {
-                font-size: 40px;
-            }
-        }
-
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .especialidades-section {
-                margin-bottom: 64px;
-                padding-top: 48px;
-            }
-
-            .especialidades-title {
-                font-size: 32px;
-                margin-bottom: 40px;
-            }
-
-            .especialidades-intro {
-                margin-bottom: 48px;
-            }
-
-            .especialidades-intro p {
-                font-size: 15px;
-                margin-bottom: 12px;
-            }
-
-            .especialidades-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .especialidade-card {
-                border-right: none;
-                border-bottom: 1px solid var(--black-800);
-                padding-right: 0;
-                padding-bottom: 40px;
-            }
-
-            .especialidade-card:last-child {
-                border-bottom: none;
-                padding-bottom: 0;
-            }
-
-            .especialidade-icon {
-                font-size: 40px;
-                margin-bottom: 16px;
-            }
-
-            .especialidade-title {
-                font-size: 18px;
-                margin-bottom: 12px;
-            }
-
-            .especialidade-description {
-                font-size: 14px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -1235,6 +1229,59 @@
             </div>
 
             <div class="section-divider"></div>
+
+            <!-- ===== ESPECIALIDADES SECTION ===== -->
+            <section class="especialidades-section">
+                <div class="especialidades-eyebrow">Especialidades</div>
+                <h2 class="especialidades-title">Como eu atuo</h2>
+                
+                <div class="especialidades-intro">
+                    <p>
+                        <span class="skill-category">Hard Skills:</span> Product Design, UI Design, UX Research, Design Systems, Prototipação, Arquitetura da Informação, Design Responsivo, HTML/CSS e IA aplicada ao Design.
+                    </p>
+                    <p>
+                        <span class="skill-category">Soft Skills:</span> Comunicação, colaboração, pensamento analítico, resolução de problemas, autonomia e síntese.
+                    </p>
+                </div>
+
+                <div class="especialidades-grid">
+                    <!-- Especialidade 1 -->
+                    <div class="especialidade-card">
+                        <div class="especialidade-icon">🔍</div>
+                        <h3 class="especialidade-title">UX Research</h3>
+                        <p class="especialidade-description">
+                            Investigo necessidades e comportamentos para transformar dados e feedbacks em <span class="highlight">insights acionáveis</span>. Utilizo pesquisas, entrevistas, <span class="highlight">testes de usabilidade</span>, benchmarking e análise qualitativa para reduzir incertezas e orientar <span class="highlight">decisões de produto</span>.
+                        </p>
+                    </div>
+
+                    <!-- Especialidade 2 -->
+                    <div class="especialidade-card">
+                        <div class="especialidade-icon">🎨</div>
+                        <h3 class="especialidade-title">Product Design</h3>
+                        <p class="especialidade-description">
+                            Transformo problemas em experiências digitais claras e intuitivas, trabalhando com jornadas, fluxos, arquitetura da informação, wireframes e interfaces de alta fidelidade. Desenvolvo e evoluo <span class="highlight">Design Systems</span>, componentes e <span class="highlight">design tokens</span>, buscando consistência e <span class="highlight">escalabilidade</span>.
+                        </p>
+                    </div>
+
+                    <!-- Especialidade 3 -->
+                    <div class="especialidade-card">
+                        <div class="especialidade-icon">💻</div>
+                        <h3 class="especialidade-title">Design + Tecnologia</h3>
+                        <p class="especialidade-description">
+                            Trabalho próximo ao desenvolvimento, criando especificações e <span class="highlight">handoffs</span> para implementação. Tenho conhecimentos de <span class="highlight">HTML/CSS</span> e venho explorando a conexão entre Design e código com <span class="highlight">Figma</span>, <span class="highlight">Lovable</span> e <span class="highlight">Claude Code</span> integrados via <span class="highlight">MCP</span>, utilizando IA para acelerar prototipação, documentação e exploração de soluções.
+                        </p>
+                    </div>
+
+                    <!-- Especialidade 4 -->
+                    <div class="especialidade-card">
+                        <div class="especialidade-icon">✨</div>
+                        <h3 class="especialidade-title">IA aplicada ao Design</h3>
+                        <p class="especialidade-description">
+                            Utilizo <span class="highlight">IA generativa</span> como aceleradora do processo de design, desde pesquisa e ideação até <span class="highlight">prototipação</span>, documentação e especificação. Exploro diferentes ferramentas para <span class="highlight">testar hipóteses</span> mais rapidamente, ampliar possibilidades e aproximar <span class="highlight">Design, Produto e Tecnologia</span>.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
             <div class="section-label">Trabalhos Recentes</div>
 
@@ -1305,60 +1352,7 @@
             </div>
         </div>
     </div>
-            <!-- ===== ESPECIALIDADES SECTION ===== -->
-            <section class="especialidades-section">
-                <div class="especialidades-eyebrow">Especialidades</div>
-                <h2 class="especialidades-title">Como eu atuo</h2>
-                
-                <div class="especialidades-intro">
-                    <p>
-                        <span class="skill-category">Hard Skills:</span> Product Design, UI Design, UX Research, Design Systems, Prototipação, Arquitetura da Informação, Design Responsivo, HTML/CSS e IA aplicada ao Design.
-                    </p>
-                    <p>
-                        <span class="skill-category">Soft Skills:</span> Comunicação, colaboração, pensamento analítico, resolução de problemas, autonomia e síntese.
-                    </p>
-                </div>
 
-                <div class="especialidades-grid">
-                    <!-- Especialidade 1 -->
-                    <div class="especialidade-card">
-                        <div class="especialidade-icon">🔍</div>
-                        <h3 class="especialidade-title">UX Research</h3>
-                        <p class="especialidade-description">
-                            Investigo necessidades e comportamentos para transformar dados e feedbacks em <span class="highlight">insights acionáveis</span>. Utilizo pesquisas, entrevistas, <span class="highlight">testes de usabilidade</span>, benchmarking e análise qualitativa para reduzir incertezas e orientar <span class="highlight">decisões de produto</span>.
-                        </p>
-                    </div>
-
-                    <!-- Especialidade 2 -->
-                    <div class="especialidade-card">
-                        <div class="especialidade-icon">🎨</div>
-                        <h3 class="especialidade-title">Product Design</h3>
-                        <p class="especialidade-description">
-                            Transformo problemas em experiências digitais claras e intuitivas, trabalhando com jornadas, fluxos, arquitetura da informação, wireframes e interfaces de alta fidelidade. Desenvolvo e evoluo <span class="highlight">Design Systems</span>, componentes e <span class="highlight">design tokens</span>, buscando consistência e <span class="highlight">escalabilidade</span>.
-                        </p>
-                    </div>
-
-                    <!-- Especialidade 3 -->
-                    <div class="especialidade-card">
-                        <div class="especialidade-icon">💻</div>
-                        <h3 class="especialidade-title">Design + Tecnologia</h3>
-                        <p class="especialidade-description">
-                            Trabalho próximo ao desenvolvimento, criando especificações e <span class="highlight">handoffs</span> para implementação. Tenho conhecimentos de <span class="highlight">HTML/CSS</span> e venho explorando a conexão entre Design e código com <span class="highlight">Figma</span>, <span class="highlight">Lovable</span> e <span class="highlight">Claude Code</span> integrados via <span class="highlight">MCP</span>, utilizando IA para acelerar prototipação, documentação e exploração de soluções.
-                        </p>
-                    </div>
-
-                    <!-- Especialidade 4 -->
-                    <div class="especialidade-card">
-                        <div class="especialidade-icon">✨</div>
-                        <h3 class="especialidade-title">IA aplicada ao Design</h3>
-                        <p class="especialidade-description">
-                            Utilizo <span class="highlight">IA generativa</span> como aceleradora do processo de design, desde pesquisa e ideação até <span class="highlight">prototipação</span>, documentação e especificação. Exploro diferentes ferramentas para <span class="highlight">testar hipóteses</span> mais rapidamente, ampliar possibilidades e aproximar <span class="highlight">Design, Produto e Tecnologia</span>.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ===== CASES ===== -->
     <!-- ===== REFUTURIZA PAGE ===== -->
     <div class="page" id="refuturiza-page">
         <div class="container">
