@@ -267,23 +267,30 @@
             flex-direction: column;
         }
 
-        .case-meta {
+         .case-meta {
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 8px;
+            margin-bottom: 16px;
             font-size: 12px;
             color: var(--gray-400);
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-weight: 600;
+            white-space: nowrap;
         }
 
-        .case-meta span {
+        .case-meta span:first-child {
             width: 8px;
             height: 8px;
             background: var(--red);
             border-radius: 50%;
+            flex-shrink: 0;
+            display: block;
+        }
+
+        .case-meta span:last-child {
+            color: var(--gray-400);
         }
 
         .case-title {
