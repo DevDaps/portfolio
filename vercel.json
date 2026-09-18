@@ -1,7 +1,7 @@
 {
   "buildCommand": "echo 'Static build'",
   "outputDirectory": ".",
-  "framework": "static",
+  "framework": "null",
   "env": {
     "NODE_ENV": "production"
   },
