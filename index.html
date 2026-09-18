@@ -1774,8 +1774,26 @@
             if (page) {
                 page.classList.add('active');
                 window.scrollTo(0, 0);
+                window.history.pushState({ caseId: caseId }, '', '#' + caseId);
             }
         }
+
+        // Voltar com o botão do navegador
+        window.addEventListener('popstate', function(event) {
+            if (event.state && event.state.caseId) {
+                navigateToCase(event.state.caseId);
+            } else {
+                navigateToCase('home');
+            }
+        });
+
+        // Carregar página correta ao recarregar
+        window.addEventListener('load', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                navigateToCase(hash);
+            }
+        });
 
         function openImageModal(imageSrc, altText) {
             const modal = document.getElementById('image-modal');
