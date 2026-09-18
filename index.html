@@ -83,8 +83,42 @@
         }
 
         /* ===== HERO SECTION ===== */
+                /* ===== HERO SECTION ===== */
         .hero {
             margin-bottom: 96px;
+            display: flex;
+            gap: 64px;
+            align-items: flex-start;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex: 0 0 300px;
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--black-800);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .hero-image {
+                flex: 0 0 250px;
+                height: 300px;
+            }
         }
 
         .hero-intro {
@@ -1002,24 +1036,29 @@
     <div class="page active" id="home-page">
         <div class="container">
             <div class="hero">
-                <div class="hero-intro">Product Designer</div>
-                <h1 class="hero-title">Mais do que criar, eu gosto de <span>entender.</span></h1>
-                <p class="hero-description">
-                    Comecei minha carreira no Design Gráfico, passei pela Direção de Arte e, ao longo dos anos, fui percebendo que meu trabalho estava cada vez mais conectado ao digital. Hoje, uno minha experiência em design visual com UX, estratégia e pensamento analítico para criar experiências digitais mais claras, intuitivas e relevantes.
-                </p>
-                <div class="hero-meta">
-                    <div class="hero-meta-item">
-                        <div class="meta-label">Localização</div>
-                        <div class="meta-value">São Paulo, Brasil</div>
+                <div class="hero-content">
+                    <div class="hero-intro">Product Designer</div>
+                    <h1 class="hero-title">Mais do que criar, eu gosto de <span>entender.</span></h1>
+                    <p class="hero-description">
+                        Comecei minha carreira no Design Gráfico, passei pela Direção de Arte e, ao longo dos anos, fui percebendo que meu trabalho estava cada vez mais conectado ao digital. Hoje, uno minha experiência em design visual com UX, estratégia e pensamento analítico para criar experiências digitais mais claras, intuitivas e relevantes.
+                    </p>
+                    <div class="hero-meta">
+                        <div class="hero-meta-item">
+                            <div class="meta-label">Localização</div>
+                            <div class="meta-value">São Paulo, Brasil</div>
+                        </div>
+                        <div class="hero-meta-item">
+                            <div class="meta-label">Especialidades</div>
+                            <div class="meta-value">Product Design · Design Systems · UX/UI</div>
+                        </div>
+                        <div class="hero-meta-item">
+                            <div class="meta-label">Status</div>
+                            <div class="meta-value" style="color: var(--red);">●  Disponível para projetos</div>
+                        </div>
                     </div>
-                    <div class="hero-meta-item">
-                        <div class="meta-label">Especialidades</div>
-                        <div class="meta-value">Product Design · Design Systems · UX/UI</div>
-                    </div>
-                    <div class="hero-meta-item">
-                        <div class="meta-label">Status</div>
-                        <div class="meta-value" style="color: var(--red);">●  Disponível para projetos</div>
-                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/douglas-pereira.jpg" alt="Douglas Pereira">
                 </div>
             </div>
 
