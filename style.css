@@ -1364,6 +1364,23 @@
                 padding: 12px;
             }
 
+            .especialidades-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .especialidade-card {
+                border-right: none;
+                border-bottom: 1px solid var(--black-800);
+                padding-right: 0;
+                padding-bottom: 24px;
+            }
+
+            .especialidade-card:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
             .page-header {
                 flex-direction: column;
                 gap: 24px;
