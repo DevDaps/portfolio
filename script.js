@@ -115,15 +115,12 @@
                 if (prefersDark) {
                     document.body.classList.add('dark-mode');
                     currentTheme = 'dark';
-                    document.getElementById('theme-dark').classList.add('active');
-                    document.getElementById('theme-light').classList.remove('active');
+                    const darkBtn = document.getElementById('theme-dark-btn');
+                    const lightBtn = document.getElementById('theme-light-btn');
+                    if (darkBtn) darkBtn.classList.add('active');
+                    if (lightBtn) lightBtn.classList.remove('active');
                 }
             }
-        }
-
-        function toggleAccessibilityPanel() {
-            const panel = document.getElementById('accessibility-panel');
-            panel.classList.toggle('active');
         }
 
         function setFontSize(size) {
@@ -149,12 +146,15 @@
         function toggleContrast() {
             const body = document.body;
             const toggle = document.getElementById('contrast-toggle');
+            const contrastText = document.getElementById('contrast-text');
             
             contrastEnabled = toggle.checked;
             if (contrastEnabled) {
                 body.classList.add('high-contrast');
+                if (contrastText) contrastText.textContent = 'Alto';
             } else {
                 body.classList.remove('high-contrast');
+                if (contrastText) contrastText.textContent = 'Normal';
             }
             
             savePreferences();
@@ -162,20 +162,20 @@
 
         function setTheme(theme) {
             const body = document.body;
-            const darkBtn = document.getElementById('theme-dark');
-            const lightBtn = document.getElementById('theme-light');
+            const darkBtn = document.getElementById('theme-dark-btn');
+            const lightBtn = document.getElementById('theme-light-btn');
             
             if (theme === 'light') {
                 body.classList.remove('dark-mode');
                 body.classList.add('light-mode');
-                darkBtn.classList.remove('active');
-                lightBtn.classList.add('active');
+                if (darkBtn) darkBtn.classList.remove('active');
+                if (lightBtn) lightBtn.classList.add('active');
                 currentTheme = 'light';
             } else {
                 body.classList.add('dark-mode');
                 body.classList.remove('light-mode');
-                darkBtn.classList.add('active');
-                lightBtn.classList.remove('active');
+                if (darkBtn) darkBtn.classList.add('active');
+                if (lightBtn) lightBtn.classList.remove('active');
                 currentTheme = 'dark';
             }
             

@@ -14,6 +14,28 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
 </head>
 <body>
+    <!-- ===== ACCESSIBILITY CONTROLS BAR ===== -->
+    <div class="accessibility-controls-bar">
+        <div class="controls-container">
+            <div class="control-group">
+                <label for="theme-toggle" class="control-label">Tema</label>
+                <div class="toggle-group">
+                    <button class="toggle-btn active" onclick="setTheme('light')" id="theme-light-btn" title="Tema Claro">☀️ Claro</button>
+                    <button class="toggle-btn" onclick="setTheme('dark')" id="theme-dark-btn" title="Tema Escuro">🌙 Escuro</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="contrast-toggle" class="control-label">Contraste</label>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="contrast-toggle" class="toggle-input" onchange="toggleContrast()">
+                    <label for="contrast-toggle" class="toggle-label"></label>
+                    <span class="toggle-text" id="contrast-text">Normal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ===== HOME PAGE ===== -->
     <div class="page active" id="home-page">
         <div class="container">
@@ -66,7 +88,7 @@
                     <div class="especialidade-card">
                         <div class="especialidade-icon">
                             <img src="assets/icons/search-icon.svg" alt="Ícone de pesquisa">
-                    </div>
+                        </div>
                         <h3 class="especialidade-title">UX Research</h3>
                         <p class="especialidade-description">
                             Investigo necessidades e comportamentos para transformar dados e feedbacks em <span class="highlight">insights acionáveis</span>. Utilizo pesquisas, entrevistas, <span class="highlight">testes de usabilidade</span>, benchmarking e análise qualitativa para reduzir incertezas e orientar <span class="highlight">decisões de produto</span>.
@@ -76,8 +98,8 @@
                     <!-- Especialidade 2 -->
                     <div class="especialidade-card">
                         <div class="especialidade-icon">
-                            <img src="assets/icons/search-icon.svg" alt="Ícone de pesquisa">
-                    </div>
+                            <img src="assets/icons/design-icon.svg" alt="Ícone de design">
+                        </div>
                         <h3 class="especialidade-title">Product Design</h3>
                         <p class="especialidade-description">
                             Transformo problemas em experiências digitais claras e intuitivas, trabalhando com jornadas, fluxos, arquitetura da informação, wireframes e interfaces de alta fidelidade. Desenvolvo e evoluo <span class="highlight">Design Systems</span>, componentes e <span class="highlight">design tokens</span>, buscando consistência e <span class="highlight">escalabilidade</span>.
@@ -87,8 +109,8 @@
                     <!-- Especialidade 3 -->
                     <div class="especialidade-card">
                         <div class="especialidade-icon">
-                            <img src="assets/icons/design tecnologia.png" alt="Ícone de pesquisa">
-                    </div>
+                            <img src="assets/icons/tech-icon.svg" alt="Ícone de laptop">
+                        </div>
                         <h3 class="especialidade-title">Design + Tecnologia</h3>
                         <p class="especialidade-description">
                             Trabalho próximo ao desenvolvimento, criando especificações e <span class="highlight">handoffs</span> para implementação. Tenho conhecimentos de <span class="highlight">HTML/CSS</span> e venho explorando a conexão entre Design e código com <span class="highlight">Figma</span>, <span class="highlight">Lovable</span> e <span class="highlight">Claude Code</span> integrados via <span class="highlight">MCP</span>, utilizando IA para acelerar prototipação, documentação e exploração de soluções.
@@ -98,8 +120,8 @@
                     <!-- Especialidade 4 -->
                     <div class="especialidade-card">
                         <div class="especialidade-icon">
-                            <img src="assets/icons/search-icon.svg" alt="Ícone de pesquisa">
-                    </div>
+                            <img src="assets/icons/ai-icon.svg" alt="Ícone de IA com sparkles">
+                        </div>
                         <h3 class="especialidade-title">IA aplicada ao Design</h3>
                         <p class="especialidade-description">
                             Utilizo <span class="highlight">IA generativa</span> como aceleradora do processo de design, desde pesquisa e ideação até <span class="highlight">prototipação</span>, documentação e especificação. Exploro diferentes ferramentas para <span class="highlight">testar hipóteses</span> mais rapidamente, ampliar possibilidades e aproximar <span class="highlight">Design, Produto e Tecnologia</span>.
@@ -348,43 +370,6 @@
             <div class="footer-container">
                 <div class="footer-name">Douglas Pereira</div>
                 <p class="footer-title">Product Designer — UX/UI · Design Systems · UX Engineering</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== ACCESSIBILITY WIDGET ===== -->
-    <div class="accessibility-widget">
-        <button class="accessibility-toggle" onclick="toggleAccessibilityPanel()" title="Acessibilidade">♿</button>
-        <div class="accessibility-panel" id="accessibility-panel">
-            <div class="accessibility-header">
-                <h3>Acessibilidade</h3>
-                <button class="close-btn" onclick="toggleAccessibilityPanel()">×</button>
-            </div>
-            
-            <div class="accessibility-setting">
-                <label class="setting-label">Tamanho da Fonte</label>
-                <div class="button-group">
-                    <button class="accessibility-btn" onclick="setFontSize('small')" title="Diminuir">−</button>
-                    <span class="font-display" id="font-display">100%</span>
-                    <button class="accessibility-btn" onclick="setFontSize('large')" title="Aumentar">+</button>
-                    <button class="accessibility-btn" onclick="setFontSize('normal')" title="Reset">↻</button>
-                </div>
-            </div>
-
-            <div class="accessibility-setting">
-                <label class="setting-label">Contraste</label>
-                <div class="toggle-switch">
-                    <input type="checkbox" id="contrast-toggle" class="toggle-input" onchange="toggleContrast()">
-                    <label for="contrast-toggle" class="toggle-label"></label>
-                </div>
-            </div>
-
-            <div class="accessibility-setting">
-                <label class="setting-label">Tema</label>
-                <div class="theme-buttons">
-                    <button class="theme-btn active" onclick="setTheme('light')" id="theme-light">Claro</button>
-                    <button class="theme-btn" onclick="setTheme('dark')" id="theme-dark">Escuro</button>
-                </div>
             </div>
         </div>
     </div>
