@@ -94,93 +94,76 @@
             --white-100: #000000;
         }
 
-        /* ===== ACCESSIBILITY CONTROLS BAR ===== */
-        .accessibility-controls-bar {
-            width: 100%;
-            background: var(--black-900);
-            border-bottom: 1px solid var(--black-800);
-            padding: 16px 0;
-            position: relative;
-            z-index: 100;
-        }
-
-        .controls-container {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 0 32px;
+        /* ===== ACCESSIBILITY CONTROLS WIDGET (Fixed Top Right) ===== */
+        .accessibility-controls-widget {
+            position: fixed;
+            top: 16px;
+            right: 16px;
             display: flex;
-            gap: 40px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .control-group {
-            display: flex;
-            align-items: center;
             gap: 12px;
+            background: var(--black-900);
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid var(--black-800);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 16px rgba(109, 40, 217, 0.1);
         }
 
-        .control-label {
-            font-family: var(--inter);
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--gray-400);
-        }
-
-        /* Toggle Buttons (Tema) */
-        .toggle-group {
+        .controls-group {
             display: flex;
-            gap: 6px;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .theme-toggle {
             background: var(--black-800);
-            border-radius: 6px;
+            border-radius: 8px;
             padding: 4px;
         }
 
-        .toggle-btn {
-            padding: 8px 16px;
-            font-family: var(--inter);
-            font-size: 13px;
-            font-weight: 600;
+        /* Icon Toggle Buttons (Tema) */
+        .toggle-btn-icon {
+            width: 32px;
+            height: 32px;
             border: none;
             background: transparent;
             color: var(--gray-400);
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 6px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: all 0.2s ease;
-            white-space: nowrap;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
         }
 
-        .toggle-btn.active {
+        .toggle-btn-icon.active {
             background: var(--purple-600);
             color: #FFFFFF;
         }
 
-        .toggle-btn:hover:not(.active) {
+        .toggle-btn-icon:hover:not(.active) {
             color: var(--white-100);
         }
 
-        .toggle-btn:focus-visible {
+        .toggle-btn-icon:focus-visible {
             outline: 2px solid var(--purple-600);
-            outline-offset: 2px;
+            outline-offset: 1px;
         }
 
-        /* Toggle Switch (Contraste) */
-        .toggle-switch {
+        /* Toggle Switch Compact (Contraste) */
+        .toggle-switch-compact {
             display: flex;
             align-items: center;
-            gap: 8px;
         }
 
         .toggle-input {
             appearance: none;
-            width: 44px;
+            width: 40px;
             height: 24px;
             background: var(--black-800);
-            border: 2px solid var(--black-800);
+            border: none;
             border-radius: 12px;
             cursor: pointer;
             position: relative;
@@ -190,7 +173,6 @@
 
         .toggle-input:checked {
             background: var(--purple-600);
-            border-color: var(--purple-600);
         }
 
         .toggle-input::after {
@@ -200,44 +182,51 @@
             height: 16px;
             background: var(--white-100);
             border-radius: 50%;
-            top: 2px;
-            left: 2px;
+            top: 4px;
+            left: 4px;
             transition: left 0.3s ease;
         }
 
         .toggle-input:checked::after {
-            left: 22px;
+            left: 20px;
         }
 
         .toggle-input:focus-visible {
             outline: 2px solid var(--purple-600);
-            outline-offset: 2px;
+            outline-offset: 1px;
         }
 
-        .toggle-text {
-            font-family: var(--inter);
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--gray-400);
-            min-width: 50px;
-            transition: color 0.3s ease;
-        }
-
-        .toggle-input:checked ~ .toggle-text {
-            color: var(--purple-600);
+        .toggle-label-compact {
+            display: none;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .controls-container {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 16px;
-                padding: 0 16px;
+            .accessibility-controls-widget {
+                top: 12px;
+                right: 12px;
+                gap: 8px;
+                padding: 10px;
             }
 
-            .accessibility-controls-bar {
-                padding: 12px 0;
+            .toggle-btn-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+
+            .toggle-input {
+                width: 36px;
+                height: 22px;
+            }
+
+            .toggle-input::after {
+                width: 14px;
+                height: 14px;
+            }
+
+            .toggle-input:checked::after {
+                left: 18px;
             }
         }
 
@@ -648,7 +637,7 @@
             display: inline-block;
             padding: 12px 24px;
             background: var(--purple-600);
-            color: var(--white-100);
+            color: #FFFFFF;
             text-decoration: none;
             border: 1px solid var(--purple-600);
             font-family: var(--space);

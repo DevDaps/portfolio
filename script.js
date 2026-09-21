@@ -146,15 +146,12 @@
         function toggleContrast() {
             const body = document.body;
             const toggle = document.getElementById('contrast-toggle');
-            const contrastText = document.getElementById('contrast-text');
             
             contrastEnabled = toggle.checked;
             if (contrastEnabled) {
                 body.classList.add('high-contrast');
-                if (contrastText) contrastText.textContent = 'Alto';
             } else {
                 body.classList.remove('high-contrast');
-                if (contrastText) contrastText.textContent = 'Normal';
             }
             
             savePreferences();

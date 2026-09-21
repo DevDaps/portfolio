@@ -14,24 +14,17 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
 </head>
 <body>
-    <!-- ===== ACCESSIBILITY CONTROLS BAR ===== -->
-    <div class="accessibility-controls-bar">
-        <div class="controls-container">
-            <div class="control-group">
-                <label for="theme-toggle" class="control-label">Tema</label>
-                <div class="toggle-group">
-                    <button class="toggle-btn active" onclick="setTheme('light')" id="theme-light-btn" title="Tema Claro">☀️ Claro</button>
-                    <button class="toggle-btn" onclick="setTheme('dark')" id="theme-dark-btn" title="Tema Escuro">🌙 Escuro</button>
-                </div>
-            </div>
+    <!-- ===== ACCESSIBILITY CONTROLS WIDGET (Top Right) ===== -->
+    <div class="accessibility-controls-widget">
+        <div class="controls-group theme-toggle">
+            <button class="toggle-btn-icon active" onclick="setTheme('light')" id="theme-light-btn" title="Tema Claro">☀️</button>
+            <button class="toggle-btn-icon" onclick="setTheme('dark')" id="theme-dark-btn" title="Tema Escuro">🌙</button>
+        </div>
 
-            <div class="control-group">
-                <label for="contrast-toggle" class="control-label">Contraste</label>
-                <div class="toggle-switch">
-                    <input type="checkbox" id="contrast-toggle" class="toggle-input" onchange="toggleContrast()">
-                    <label for="contrast-toggle" class="toggle-label"></label>
-                    <span class="toggle-text" id="contrast-text">Normal</span>
-                </div>
+        <div class="controls-group">
+            <div class="toggle-switch-compact">
+                <input type="checkbox" id="contrast-toggle" class="toggle-input" onchange="toggleContrast()">
+                <label for="contrast-toggle" class="toggle-label-compact" title="Toggle Contraste"></label>
             </div>
         </div>
     </div>
