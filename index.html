@@ -18,7 +18,7 @@
             --black-900: #111111;
             --black-800: #1A1A1A;
             --white-100: #F2F2F2;
-            --gray-400: #969696;
+            --gray-400: #B3B3B3;
             --red: #D71920;
             --moss: #596B3A;
             --blue: #2457E6;
@@ -33,6 +33,12 @@
 
         body {
             font-family: var(--inter);
+            /* PADRÃO = CLARO */
+            --black-950: #FFFFFF;
+            --black-900: #F5F5F5;
+            --black-800: #E8E8E8;
+            --white-100: #111111;
+            --gray-400: #333333;
             background: var(--black-950);
             color: var(--white-100);
             line-height: 1.6;
@@ -41,15 +47,24 @@
             transition: background 0.3s, color 0.3s;
         }
 
-        /* LIGHT MODE */
-        body.light-mode {
-            --black-950: #FFFFFF;
-            --black-900: #F5F5F5;
-            --black-800: #E8E8E8;
-            --white-100: #111111;
-            --gray-400: #555555;
-            background: var(--black-950);
-            color: var(--white-100);
+        /* RESPEITAR PREFERÊNCIA DO SISTEMA (dark mode) */
+        @media (prefers-color-scheme: dark) {
+            body:not(.dark-mode):not(.light-mode) {
+                --black-950: #080808;
+                --black-900: #111111;
+                --black-800: #1A1A1A;
+                --white-100: #F2F2F2;
+                --gray-400: #969696;
+            }
+        }
+
+        /* DARK MODE MANUAL (quando usuário clica) */
+        body.dark-mode {
+            --black-950: #080808;
+            --black-900: #111111;
+            --black-800: #1A1A1A;
+            --white-100: #F2F2F2;
+            --gray-400: #969696;
         }
 
         /* FONT SIZE CLASSES */
@@ -95,18 +110,36 @@
             flex: 1;
         }
 
+        .hero-content .btn-primary {
+            margin-top: 32px;
+            margin-bottom: 32px;
+            display: inline-block;
+        }
+
         .hero-image {
             flex: 0 0 300px;
             height: 400px;
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--black-800);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .hero-image:hover {
+            box-shadow: 0 30px 80px rgba(215, 25, 32, 0.15);
+            transform: translateY(-8px);
         }
 
         .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
@@ -116,19 +149,78 @@
             }
 
             .hero-image {
-                flex: 0 0 250px;
-                height: 300px;
+                flex: 0 0 280px;
+                height: 350px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .hero-title {
+                font-size: clamp(28px, 7vw, 36px);
+                max-width: 100%;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 12px;
+                border-top: 1px solid var(--black-800);
+                padding-top: 24px;
+                margin-top: 24px;
+            }
+
+            .hero-meta-item {
+                padding: 12px;
+                gap: 6px;
+            }
+
+            .meta-label {
+                font-size: 10px;
+                gap: 6px;
+            }
+
+            .meta-label::before {
+                font-size: 12px;
+            }
+
+            .meta-value {
+                font-size: 13px;
+            }
+
+            .hero-content .btn-primary {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 24px;
             }
         }
 
         .hero-intro {
             font-family: var(--space);
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--gray-400);
-            letter-spacing: 0.05em;
+            font-size: clamp(12px, 2vw, 16px);
+            font-weight: 700;
+            color: var(--red);
+            letter-spacing: 0.1em;
             margin-bottom: 24px;
             text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 16px;
+            background: rgba(215, 25, 32, 0.1);
+            border: 1px solid rgba(215, 25, 32, 0.3);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-intro:hover {
+            background: rgba(215, 25, 32, 0.15);
+            border-color: var(--red);
+        }
+
+        .hero-intro::before {
+            content: '◆';
+            display: inline-block;
+            font-size: 10px;
+            color: var(--red);
         }
 
         .hero-title {
@@ -161,20 +253,77 @@
             color: var(--gray-400);
             border-top: 1px solid var(--black-800);
             padding-top: 24px;
+            margin-top: 24px;
         }
 
         .hero-meta-item {
             display: flex;
             flex-direction: column;
             gap: 8px;
+            flex: 1;
+            padding: 16px;
+            background: var(--black-900);
+            border-radius: 8px;
+            border: 1px solid var(--black-800);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-meta-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(215, 25, 32, 0.05);
+            transition: left 0.3s ease;
+            z-index: 0;
+        }
+
+        .hero-meta-item:hover::before {
+            left: 0;
+        }
+
+        .hero-meta-item:hover {
+            border-color: var(--red);
+            transform: translateY(-4px);
+        }
+
+        .hero-meta-item > * {
+            position: relative;
+            z-index: 1;
         }
 
         .meta-label {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             color: var(--gray-400);
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-label::before {
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        .hero-meta-item:nth-child(1) .meta-label::before {
+            content: '📍';
+        }
+
+        .hero-meta-item:nth-child(2) .meta-label::before {
+            content: '🎨';
+        }
+
+        .hero-meta-item:nth-child(3) .meta-label::before {
+            content: '✓';
+            color: var(--red);
+            font-weight: 900;
         }
 
         .meta-value {
@@ -182,6 +331,7 @@
             font-size: 14px;
             font-weight: 600;
             color: var(--white-100);
+            line-height: 1.4;
         }
 
         /* ===== SECTION DIVIDER ===== */
@@ -978,6 +1128,15 @@
                 font-size: 36px;
             }
 
+            .hero-meta {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .hero-meta-item {
+                padding: 12px;
+            }
+
             .page-header {
                 flex-direction: column;
                 gap: 24px;
@@ -1393,6 +1552,7 @@
                     <p class="hero-description">
                         Comecei minha carreira no Design Gráfico, passei pela Direção de Arte e, ao longo dos anos, fui percebendo que meu trabalho estava cada vez mais conectado ao digital. Hoje, uno minha experiência em design visual com UX, estratégia e pensamento analítico para criar experiências digitais mais claras, intuitivas e relevantes.
                     </p>
+                    <a href="https://www.linkedin.com/in/product-designer-douglas-pereira/" target="_blank" class="btn-primary">Conectar no LinkedIn ↗</a>
                     <div class="hero-meta">
                         <div class="hero-meta-item">
                             <div class="meta-label">Localização</div>
@@ -2180,8 +2340,8 @@
             <div class="accessibility-setting">
                 <label class="setting-label">Tema</label>
                 <div class="theme-buttons">
-                    <button class="theme-btn active" onclick="setTheme('dark')" id="theme-dark">Escuro</button>
-                    <button class="theme-btn" onclick="setTheme('light')" id="theme-light">Claro</button>
+                    <button class="theme-btn active" onclick="setTheme('light')" id="theme-light">Claro</button>
+                    <button class="theme-btn" onclick="setTheme('dark')" id="theme-dark">Escuro</button>
                 </div>
             </div>
         </div>
@@ -2303,8 +2463,21 @@
 
         // ===== ACCESSIBILITY FUNCTIONS =====
         let currentFontSize = 'normal';
-        let currentTheme = 'dark';
+        let currentTheme = 'light'; // PADRÃO = CLARO
         let contrastEnabled = false;
+
+        // Detectar preferência do sistema na primeira vez
+        function initThemeFromSystem() {
+            if (!localStorage.getItem('portfolio-prefs')) {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (prefersDark) {
+                    document.body.classList.add('dark-mode');
+                    currentTheme = 'dark';
+                    document.getElementById('theme-dark').classList.add('active');
+                    document.getElementById('theme-light').classList.remove('active');
+                }
+            }
+        }
 
         function toggleAccessibilityPanel() {
             const panel = document.getElementById('accessibility-panel');
@@ -2351,11 +2524,13 @@
             const lightBtn = document.getElementById('theme-light');
             
             if (theme === 'light') {
-                body.classList.add('light-mode');
+                body.classList.remove('dark-mode');
+                body.classList.remove('light-mode'); // Remove explícito se tiver
                 darkBtn.classList.remove('active');
                 lightBtn.classList.add('active');
                 currentTheme = 'light';
             } else {
+                body.classList.add('dark-mode');
                 body.classList.remove('light-mode');
                 darkBtn.classList.add('active');
                 lightBtn.classList.remove('active');
@@ -2385,6 +2560,9 @@
                     document.getElementById('contrast-toggle').checked = true;
                     toggleContrast();
                 }
+            } else {
+                // Primeira vez: respeitar preferência do sistema
+                initThemeFromSystem();
             }
         }
 
