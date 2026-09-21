@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug - Verificar Páginas Ativas</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .debug-box {
+            background: white;
+            padding: 20px;
+            border: 2px solid #333;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .active { color: green; font-weight: bold; }
+        .inactive { color: red; }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐛 Debug - Sistema de Navegação</h1>
+    
+    <div class="debug-box">
+        <h2>Status das Páginas:</h2>
+        <div id="pages-status"></div>
+    </div>
+
+    <div class="debug-box">
+        <h2>CSS das Páginas:</h2>
+        <div id="css-status"></div>
+    </div>
+
+    <div class="debug-box">
+        <h2>Ações de Teste:</h2>
+        <button onclick="testNavigateHome()">Ir para HOME</button>
+        <button onclick="testNavigateRefuturiza()">Ir para REFUTURIZA</button>
+        <button onclick="testNavigateSoulcode()">Ir para SOULCODE</button>
+        <button onclick="testNavigatePetropolis()">Ir para PETROPÓLIS</button>
+        <button onclick="testReset()">RESET (Limpar active)</button>
+    </div>
+
+    <div class="debug-box">
+        <h2>Verificação do LocalStorage:</h2>
+        <div id="storage-status"></div>
+    </div>
+
+    <script>
+        function checkPagesStatus() {
+            const pagesDiv = document.getElementById('pages-status');
+            const pages = document.querySelectorAll('.page');
+            let html = '<pre>';
+            
+            pages.forEach(page => {
+                const id = page.id;
+                const hasActive = page.classList.contains('active');
+                const display = window.getComputedStyle(page).display;
+                const status = hasActive ? '✅ ACTIVE' : '❌ INACTIVE';
+                
+                html += `${id}\n`;
+                html += `  ${status}\n`;
+                html += `  display: ${display}\n`;
+                html += `  classList: ${page.className}\n\n`;
+            });
+            
+            html += '</pre>';
+            pagesDiv.innerHTML = html;
+        }
+
+        function checkCSS() {
+            const cssDiv = document.getElementById('css-status');
+            const stylesheet = document.styleSheets[0];
+            let html = '<pre>';
+            
+            html += 'Procurando regras de .page e .page.active...\n\n';
+            
+            try {
+                for (let rule of stylesheet.cssRules) {
+                    if (rule.selectorText && (rule.selectorText.includes('.page'))) {
+                        html += `${rule.selectorText}\n`;
+                        html += `  ${rule.style.cssText}\n\n`;
+                    }
+                }
+            } catch (e) {
+                html += `Erro ao acessar stylesheet: ${e.message}`;
+            }
+            
+            html += '</pre>';
+            cssDiv.innerHTML = html;
+        }
+
+        function checkStorage() {
+            const storageDiv = document.getElementById('storage-status');
+            let html = '<pre>';
+            
+            const prefs = localStorage.getItem('portfolio-prefs');
+            html += `portfolio-prefs: ${prefs || 'não encontrado'}\n`;
+            html += `URL atual: ${window.location.href}\n`;
+            html += `Hash: ${window.location.hash}\n`;
+            
+            html += '</pre>';
+            storageDiv.innerHTML = html;
+        }
+
+        function testNavigateHome() {
+            if (window.navigateToCase) {
+                window.navigateToCase('home');
+            } else {
+                alert('Função navigateToCase não encontrada!');
+            }
+            setTimeout(checkPagesStatus, 100);
+        }
+
+        function testNavigateRefuturiza() {
+            if (window.navigateToCase) {
+                window.navigateToCase('refuturiza');
+            } else {
+                alert('Função navigateToCase não encontrada!');
+            }
+            setTimeout(checkPagesStatus, 100);
+        }
+
+        function testNavigateSoulcode() {
+            if (window.navigateToCase) {
+                window.navigateToCase('soulcode');
+            } else {
+                alert('Função navigateToCase não encontrada!');
+            }
+            setTimeout(checkPagesStatus, 100);
+        }
+
+        function testNavigatePetropolis() {
+            if (window.navigateToCase) {
+                window.navigateToCase('petropolis');
+            } else {
+                alert('Função navigateToCase não encontrada!');
+            }
+            setTimeout(checkPagesStatus, 100);
+        }
+
+        function testReset() {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            checkPagesStatus();
+        }
+
+        // Executar checks iniciais
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                checkPagesStatus();
+                checkCSS();
+                checkStorage();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
