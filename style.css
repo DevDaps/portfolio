@@ -259,23 +259,18 @@
             margin-bottom: 0;
         }
 
-        .hero-section,
-        .hero-section * {
-            color-scheme: dark;
-        }
-
-        /* Hero sempre com texto claro */
+        /* Hero sempre com texto CLARO/BRANCO */
+        .hero-section .hero-intro,
         .hero-section .hero-title,
         .hero-section .hero-description,
-        .hero-section .hero-intro,
         .hero-section .meta-label,
         .hero-section .meta-value,
-        .hero-section .hero-meta-item {
-            color: var(--white-100);
+        .hero-section .btn-primary {
+            color: #F1F5F9 !important;
         }
 
         .hero-section .hero-title span {
-            color: var(--purple-600);
+            color: #6D28D9 !important;
         }
 
         .hero {
@@ -1193,17 +1188,12 @@
             margin-top: 0;
         }
 
-        .footer-section,
-        .footer-section * {
-            color-scheme: dark;
-        }
-
-        /* Footer sempre com texto claro */
+        /* Footer sempre com texto CLARO/BRANCO */
         .footer-section .footer-name,
         .footer-section .footer-title,
         .footer-section .footer-location,
         .footer-section .footer-links a {
-            color: var(--white-100);
+            color: #F1F5F9 !important;
         }
 
         .footer-section .footer-links a:hover {
