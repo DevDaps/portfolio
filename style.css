@@ -252,11 +252,30 @@
 
         /* ===== HERO SECTION ===== */
         .hero-section {
-            background: var(--black-950);
+            background: #0F172A;
             margin-left: -32px;
             margin-right: -32px;
             padding: 96px 32px;
             margin-bottom: 0;
+        }
+
+        .hero-section,
+        .hero-section * {
+            color-scheme: dark;
+        }
+
+        /* Hero sempre com texto claro */
+        .hero-section .hero-title,
+        .hero-section .hero-description,
+        .hero-section .hero-intro,
+        .hero-section .meta-label,
+        .hero-section .meta-value,
+        .hero-section .hero-meta-item {
+            color: var(--white-100);
+        }
+
+        .hero-section .hero-title span {
+            color: var(--purple-600);
         }
 
         .hero {
@@ -1167,11 +1186,28 @@
 
         /* ===== FOOTER ===== */
         .footer-section {
-            background: var(--black-950);
+            background: #0F172A;
             margin-left: -32px;
             margin-right: -32px;
             padding: 96px 32px;
             margin-top: 0;
+        }
+
+        .footer-section,
+        .footer-section * {
+            color-scheme: dark;
+        }
+
+        /* Footer sempre com texto claro */
+        .footer-section .footer-name,
+        .footer-section .footer-title,
+        .footer-section .footer-location,
+        .footer-section .footer-links a {
+            color: var(--white-100);
+        }
+
+        .footer-section .footer-links a:hover {
+            opacity: 0.8;
         }
 
         .footer {
