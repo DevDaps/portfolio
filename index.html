@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Douglas Pereira — Product Designer</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
     <style>
@@ -14,11 +16,11 @@
         }
 
         :root {
-            --black-950: #080808;
-            --black-900: #111111;
-            --black-800: #1A1A1A;
-            --white-100: #F2F2F2;
-            --gray-400: #B3B3B3;
+            --black-950: #FFFFFF;
+            --black-900: #F5F5F5;
+            --black-800: #E8E8E8;
+            --white-100: #111111;
+            --gray-400: #333333;
             --red: #D71920;
             --moss: #596B3A;
             --blue: #2457E6;
@@ -33,12 +35,6 @@
 
         body {
             font-family: var(--inter);
-            /* PADRÃO = CLARO */
-            --black-950: #FFFFFF;
-            --black-900: #F5F5F5;
-            --black-800: #E8E8E8;
-            --white-100: #111111;
-            --gray-400: #333333;
             background: var(--black-950);
             color: var(--white-100);
             line-height: 1.6;
@@ -54,7 +50,7 @@
                 --black-900: #111111;
                 --black-800: #1A1A1A;
                 --white-100: #F2F2F2;
-                --gray-400: #969696;
+                --gray-400: #B3B3B3;
             }
         }
 
@@ -64,7 +60,16 @@
             --black-900: #111111;
             --black-800: #1A1A1A;
             --white-100: #F2F2F2;
-            --gray-400: #969696;
+            --gray-400: #B3B3B3;
+        }
+
+        /* LIGHT MODE MANUAL */
+        body.light-mode {
+            --black-950: #FFFFFF;
+            --black-900: #F5F5F5;
+            --black-800: #E8E8E8;
+            --white-100: #111111;
+            --gray-400: #333333;
         }
 
         /* FONT SIZE CLASSES */
@@ -2525,7 +2530,7 @@
             
             if (theme === 'light') {
                 body.classList.remove('dark-mode');
-                body.classList.remove('light-mode'); // Remove explícito se tiver
+                body.classList.add('light-mode');
                 darkBtn.classList.remove('active');
                 lightBtn.classList.add('active');
                 currentTheme = 'light';
