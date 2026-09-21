@@ -1069,6 +1069,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 24px;
+            text-align: center;
         }
 
         .contact-title {
@@ -1078,6 +1079,7 @@
             color: var(--white-100);
             line-height: 1.2;
             margin-bottom: 48px;
+            text-align: center;
         }
 
         .contact-form {
