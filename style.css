@@ -231,13 +231,17 @@
         }
 
         .page {
-            display: none;
+            display: none !important;
             min-height: 100vh;
             background: var(--black-950);
+            visibility: hidden;
+            pointer-events: none;
         }
 
         .page.active {
-            display: block;
+            display: block !important;
+            visibility: visible;
+            pointer-events: auto;
         }
 
         .container {

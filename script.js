@@ -29,6 +29,9 @@
                     // Limpar formulário
                     document.getElementById('contact-form').reset();
                     
+                    // Limpar parâmetros de query da URL
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                    
                     // Reabilitar botão
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Enviar Mensagem';
@@ -51,15 +54,25 @@
         });
 
         function navigateToCase(caseId) {
-            document.querySelectorAll('.page').forEach(page => {
+            // Remover active de TODAS as páginas
+            const allPages = document.querySelectorAll('.page');
+            allPages.forEach(page => {
                 page.classList.remove('active');
+                page.style.display = 'none';
+                page.style.visibility = 'hidden';
             });
             
+            // Ativar apenas a página correta
             const page = document.getElementById(caseId + '-page');
             if (page) {
                 page.classList.add('active');
+                page.style.display = 'block';
+                page.style.visibility = 'visible';
                 window.scrollTo(0, 0);
                 window.history.pushState({ caseId: caseId }, '', '#' + caseId);
+                console.log('✅ Navegado para:', caseId);
+            } else {
+                console.error('❌ Página não encontrada:', caseId + '-page');
             }
         }
 
