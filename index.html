@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Douglas Pereira — Product Designer</title>
-    <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    ...
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
     <style>
@@ -138,7 +133,7 @@
 
         .hero-title {
             font-family: var(--space);
-            font-size: 64px;
+            font-size: clamp(32px, 8vw, 64px);
             font-weight: 700;
             color: var(--white-100);
             line-height: 1.1;
@@ -300,7 +295,7 @@
 
         .case-title {
             font-family: var(--space);
-            font-size: 24px;
+            font-size: clamp(18px, 4vw, 24px);
             font-weight: 700;
             color: var(--white-100);
             margin-bottom: 12px;
@@ -362,6 +357,11 @@
             color: var(--red);
         }
 
+        .btn-primary:focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 2px;
+        }
+
         .btn-secondary {
             display: inline-flex;
             align-items: center;
@@ -385,6 +385,11 @@
             transform: translateX(-3px);
         }
 
+        .btn-secondary:focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 2px;
+        }
+
         /* ===== PAGE HEADER ===== */
         .page-header {
             display: flex;
@@ -401,7 +406,7 @@
 
         .page-header-title h1 {
             font-family: var(--space);
-            font-size: 48px;
+            font-size: clamp(32px, 6vw, 48px);
             font-weight: 700;
             color: var(--white-100);
             margin-bottom: 8px;
@@ -471,6 +476,11 @@
             border-color: var(--red);
             color: var(--red);
             transform: rotate(90deg);
+        }
+
+        .image-modal-close:focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 2px;
         }
 
         /* ===== CONTENT SECTIONS ===== */
@@ -704,7 +714,7 @@
 
         .contact-title {
             font-family: var(--space);
-            font-size: 48px;
+            font-size: clamp(32px, 6vw, 48px);
             font-weight: 700;
             color: var(--white-100);
             line-height: 1.2;
@@ -757,6 +767,12 @@
             box-shadow: 0 0 0 3px rgba(215, 25, 32, 0.1);
         }
 
+        .form-group input:focus-visible,
+        .form-group textarea:focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 2px;
+        }
+
         .form-group textarea {
             min-height: 150px;
         }
@@ -785,6 +801,11 @@
         .form-submit button:hover {
             background: transparent;
             color: var(--red);
+        }
+
+        .form-submit button:focus-visible {
+            outline: 2px solid var(--white-100);
+            outline-offset: 2px;
         }
 
         .form-submit button:disabled {
@@ -871,6 +892,11 @@
         .footer-links a:hover {
             color: var(--red);
             border-bottom-color: var(--red);
+        }
+
+        .footer-links a:focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 4px;
         }
 
         /* ===== ANIMATIONS ===== */
@@ -1061,6 +1087,11 @@
             box-shadow: 0 6px 24px rgba(215, 25, 32, 0.4);
         }
 
+        .accessibility-toggle:focus-visible {
+            outline: 2px solid var(--white-100);
+            outline-offset: 2px;
+        }
+
         .accessibility-panel {
             position: absolute;
             bottom: 80px;
@@ -1102,10 +1133,16 @@
             font-size: 20px;
             cursor: pointer;
             transition: color 0.2s;
+            border-radius: 4px;
         }
 
         .close-btn:hover {
             color: var(--red);
+        }
+
+        .close-btn:focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 2px;
         }
 
         .accessibility-setting {
@@ -1146,6 +1183,11 @@
             border-color: var(--red);
         }
 
+        .accessibility-btn:focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 1px;
+        }
+
         .font-display {
             flex: 1;
             text-align: center;
@@ -1172,6 +1214,7 @@
             cursor: pointer;
             position: relative;
             transition: background-color 0.3s;
+            border: 2px solid transparent;
         }
 
         .toggle-label::after {
@@ -1192,6 +1235,10 @@
 
         .toggle-input:checked + .toggle-label::after {
             left: 22px;
+        }
+
+        .toggle-input:focus-visible + .toggle-label {
+            border-color: var(--red);
         }
 
         .theme-buttons {
@@ -1220,6 +1267,11 @@
         .theme-btn:hover {
             background-color: var(--red);
             border-color: var(--red);
+        }
+
+        .theme-btn:focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 1px;
         }
 
         @media (max-width: 768px) {
@@ -1259,7 +1311,7 @@
 
         .especialidades-title {
             font-family: var(--space);
-            font-size: 48px;
+            font-size: clamp(32px, 6vw, 48px);
             font-weight: 700;
             color: var(--white-100);
             line-height: 1.2;
@@ -1306,7 +1358,7 @@
 
         .especialidade-title {
             font-family: var(--space);
-            font-size: 20px;
+            font-size: clamp(16px, 3vw, 20px);
             font-weight: 700;
             color: var(--white-100);
             margin-bottom: 16px;
@@ -1357,7 +1409,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/images/douglas-pereira.jpg" alt="Douglas Pereira">
+                    <img src="assets/images/douglas-pereira.jpg" alt="Douglas Pereira, Product Designer com experiência em UX/UI e Design Systems, baseado em São Paulo">
                 </div>
             </div>
 
@@ -1422,7 +1474,7 @@
                 <!-- CASE 1: REFUTURIZA -->
                 <div class="case-card" onclick="navigateToCase('refuturiza')">
                     <div class="case-cover">
-                        <img src="assets/images/capa soulcode.png" alt="Refuturiza">
+                        <img src="assets/images/capa soulcode.png" alt="Redesign Refuturiza: Home atualizada com Design System robusto e identidade visual consistente">
                     </div>
                     <div class="case-content">
                         <div class="case-meta">
@@ -1439,7 +1491,7 @@
                 <!-- CASE 2: SOULCODE -->
                 <div class="case-card" onclick="navigateToCase('soulcode')">
                     <div class="case-cover">
-                        <img src="assets/images/capa soulcode.png" alt="SoulCode">
+                        <img src="assets/images/capa soulcode.png" alt="SoulCode Academy LMS: Plataforma educacional com foco mobile-first e gamificação integrada">
                     </div>
                     <div class="case-content">
                         <div class="case-meta">
@@ -1456,7 +1508,7 @@
                 <!-- CASE 3: GRUPO PETROPÓLIS -->
                 <div class="case-card" onclick="navigateToCase('petropolis')">
                     <div class="case-cover">
-                        <img src="assets/images/capa grupo petropolis.png" alt="Grupo Petropolis">
+                        <img src="assets/images/capa grupo petropolis.png" alt="Grupo Petropólis: Website corporativo apresentando marcas, infraestrutura e experiências imersivas">
                     </div>
                     <div class="case-content">
                         <div class="case-meta">
@@ -1753,7 +1805,7 @@
                 <div class="screens-grid">
                     <div class="screen-card" onclick="openImageModal('assets/images/SoulCode/Area logada Carreiras.png', 'Dashboard')">
                         <div class="screen-image">
-                            <img src="assets/images/SoulCode/Area logada Carreiras.png" alt="Dashboard">
+                            <img src="assets/images/SoulCode/Area logada Carreiras.png" alt="Dashboard do SoulCode Academy mostrando cursos, pontos e ranking de alunos">
                         </div>
                         <div class="screen-content">
                             <div class="screen-meta">
@@ -1771,7 +1823,7 @@
 
                     <div class="screen-card" onclick="openImageModal('assets/images/SoulCode/Página do Curso.png', 'Conteúdo')">
                         <div class="screen-image">
-                            <img src="assets/images/SoulCode/Página do curso.png" alt="Conteúdo">
+                            <img src="assets/images/SoulCode/Página do curso.png" alt="Página de curso no SoulCode mostrando lista de módulos com status e indicador de progresso">
                         </div>
                         <div class="screen-content">
                             <div class="screen-meta">
@@ -1787,9 +1839,9 @@
                         </div>
                     </div>
 
-                    <div class="screen-card" onclick="openImageModal('soulcode-aula.png', 'Aula')">
+                    <div class="screen-card" onclick="openImageModal('assets/images/SoulCode/Página da Aula.png', 'Aula')">
                         <div class="screen-image">
-                            <img src="assets/images/SoulCode/Página da Aula.png" alt="Aula">
+                            <img src="assets/images/SoulCode/Página da Aula.png" alt="Interface de aula no SoulCode com player de vídeo, sidebar de navegação e ranking de alunos">
                         </div>
                         <div class="screen-content">
                             <div class="screen-meta">
@@ -1805,9 +1857,9 @@
                         </div>
                     </div>
 
-                    <div class="screen-card" onclick="openImageModal('soulcode-Ranking.png', 'Ranking')">
+                    <div class="screen-card" onclick="openImageModal('assets/images/SoulCode/Ranking.png', 'Ranking')">
                         <div class="screen-image">
-                            <img src="assets/images/SoulCode/Ranking.png" alt="Ranking">
+                            <img src="assets/images/SoulCode/Ranking.png" alt="Sistema de gamificação do SoulCode mostrando níveis de evolução, XP e badges conquistadas">
                         </div>
                         <div class="screen-content">
                             <div class="screen-meta">
@@ -1823,9 +1875,9 @@
                         </div>
                     </div>
 
-                    <div class="screen-card" onclick="openImageModal('soulcode-perfil.png', 'Perfil')">
+                    <div class="screen-card" onclick="openImageModal('assets/images/SoulCode/Perfil.png', 'Perfil')">
                         <div class="screen-image">
-                            <img src="assets/images/SoulCode/Perfil.png" alt="Perfil">
+                            <img src="assets/images/SoulCode/Perfil.png" alt="Perfil do aluno no SoulCode mostrando avatar, nível, frequência e certificados conquistados">
                         </div>
                         <div class="screen-content">
                             <div class="screen-meta">
@@ -2145,8 +2197,7 @@
 
     <script>
         // ===== EmailJS Setup =====
-        emailjs.init('XuGm9MoyMGGM8Z6wS'); //
-        emailjs.send('service_mrct1oh', 'modelo_6wqytfg', templateParams) //
+        emailjs.init('SEU_PUBLIC_KEY'); // Substitua com sua chave pública do EmailJS
 
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
