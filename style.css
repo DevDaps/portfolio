@@ -200,21 +200,46 @@
             display: none;
         }
 
-        /* ===== MOBILE FIRST: 375px (CRÍTICO) ===== */
+        /* ===== MOBILE FIRST: 375px (CRÍTICO - COMPLETO) ===== */
         @media (max-width: 375px) {
+            /* BASE */
+            html, body {
+                overflow-x: hidden;
+            }
+
             .container {
                 padding: 20px 16px !important;
                 max-width: 100% !important;
+                margin: 0 auto !important;
+                width: 100% !important;
+            }
+
+            /* SECTIONS - REMOVE NEGATIVE MARGINS */
+            .hero-section,
+            .especialidades-section,
+            .trabalhos-recentes-section,
+            .contact-section,
+            .footer-section {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 40px 16px !important;
+            }
+
+            /* PAGE */
+            .page {
+                width: 100%;
+                overflow-x: hidden;
             }
 
             /* HERO SECTION */
             .hero-section {
-                padding: 48px 16px !important;
+                background: #0F172A !important;
             }
 
             .hero {
                 flex-direction: column !important;
-                gap: 24px !important;
+                gap: 20px !important;
+                width: 100% !important;
             }
 
             .hero-content {
@@ -223,51 +248,87 @@
             }
 
             .hero-image {
-                flex: 0 0 280px !important;
+                flex: 0 0 auto !important;
                 width: 100% !important;
-                height: 320px !important;
+                max-width: 100% !important;
+                height: 300px !important;
             }
 
             .hero-title {
-                font-size: 28px !important;
-                line-height: 1.2 !important;
+                font-size: 26px !important;
+                line-height: 1.3 !important;
+                margin-bottom: 16px !important;
             }
 
             .hero-description {
                 font-size: 14px !important;
-                line-height: 1.5 !important;
+                line-height: 1.6 !important;
                 margin-bottom: 20px !important;
+            }
+
+            .hero-intro {
+                margin-bottom: 12px !important;
             }
 
             .hero-meta {
                 flex-direction: column !important;
                 gap: 12px !important;
+                margin-top: 24px !important;
             }
 
             .hero-meta-item {
-                padding: 12px !important;
+                width: 100% !important;
+                padding: 12px 14px !important;
                 gap: 8px !important;
             }
 
-            /* ESPECIALIDADES */
+            .meta-label {
+                font-size: 11px !important;
+            }
+
+            .meta-value {
+                font-size: 13px !important;
+            }
+
+            /* ESPECIALIDADES SECTION */
             .especialidades-section {
-                padding: 48px 16px !important;
+                background: var(--black-900);
+            }
+
+            .especialidades-eyebrow {
+                font-size: 11px !important;
+                margin-bottom: 12px !important;
             }
 
             .especialidades-title {
-                font-size: 28px !important;
+                font-size: 26px !important;
+                margin-bottom: 24px !important;
+            }
+
+            .especialidades-intro {
+                margin-bottom: 32px !important;
+            }
+
+            .especialidades-intro p {
+                font-size: 13px !important;
+                line-height: 1.6 !important;
+                margin-bottom: 12px !important;
             }
 
             .especialidades-grid {
                 grid-template-columns: 1fr !important;
-                gap: 20px !important;
+                gap: 0 !important;
             }
 
             .especialidade-card {
                 border-right: none !important;
                 border-bottom: 1px solid var(--black-800) !important;
-                padding: 0 0 20px 0 !important;
+                padding: 20px 0 !important;
                 margin: 0 !important;
+            }
+
+            .especialidade-card:first-child {
+                padding-top: 0 !important;
             }
 
             .especialidade-card:last-child {
@@ -276,8 +337,13 @@
             }
 
             .especialidade-icon {
-                font-size: 40px !important;
+                font-size: 36px !important;
                 margin-bottom: 12px !important;
+                display: block !important;
+            }
+
+            .especialidade-icon img {
+                max-width: 40px !important;
             }
 
             .especialidade-title {
@@ -287,114 +353,287 @@
 
             .especialidade-description {
                 font-size: 13px !important;
-                line-height: 1.5 !important;
+                line-height: 1.6 !important;
             }
 
-            /* CASOS */
+            /* TRABALHOS RECENTES */
             .trabalhos-recentes-section {
-                padding: 48px 16px !important;
+                background: var(--black-900);
             }
 
             .section-label {
-                font-size: 12px !important;
-                margin-bottom: 32px !important;
+                font-size: 11px !important;
+                margin-bottom: 24px !important;
+                text-align: left !important;
             }
 
             .cases-container {
                 grid-template-columns: 1fr !important;
-                gap: 20px !important;
+                gap: 16px !important;
+                width: 100% !important;
             }
 
             .case-card {
-                margin-bottom: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+                overflow: hidden !important;
             }
 
             .case-cover {
-                height: 200px !important;
+                height: 180px !important;
+                width: 100% !important;
+            }
+
+            .case-cover img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+            }
+
+            .case-content {
+                padding: 16px !important;
+            }
+
+            .case-meta {
+                font-size: 11px !important;
+                margin-bottom: 8px !important;
             }
 
             .case-title {
-                font-size: 18px !important;
+                font-size: 16px !important;
+                margin-bottom: 4px !important;
+            }
+
+            .case-subtitle {
+                font-size: 12px !important;
+                margin-bottom: 8px !important;
             }
 
             .case-description {
-                font-size: 13px !important;
+                font-size: 12px !important;
+                line-height: 1.5 !important;
+                margin-bottom: 8px !important;
+            }
+
+            .case-arrow {
+                font-size: 12px !important;
             }
 
             /* CONTATO */
             .contact-section {
-                padding: 48px 16px !important;
+                background: var(--black-900);
             }
 
             .contact-eyebrow {
                 font-size: 11px !important;
-                margin-bottom: 16px !important;
+                margin-bottom: 12px !important;
+                text-align: center !important;
             }
 
             .contact-title {
-                font-size: 28px !important;
-                margin-bottom: 32px !important;
+                font-size: 26px !important;
+                margin-bottom: 28px !important;
+                text-align: center !important;
             }
 
             .contact-form {
                 max-width: 100% !important;
                 width: 100% !important;
+                margin: 0 auto !important;
             }
 
             .form-group {
                 margin-bottom: 16px !important;
+                width: 100% !important;
             }
 
             .form-group label {
                 font-size: 11px !important;
                 margin-bottom: 6px !important;
+                display: block !important;
             }
 
             .form-group input,
             .form-group textarea {
+                width: 100% !important;
                 font-size: 14px !important;
                 padding: 10px 12px !important;
                 border-radius: 6px !important;
+                box-sizing: border-box !important;
+            }
+
+            .form-group textarea {
+                min-height: 100px !important;
             }
 
             .form-submit {
                 margin-top: 20px !important;
+                width: 100% !important;
             }
 
             .btn-primary {
                 width: 100% !important;
                 font-size: 14px !important;
                 padding: 12px 20px !important;
+                box-sizing: border-box !important;
+                display: block !important;
+            }
+
+            .form-status {
+                font-size: 12px !important;
+                margin-top: 12px !important;
             }
 
             /* FOOTER */
             .footer-section {
-                padding: 48px 16px !important;
+                background: #0F172A !important;
+            }
+
+            .footer {
+                text-align: center !important;
+            }
+
+            .footer-container {
+                max-width: 100% !important;
             }
 
             .footer-name {
-                font-size: 18px !important;
+                font-size: 16px !important;
+                margin-bottom: 8px !important;
             }
 
             .footer-title {
-                font-size: 12px !important;
+                font-size: 11px !important;
+                margin-bottom: 6px !important;
             }
 
             .footer-location {
-                font-size: 13px !important;
+                font-size: 12px !important;
+                margin-bottom: 12px !important;
             }
 
             .footer-links {
-                gap: 16px !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 12px !important;
+                justify-content: center !important;
             }
 
             .footer-links a {
+                font-size: 11px !important;
+                word-break: break-word !important;
+            }
+
+            /* ACCESSIBILITY WIDGET */
+            .accessibility-controls-widget {
+                top: 12px !important;
+                right: 12px !important;
+                gap: 6px !important;
+                padding: 8px !important;
+            }
+
+            .toggle-btn-icon {
+                width: 32px !important;
+                height: 32px !important;
+                font-size: 14px !important;
+            }
+
+            /* IMAGES */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            /* SCREEN CARDS (modais) */
+            .screen-card {
+                width: 100% !important;
+                overflow: hidden !important;
+            }
+
+            .screen-image {
+                height: 150px !important;
+                width: 100% !important;
+            }
+
+            .screen-image img {
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            .screen-content {
+                padding: 12px !important;
+            }
+
+            .screen-name {
+                font-size: 14px !important;
+            }
+
+            .screen-description {
                 font-size: 12px !important;
+            }
+
+            .screen-tag {
+                font-size: 10px !important;
+                padding: 4px 8px !important;
             }
 
             /* GERAL */
             .section-divider {
-                margin: 32px 0 !important;
+                margin: 24px 0 !important;
+            }
+
+            /* EVITAR OVERFLOW */
+            * {
+                max-width: 100% !important;
+            }
+
+            body, html, .page, .container {
+                overflow-x: hidden !important;
+            }
+        }
+
+        /* ===== MOBILE: 376px - 480px ===== */
+        @media (min-width: 376px) and (max-width: 480px) {
+            .container {
+                padding: 24px 16px !important;
+            }
+
+            /* Remove margens negativas - CRÍTICO */
+            .hero-section,
+            .especialidades-section,
+            .trabalhos-recentes-section,
+            .contact-section,
+            .footer-section {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 40px 16px !important;
+            }
+
+            /* Grid em 1 coluna */
+            .especialidades-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+
+            .cases-container {
+                grid-template-columns: 1fr !important;
+            }
+
+            .hero {
+                flex-direction: column;
+            }
+
+            /* Font sizes apropriadas */
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .especialidades-title {
+                font-size: 26px;
+            }
+
+            .contact-title {
+                font-size: 26px;
             }
         }
 
@@ -1542,6 +1781,16 @@
         @media (max-width: 768px) {
             .container {
                 padding: 40px 20px;
+            }
+
+            /* Remove margens negativas das sections */
+            .hero-section,
+            .especialidades-section,
+            .trabalhos-recentes-section,
+            .contact-section,
+            .footer-section {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
             }
 
             .cases-container {
