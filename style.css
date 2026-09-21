@@ -252,7 +252,11 @@
 
         /* ===== HERO SECTION ===== */
         .hero {
-            margin-bottom: 96px;
+            background: var(--black-950);
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 96px 32px;
+            margin-bottom: 0;
             display: flex;
             gap: 64px;
             align-items: flex-start;
@@ -999,11 +1003,7 @@
         }
 
         /* ===== CONTACT SECTION ===== */
-        .contact-section {
-            margin-bottom: 96px;
-            border-top: 1px solid var(--black-800);
-            padding-top: 64px;
-        }
+        /* Styles moved to SECTION BACKGROUNDS */
 
         .contact-eyebrow {
             font-family: var(--space);
@@ -1138,13 +1138,7 @@
         }
 
         /* ===== FOOTER ===== */
-        .footer {
-            background: var(--black-900);
-            border-top: 1px solid var(--black-800);
-            padding: 64px 32px;
-            margin-top: 96px;
-            text-align: center;
-        }
+        /* Styles moved to SECTION BACKGROUNDS */
 
         .footer-container {
             max-width: 1440px;
@@ -1367,6 +1361,34 @@
                 font-size: 32px;
                 margin-bottom: 40px;
             }
+        }
+
+        /* ===== SECTION BACKGROUNDS ===== */
+        .especialidades-section {
+            background: var(--black-900);
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 96px 32px;
+            margin-bottom: 0;
+        }
+
+        .contact-section {
+            background: var(--black-900);
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 96px 32px;
+            margin-bottom: 0;
+            border-top: none;
+            padding-top: 96px;
+        }
+
+        .footer {
+            background: var(--black-950);
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 96px 32px;
+            margin-top: 96px;
+            text-align: center;
         }
 
         /* ===== ACCESSIBILITY WIDGET ===== */
