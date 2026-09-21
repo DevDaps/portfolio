@@ -251,15 +251,36 @@
         }
 
         /* ===== HERO SECTION ===== */
-        .hero {
+        .hero-section {
             background: var(--black-950);
             margin-left: -32px;
             margin-right: -32px;
             padding: 96px 32px;
             margin-bottom: 0;
+        }
+
+        .hero {
             display: flex;
             gap: 64px;
             align-items: flex-start;
+        }
+
+        /* ===== TRABALHOS RECENTES SECTION ===== */
+        .trabalhos-recentes-section {
+            background: var(--black-900);
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 96px 32px;
+            margin-bottom: 0;
+        }
+
+        /* ===== ESPECIALIDADES SECTION ===== */
+        .especialidades-section {
+            background: var(--black-900);
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 96px 32px;
+            margin-bottom: 0;
         }
 
         .hero-content {
@@ -1003,7 +1024,14 @@
         }
 
         /* ===== CONTACT SECTION ===== */
-        /* Styles moved to SECTION BACKGROUNDS */
+        .contact-section {
+            background: var(--black-900);
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 96px 32px;
+            margin-bottom: 0;
+            border-top: none;
+        }
 
         .contact-eyebrow {
             font-family: var(--space);
@@ -1138,7 +1166,17 @@
         }
 
         /* ===== FOOTER ===== */
-        /* Styles moved to SECTION BACKGROUNDS */
+        .footer-section {
+            background: var(--black-950);
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 96px 32px;
+            margin-top: 0;
+        }
+
+        .footer {
+            text-align: center;
+        }
 
         .footer-container {
             max-width: 1440px;
@@ -1361,34 +1399,6 @@
                 font-size: 32px;
                 margin-bottom: 40px;
             }
-        }
-
-        /* ===== SECTION BACKGROUNDS ===== */
-        .especialidades-section {
-            background: var(--black-900);
-            margin-left: -32px;
-            margin-right: -32px;
-            padding: 96px 32px;
-            margin-bottom: 0;
-        }
-
-        .contact-section {
-            background: var(--black-900);
-            margin-left: -32px;
-            margin-right: -32px;
-            padding: 96px 32px;
-            margin-bottom: 0;
-            border-top: none;
-            padding-top: 96px;
-        }
-
-        .footer {
-            background: var(--black-950);
-            margin-left: -32px;
-            margin-right: -32px;
-            padding: 96px 32px;
-            margin-top: 96px;
-            text-align: center;
         }
 
         /* ===== ACCESSIBILITY WIDGET ===== */
