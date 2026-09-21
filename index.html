@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Douglas Pereira — Product Designer</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -679,6 +680,134 @@
             transform: translateY(-2px);
         }
 
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            margin-bottom: 96px;
+            border-top: 1px solid var(--black-800);
+            padding-top: 64px;
+        }
+
+        .contact-eyebrow {
+            font-family: var(--space);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+
+        .contact-title {
+            font-family: var(--space);
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--white-100);
+            line-height: 1.2;
+            margin-bottom: 48px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--white-100);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: var(--space);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--black-900);
+            border: 1px solid var(--black-800);
+            color: var(--white-100);
+            font-family: var(--inter);
+            font-size: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            resize: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--gray-400);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--red);
+            box-shadow: 0 0 0 3px rgba(215, 25, 32, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+        }
+
+        .form-submit {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .form-submit button {
+            padding: 12px 24px;
+            background: var(--red);
+            color: var(--white-100);
+            border: 1px solid var(--red);
+            font-family: var(--space);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .form-submit button:hover {
+            background: transparent;
+            color: var(--red);
+        }
+
+        .form-submit button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .form-status {
+            font-size: 14px;
+            font-weight: 500;
+            display: none;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .form-status.success {
+            background: rgba(89, 107, 58, 0.2);
+            color: var(--moss);
+            display: block;
+        }
+
+        .form-status.error {
+            background: rgba(215, 25, 32, 0.2);
+            color: var(--red);
+            display: block;
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background: var(--black-900);
@@ -885,6 +1014,16 @@
             .especialidade-description {
                 font-size: 14px;
             }
+
+            .contact-section {
+                margin-bottom: 64px;
+                padding-top: 48px;
+            }
+
+            .contact-title {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
         }
 
         /* ===== ACCESSIBILITY WIDGET ===== */
@@ -933,17 +1072,6 @@
 
         .accessibility-panel.active {
             display: block;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .accessibility-header {
@@ -1228,6 +1356,7 @@
                 </div>
             </div>
 
+            <div class="section-divider"></div>
 
             <!-- ===== ESPECIALIDADES SECTION ===== -->
             <section class="especialidades-section">
@@ -1336,6 +1465,40 @@
                     </div>
                 </div>
             </div>
+
+            <!-- ===== CONTACT SECTION ===== -->
+            <section class="contact-section">
+                <div class="contact-eyebrow">Vamos conversar</div>
+                <h2 class="contact-title">Entre em contato</h2>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" name="subject" placeholder="Qual é o assunto?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" placeholder="Conte mais sobre seu projeto ou ideia..." required></textarea>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" id="submit-btn">Enviar Mensagem</button>
+                    </div>
+
+                    <div class="form-status" id="form-status"></div>
+                </form>
+            </section>
         </div>
 
         <div class="footer">
@@ -1976,6 +2139,59 @@
     </div>
 
     <script>
+        // ===== EmailJS Setup =====
+        emailjs.init('XuGm9MoyMGGM8Z6wS'); //
+        emailjs.send('service_mrct1oh', 'modelo_6wqytfg', templateParams) //
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const formStatus = document.getElementById('form-status');
+            
+            // Desabilitar botão
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+
+            // Dados do formulário
+            const templateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            // Enviar email
+            emailjs.send('service_XXXX', 'template_XXXX', templateParams)
+                .then(function(response) {
+                    formStatus.textContent = 'Mensagem enviada com sucesso! Vou responder em breve.';
+                    formStatus.classList.remove('error');
+                    formStatus.classList.add('success');
+                    
+                    // Limpar formulário
+                    document.getElementById('contact-form').reset();
+                    
+                    // Reabilitar botão
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar Mensagem';
+
+                    // Limpar mensagem após 5 segundos
+                    setTimeout(() => {
+                        formStatus.classList.remove('success');
+                    }, 5000);
+                }, function(error) {
+                    formStatus.textContent = 'Erro ao enviar mensagem. Tente novamente.';
+                    formStatus.classList.remove('success');
+                    formStatus.classList.add('error');
+                    
+                    // Reabilitar botão
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar Mensagem';
+
+                    console.error('Erro:', error);
+                });
+        });
+
         function navigateToCase(caseId) {
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
@@ -1989,7 +2205,6 @@
             }
         }
 
-        // Voltar com o botão do navegador
         window.addEventListener('popstate', function(event) {
             if (event.state && event.state.caseId) {
                 navigateToCase(event.state.caseId);
@@ -1998,7 +2213,6 @@
             }
         });
 
-        // Carregar página correta ao recarregar
         window.addEventListener('load', function() {
             const hash = window.location.hash.substring(1);
             if (hash) {
@@ -2118,7 +2332,6 @@
             }
         }
 
-        // Load preferences on page load
         document.addEventListener('DOMContentLoaded', loadPreferences);
     </script>
 </body>
