@@ -187,7 +187,7 @@
         </section>
 
         <!-- ===== CONTACT SECTION ===== -->
-        <section class="contact-section">
+        <section class="contact-section" id="contato">
                 <div class="contact-eyebrow">Vamos conversar</div>
                 <h2 class="contact-title">Entre em contato</h2>
 
@@ -218,7 +218,6 @@
 
                     <div class="form-status" id="form-status"></div>
                 </form>
-            </div>
         </section>
 
         <!-- ===== FOOTER SECTION ===== -->
@@ -239,580 +238,1542 @@
     </div>
 
     <!-- ===== REFUTURIZA PAGE ===== -->
-    <div class="page" id="refuturiza-page">
-        <div class="container">
-            <div class="page-header">
-                <div class="page-header-title">
-                    <h1>Refuturiza</h1>
-                    <p>Redesign da Home + Design System</p>
+    <div class="page cs-page" id="refuturiza-page">
+        <div class="cs-layout">
+            <!-- SIDEBAR -->
+            <aside class="cs-sidebar">
+                <button class="btn-secondary" type="button" onclick="navigateToCase('home')">← Voltar</button>
+                <div class="cs-brand">
+                    <p class="cs-kicker">Dossiê de projeto</p>
+                    <p class="cs-brand-name">Refuturiza</p>
+                    <div class="cs-brand-rule"></div>
                 </div>
-                <button class="btn-secondary" onclick="navigateToCase('home')">← Voltar</button>
-            </div>
-
-            <div class="modal-section">
-                <h3 class="section-heading">Contexto</h3>
-                <div class="section-content">
-                    <p>Site desatualizado usando template inadequado. Problemas de carregamento, informações pouco claras e experiência pouco intuitiva. Necessidade de criar uma identidade visual consistente entre diferentes páginas e sistemas.</p>
+                <nav class="cs-nav" aria-label="Seções do case">
+                    <p class="cs-kicker">Índice</p>
+                    <ul>
+                        <li><button type="button" class="cs-nav-btn active" data-tab="contexto" aria-current="true" onclick="showCaseTab('refuturiza','contexto')"><span class="cs-nav-num">01</span><span>Contexto</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="discovery" onclick="showCaseTab('refuturiza','discovery')"><span class="cs-nav-num">02</span><span>Discovery</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="decisoes" onclick="showCaseTab('refuturiza','decisoes')"><span class="cs-nav-num">03</span><span>Decisões</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="solucao" onclick="showCaseTab('refuturiza','solucao')"><span class="cs-nav-num">04</span><span>Solução</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="tech" onclick="showCaseTab('refuturiza','tech')"><span class="cs-nav-num">05</span><span>Design × Tech</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="resultado" onclick="showCaseTab('refuturiza','resultado')"><span class="cs-nav-num">06</span><span>Resultado</span></button></li>
+                    </ul>
+                </nav>
+                <div class="cs-sidebar-foot">
+                    <p class="cs-kicker">Product Design · UX Research</p>
+                    <p class="cs-sidebar-note">Conduzi o processo ponta a ponta com Product, Marketing e Development.</p>
                 </div>
-            </div>
+            </aside>
 
-            <div class="modal-section">
-                <h3 class="section-heading">Abordagem</h3>
-                <ul class="list-items">
-                    <li>Pesquisa qualitativa com usuários, professores e stakeholders</li>
-                    <li>Mapeamento de melhorias solicitadas pelo time técnico</li>
-                    <li>Reorganização da arquitetura de informação da home</li>
-                    <li>Criação de Design System robusto e documentado</li>
-                    <li>Handoff tela a tela com validação de desenvolvimento</li>
-                </ul>
-            </div>
-
-            <div class="modal-section">
-                <h3 class="section-heading">Resultado</h3>
-                <div class="section-content">
-                    <p>Home completamente redesenhada e em produção. Design System expandido de 20 para 80+ componentes reutilizáveis. Integração com backoffice implementada, permitindo autonomia da equipe de marketing para criar novas páginas sem dependência de design.</p>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3 class="section-heading">Principais Telas</h3>
-                <div class="screens-grid">
-                    <div class="screen-card" onclick="openImageModal('assets/images/Refuturiza/cadastro de usuário.png', 'Cadastro')">
-                        <div class="screen-image">
-                            <img src="assets/images/Refuturiza/cadastro de usuário.png" alt="cadastro de usuario">
+            <!-- MAIN -->
+            <main class="cs-main">
+                <!-- barra mobile -->
+                <div class="cs-mobilebar">
+                    <div class="cs-mobilebar-top">
+                        <div class="cs-mobile-title">
+                            <button class="cs-back-mini" type="button" aria-label="Voltar" onclick="navigateToCase('home')">←</button>
+                            <span>Refuturiza</span>
                         </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>UX/UI</span>
-                            </div>
-                            <div class="screen-name">Cadastro</div>
-                            <p class="screen-description">Formulário de onboarding com validações claras.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Form</span>
-                                <span class="screen-tag">UX</span>
-                            </div>
-                        </div>
+                        <p class="cs-kicker">Dossiê · 06 seções</p>
                     </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/Refuturiza/home.png', 'Home')">
-                        <div class="screen-image">
-                            <img src="assets/images/Refuturiza/home.png" alt="home">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>UX/UI</span>
-                            </div>
-                            <div class="screen-name">Home</div>
-                            <p class="screen-description">Landing page com apresentação clara dos cursos.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Hero</span>
-                                <span class="screen-tag">UI</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/Refuturiza/chekout.png', 'Checkout')">
-                        <div class="screen-image">
-                            <img src="assets/images/Refuturiza/chekout.png" alt="checkout">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>UX/UI</span>
-                            </div>
-                            <div class="screen-name">Checkout</div>
-                            <p class="screen-description">Fluxo de pagamento seguro e minimalista.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Payment</span>
-                                <span class="screen-tag">UX</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/Refuturiza/dashboard.png', 'dashboard')">
-                        <div class="screen-image">
-                            <img src="assets/images/Refuturiza/dashboard.png" alt="Dashboard">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>UX/UI</span>
-                            </div>
-                            <div class="screen-name">Dashboard</div>
-                            <p class="screen-description">Visão centralizada para alunos de TO.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Dashboard</span>
-                                <span class="screen-tag">UI</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/Refuturiza/dashboard.png', 'Perfil')">
-                        <div class="screen-image">
-                            <img src="assets/images/Refuturiza/dashboard.png" alt="Dashboard">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>UX/UI</span>
-                            </div>
-                            <div class="screen-name">Perfil</div>
-                            <p class="screen-description">Edição de dados do titular com validações.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Form</span>
-                                <span class="screen-tag">UX</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/Refuturiza/Design system.png', 'Design system')">
-                        <div class="screen-image">
-                            <img src="assets/images/Refuturiza/Design system.png" alt="Design system">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>Design System</span>
-                            </div>
-                            <div class="screen-name">Design System</div>
-                            <p class="screen-description">Biblioteca de 80+ componentes documentados.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">DS</span>
-                                <span class="screen-tag">Docs</span>
-                            </div>
-                        </div>
+                    <div class="cs-tabs-scroll">
+                        <button type="button" class="cs-chip-tab active" data-tab="contexto" onclick="showCaseTab('refuturiza','contexto')">01 Contexto</button>
+                        <button type="button" class="cs-chip-tab" data-tab="discovery" onclick="showCaseTab('refuturiza','discovery')">02 Discovery</button>
+                        <button type="button" class="cs-chip-tab" data-tab="decisoes" onclick="showCaseTab('refuturiza','decisoes')">03 Decisões</button>
+                        <button type="button" class="cs-chip-tab" data-tab="solucao" onclick="showCaseTab('refuturiza','solucao')">04 Solução</button>
+                        <button type="button" class="cs-chip-tab" data-tab="tech" onclick="showCaseTab('refuturiza','tech')">05 Design × Tech</button>
+                        <button type="button" class="cs-chip-tab" data-tab="resultado" onclick="showCaseTab('refuturiza','resultado')">06 Resultado</button>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal-section">
-                <h3 class="section-heading">Destaques</h3>
-                <div class="metrics-grid">
-                    <div class="metric">
-                        <div class="metric-label">Componentes</div>
-                        <div class="metric-value">80+</div>
+                <!-- 01 CONTEXTO -->
+                <section class="cs-panel active" data-panel="contexto">
+                    <p class="cs-eyebrow">01 · Contexto</p>
+                    <h1 class="cs-h1">Refuturiza</h1>
+                    <p class="cs-lead">Redesign da experiência digital e evolução do Design System. Reestruturei a Home para tornar a proposta da Refuturiza mais clara, melhorar a descoberta dos produtos e criar uma base de interface mais consistente e escalável.</p>
+
+                    <div class="cs-split cs-mt-l">
+                        <div>
+                            <p class="cs-label">Meu papel</p>
+                            <p class="cs-body cs-mt-xs">Product Designer responsável por UX/UI, discovery, arquitetura da informação, Design System, prototipação, handoff e acompanhamento da implementação.</p>
+                        </div>
+                        <div>
+                            <p class="cs-label">Colaboração</p>
+                            <p class="cs-body cs-mt-xs">Product · Marketing · Development</p>
+                            <div class="cs-tags cs-mt-s">
+                                <span class="cs-tag">Product Design</span>
+                                <span class="cs-tag">UX Research</span>
+                                <span class="cs-tag">Design System</span>
+                                <span class="cs-tag cs-tag-accent">Design × Tech</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="metric">
-                        <div class="metric-label">Tempo Dev</div>
-                        <div class="metric-value">-40%</div>
+
+                    <div class="cs-block">
+                        <p class="cs-label">O problema</p>
+                        <h2 class="cs-h3">O site havia se tornado um ponto de atrito.</h2>
+                        <div class="cs-grid cs-cols-2 cs-mt-m">
+                            <div class="cs-problem"><span class="cs-num">01</span><p>Informações pouco claras sobre os produtos</p></div>
+                            <div class="cs-problem"><span class="cs-num">02</span><p>Navegação pouco intuitiva</p></div>
+                            <div class="cs-problem"><span class="cs-num">03</span><p>Links e botões com problemas</p></div>
+                            <div class="cs-problem"><span class="cs-num">04</span><p>Problemas de carregamento</p></div>
+                            <div class="cs-problem"><span class="cs-num">05</span><p>Estrutura inadequada para apresentar o ecossistema</p></div>
+                            <div class="cs-problem"><span class="cs-num">06</span><p>Dependência de dev para alterações simples de conteúdo</p></div>
+                        </div>
+                        <p class="cs-quote cs-mt-m">Como reorganizar a experiência para tornar os produtos mais compreensíveis e, ao mesmo tempo, criar uma estrutura que pudesse evoluir com o negócio?</p>
                     </div>
-                    <div class="metric">
-                        <div class="metric-label">Autonomia</div>
-                        <div class="metric-value">+</div>
+
+                    <div class="cs-block">
+                        <p class="cs-label">Do problema à implementação</p>
+                        <div class="cs-grid cs-cols-3 cs-mt-s">
+                            <div><p class="cs-cell-title cs-cell-title-accent">Discovery</p><p class="cs-small cs-mt-xs">Investigação com pessoas envolvidas no produto e consolidação dos principais problemas.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">UX</p><p class="cs-small cs-mt-xs">Arquitetura da informação, estrutura da Home, organização de conteúdo e prototipação.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">UI</p><p class="cs-small cs-mt-xs">Interfaces, componentes, estados, responsividade e linguagem visual.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Design System</p><p class="cs-small cs-mt-xs">Evolução da base existente para uma estrutura mais completa e reutilizável.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Design × Tech</p><p class="cs-small cs-mt-xs">Handoff, especificações, acompanhamento da implementação e Design QA.</p></div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="modal-section">
-                <h3 class="section-heading">O Que Aprendi</h3>
-                <ul class="list-items">
-                    <li>Design não começa na interface — começa na compreensão profunda do problema</li>
-                    <li>Um design system não é apenas componentes: é infraestrutura de decisão</li>
-                    <li>Handoff é parte crítica do design — validar implementação salva retrabalho</li>
-                </ul>
-            </div>
+                <!-- 02 DISCOVERY -->
+                <section class="cs-panel" data-panel="discovery">
+                    <p class="cs-eyebrow">02 · Discovery</p>
+                    <h2 class="cs-h2">Antes de desenhar, fomos investigar.</h2>
 
-            <div class="case-tags">
-                <span class="case-tag">Product Design</span>
-                <span class="case-tag">Design System</span>
-                <span class="case-tag">UX/UI</span>
-                <span class="case-tag">Handoff</span>
-            </div>
-        </div>
+                    <div class="cs-split cs-split-wide cs-mt-l">
+                        <div class="cs-stack">
+                            <p class="cs-text">O problema não estava só na interface. Conduzi uma investigação interna com 10 pessoas para entender onde estavam os principais atritos, considerando também o contexto de Marketing e as necessidades levantadas pelo Development.</p>
+                            <div class="cs-stats">
+                                <div class="cs-stat cs-stat-accent"><p class="cs-stat-value">3</p><p class="cs-stat-label">Customer Success</p></div>
+                                <div class="cs-stat"><p class="cs-stat-value">5</p><p class="cs-stat-label">Coordenadores</p></div>
+                                <div class="cs-stat"><p class="cs-stat-value">2</p><p class="cs-stat-label">Diretores</p></div>
+                            </div>
+                            <p class="cs-note">O site também era usado pelo Customer Success como referência para atendimento, enquanto coordenadores e direção tinham visão sobre produtos e necessidades do negócio.</p>
+                            <div class="cs-grid cs-cols-2">
+                                <div><p class="cs-cell-title">Clareza</p><p class="cs-small cs-mt-xs">As informações apresentavam os produtos de maneira suficientemente clara?</p></div>
+                                <div><p class="cs-cell-title">Descoberta</p><p class="cs-small cs-mt-xs">Era fácil entender o que a Refuturiza oferecia e encontrar os produtos?</p></div>
+                                <div><p class="cs-cell-title">Experiência</p><p class="cs-small cs-mt-xs">A navegação e os elementos da interface eram intuitivos?</p></div>
+                                <div><p class="cs-cell-title">Operação</p><p class="cs-small cs-mt-xs">Como atualizar conteúdo sem transformar cada alteração em uma demanda de dev?</p></div>
+                            </div>
+                        </div>
 
-        <div class="footer">
-            <div class="footer-container">
-                <div class="footer-name">Douglas Pereira</div>
-                <p class="footer-title">Product Designer — UX/UI · Design Systems · UX Engineering</p>
-            </div>
+                        <div>
+                            <p class="cs-label">Benchmark</p>
+                            <p class="cs-small cs-mt-xs cs-measure">Sem um concorrente direto que representasse todo o ecossistema, analisei produtos de categorias próximas para identificar padrões de interação e oportunidades aplicáveis ao contexto da Refuturiza.</p>
+                            <div class="cs-mt-s">
+                                <p class="cs-label cs-label-accent">Educação</p>
+                                <p class="cs-small cs-mt-xxs">Alura · Senac · Udemy · Descomplica · Coursera · Domestika</p>
+                            </div>
+                            <div class="cs-mt-xs">
+                                <p class="cs-label cs-label-accent">Empregabilidade</p>
+                                <p class="cs-small cs-mt-xxs">Vagas · Gupy</p>
+                            </div>
+                            <p class="cs-label cs-mt-m">O que observei</p>
+                            <div class="cs-pills cs-mt-xs">
+                                <span class="cs-pill">Navegação</span><span class="cs-pill">Busca</span><span class="cs-pill">Filtros</span><span class="cs-pill">Cards</span><span class="cs-pill">Apresentação dos produtos</span><span class="cs-pill">CTAs</span><span class="cs-pill">Páginas de produto</span><span class="cs-pill">Conteúdo</span><span class="cs-pill">Responsividade</span><span class="cs-pill">Acessibilidade</span><span class="cs-pill">Padrões de descoberta</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cs-block">
+                        <p class="cs-label">O que os dados indicaram · 3 direcionadores</p>
+                        <div class="cs-grid cs-cols-3 cs-mt-s">
+                            <div><p class="cs-cell-num">01</p><p class="cs-cell-big">Produtos mais compreensíveis</p><p class="cs-small cs-mt-xs">Os cards traziam o nome dos produtos, mas pouco contexto. Direção: apresentação mais informativa e acionável.</p></div>
+                            <div><p class="cs-cell-num">02</p><p class="cs-cell-big">Home que representa o ecossistema</p><p class="cs-small cs-mt-xs">A estrutura concentrava poucos elementos. Direção: reorganizar a arquitetura e distribuir melhor os conteúdos.</p></div>
+                            <div><p class="cs-cell-num">03</p><p class="cs-cell-big">Conteúdo mais flexível</p><p class="cs-small cs-mt-xs">Marketing precisava de autonomia. Direção: usar o backoffice existente como camada de gerenciamento de conteúdo.</p></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 03 DECISÕES -->
+                <section class="cs-panel" data-panel="decisoes">
+                    <p class="cs-eyebrow">03 · Decisões</p>
+                    <h2 class="cs-h2">Problema → Evidência → Decisão.</h2>
+                    <p class="cs-text cs-mt-m">Em vez de telas bonitas, mostro a lógica por trás de cada escolha.</p>
+
+                    <!-- Decisão 01 -->
+                    <div class="cs-decision cs-mt-l">
+                        <div class="cs-decision-head">
+                            <span class="cs-decision-num">01</span>
+                            <div>
+                                <p class="cs-card-title cs-card-title-l">Tornar os produtos exploráveis</p>
+                                <p class="cs-kicker cs-mt-xxs">A evidência central do case</p>
+                            </div>
+                        </div>
+                        <div class="cs-grid cs-grid-flat cs-cols-3">
+                            <div><p class="cs-label">Problema</p><p class="cs-small cs-mt-xs">Cards com apenas o nome, sem deixar claro o que o usuário encontraria ao acessar.</p></div>
+                            <div><p class="cs-label">Evidência</p><p class="cs-small cs-mt-xs">Na análise de comportamento com Microsoft Clarity, usuários clicavam repetidamente nos cards esperando mais informação.</p></div>
+                            <div><p class="cs-label">Decisão</p><p class="cs-small cs-mt-xs">Transformar os cards em elementos mais informativos e acionáveis.</p></div>
+                        </div>
+                        <div class="cs-grid cs-grid-flat cs-cols-2">
+                            <div class="cs-before">
+                                <p class="cs-label">Antes</p>
+                                <img class="cs-shot" src="assets/images/Refuturiza/case/card-antes.jpg" alt="Card de produto anterior, com apenas o nome do produto" width="1008" height="656" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </div>
+                            <div class="cs-after">
+                                <p class="cs-label cs-label-accent">Depois</p>
+                                <img class="cs-shot" src="assets/images/Refuturiza/case/card-depois.jpg" alt="Card de produto redesenhado, com descrição, informações e chamada para ação" width="1008" height="656" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </div>
+                        </div>
+                        <div class="cs-decision-foot">
+                            <p class="cs-body cs-measure">Os produtos passaram a ter uma apresentação mais clara dentro da Home, reduzindo a distância entre “o que é isso?” e “quero conhecer esse produto”.</p>
+                        </div>
+                    </div>
+
+                    <!-- Decisões 02 e 03 -->
+                    <div class="cs-split cs-mt-s">
+                        <div class="cs-card">
+                            <div class="cs-card-head"><span class="cs-card-num">02</span><p class="cs-card-title">Reorganizar a Home</p></div>
+                            <p class="cs-small cs-mt-s">Antes: banner → produtos → preço → ferramenta de RH → footer. A Home deixou de funcionar apenas como apresentação institucional e passou a atuar como porta de entrada para o ecossistema.</p>
+                            <div class="cs-flow cs-mt-s">
+                                <span class="cs-step">Banner</span><span class="cs-arrow">→</span>
+                                <span class="cs-step">Produtos</span><span class="cs-arrow">→</span>
+                                <span class="cs-step">Trilhas</span><span class="cs-arrow">→</span>
+                                <span class="cs-step">Planos</span><span class="cs-arrow">→</span>
+                                <span class="cs-step">Campus</span><span class="cs-arrow">→</span>
+                                <span class="cs-step cs-step-accent">Vagas</span><span class="cs-arrow">→</span>
+                                <span class="cs-step">RH</span><span class="cs-arrow">→</span>
+                                <span class="cs-step">Blog</span>
+                            </div>
+                        </div>
+                        <div class="cs-card">
+                            <div class="cs-card-head"><span class="cs-card-num">03</span><p class="cs-card-title">Dar autonomia ao Marketing</p></div>
+                            <p class="cs-small cs-mt-s">Alterações de banners, textos, imagens e links dependiam do fluxo com Development. O time já tinha um backoffice usado por outros produtos — trabalhei junto ao Development para estruturar a Home integrada a ele.</p>
+                            <div class="cs-pills cs-mt-s">
+                                <span class="cs-pill">Banners</span><span class="cs-pill">Textos</span><span class="cs-pill">Imagens</span><span class="cs-pill">Links</span><span class="cs-pill">Cards</span><span class="cs-pill">CTAs</span><span class="cs-pill">Menus</span><span class="cs-pill">Seções</span><span class="cs-pill">Ordem das seções</span>
+                            </div>
+                            <p class="cs-xsmall cs-mt-s">Dentro das possibilidades definidas para o produto — o conteúdo evolui sem exigir uma nova alteração de código para cada atualização prevista no escopo do backoffice.</p>
+                        </div>
+                    </div>
+
+                    <!-- Decisão 04 -->
+                    <div class="cs-card cs-mt-s">
+                        <div class="cs-card-head"><span class="cs-card-num">04</span><p class="cs-card-title">Criar uma base de interface reutilizável</p></div>
+                        <p class="cs-small cs-mt-s cs-measure">A experiência precisava crescer sem gerar novas inconsistências a cada página ou produto. Evoluí o Design System para além de cores e tipografia.</p>
+                        <div class="cs-split cs-split-tight cs-mt-m">
+                            <div><p class="cs-label">Fundamentos</p><p class="cs-small cs-mt-xs">Cores · tipografia · grid · espaçamento · tokens</p></div>
+                            <div><p class="cs-label">Componentes</p><p class="cs-small cs-mt-xs">Botões · inputs · cards · menus · modais · badges · estados · componentes responsivos</p></div>
+                        </div>
+                        <p class="cs-quote cs-mt-m">O Design System não foi tratado apenas como biblioteca visual, mas como uma forma de organizar decisões reutilizáveis em diferentes partes do ecossistema.</p>
+                    </div>
+                </section>
+
+                <!-- 04 SOLUÇÃO -->
+                <section class="cs-panel" data-panel="solucao">
+                    <p class="cs-eyebrow">04 · Solução</p>
+                    <h2 class="cs-h2">Uma base de produto, não só telas.</h2>
+
+                    <div class="cs-split cs-split-tight cs-mt-l">
+                        <figure class="cs-media">
+                            <img class="cs-img-top" src="assets/images/Refuturiza/home.png" alt="Nova Home apresentando o ecossistema de produtos" width="1024" height="704" onclick="openImageModal(this.src, this.alt)">
+                            <figcaption><p class="cs-label">Home</p><p class="cs-small cs-mt-xs">Nova hierarquia e apresentação dos produtos.</p></figcaption>
+                        </figure>
+                        <figure class="cs-media">
+                            <img class="cs-img-top" src="assets/images/Refuturiza/chekout.png" alt="Página de produto com informação mais clara" width="1024" height="704" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <figcaption><p class="cs-label">Produto</p><p class="cs-small cs-mt-xs">A informação ficou mais clara e acionável.</p></figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Jornada (componente cs-journey) -->
+                    <p class="cs-label cs-block">Jornada do usuário</p>
+                    <div class="cs-journey cs-mt-s">
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/Refuturiza/home.png" alt="Home da Refuturiza" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Home</p>
+                            <p class="cs-small cs-mt-xxs">Conhece o ecossistema de produtos.</p>
+                        </div>
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/Refuturiza/cadastro de usuário.png" alt="Cadastro de usuário" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Cadastro</p>
+                            <p class="cs-small cs-mt-xxs">Cria sua conta na plataforma.</p>
+                        </div>
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/Refuturiza/chekout.png" alt="Checkout do plano" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Checkout</p>
+                            <p class="cs-small cs-mt-xxs">Escolhe o plano e finaliza a matrícula.</p>
+                        </div>
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/Refuturiza/dashboard.png" alt="Área logada com vagas, cursos e trilhas" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Área logada</p>
+                            <p class="cs-small cs-mt-xxs">Acessa vagas, cursos e trilhas.</p>
+                        </div>
+                        <div class="cs-journey-step cs-journey-last">
+                            <img class="cs-shot cs-img-top" src="assets/images/Refuturiza/editar perfil titular.png" alt="Perfil do titular" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Perfil</p>
+                            <p class="cs-small cs-mt-xxs">Gerencia dados, pagamentos e dependentes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Design System -->
+                    <div class="cs-card cs-mt-s">
+                        <p class="cs-label">Design System · de identidade a sistema de produto</p>
+                        <div class="cs-ds-rows">
+                            <div class="cs-ds-row">
+                                <span class="cs-ds-key">Tokens</span>
+                                <div class="cs-swatches">
+                                    <span class="cs-swatch" style="background: var(--white-100)"></span>
+                                    <span class="cs-swatch" style="background: var(--purple-600)"></span>
+                                    <span class="cs-swatch" style="background: var(--purple-200)"></span>
+                                    <span class="cs-swatch" style="background: var(--gray-400)"></span>
+                                    <span class="cs-swatch" style="background: var(--black-950)"></span>
+                                </div>
+                            </div>
+                            <div class="cs-ds-row">
+                                <span class="cs-ds-key">Tipografia</span>
+                                <p class="cs-ds-type">Aa <span>Aa</span></p>
+                            </div>
+                            <div class="cs-ds-row">
+                                <span class="cs-ds-key">Componentes</span>
+                                <div class="cs-ds-components">
+                                    <span class="cs-mini-primary">Primário</span>
+                                    <span class="cs-mini-secondary">Secundário</span>
+                                    <span class="cs-mini-input">Input</span>
+                                    <span class="cs-mini-badge">Badge</span>
+                                </div>
+                            </div>
+                            <div class="cs-ds-row">
+                                <span class="cs-ds-key">Responsivo</span>
+                                <div class="cs-devices cs-devices-start">
+                                    <div class="cs-device"><span class="cs-device-frame cs-device-mobile cs-device-shot"><img src="assets/images/Refuturiza/home.png" alt="" loading="lazy"></span><p>Mobile</p></div>
+                                    <span class="cs-arrow">→</span>
+                                    <div class="cs-device"><span class="cs-device-frame cs-device-tablet cs-device-shot"><img src="assets/images/Refuturiza/home.png" alt="" loading="lazy"></span><p>Tablet</p></div>
+                                    <span class="cs-arrow">→</span>
+                                    <div class="cs-device"><span class="cs-device-frame cs-device-desktop cs-device-shot"><img src="assets/images/Refuturiza/home.png" alt="" loading="lazy"></span><p>Desktop</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="cs-small cs-mt-m cs-measure">Estrutura: Brand → Tokens → Componentes → Padrões → Interfaces. As decisões de responsividade consideraram hierarquia, distribuição de conteúdo, navegação, cards, espaçamento, CTAs e legibilidade — não apenas reduzir o tamanho das telas.</p>
+                    </div>
+
+                    <!-- Backoffice -->
+                    <div class="cs-card cs-card-muted cs-mt-s">
+                        <p class="cs-label">Backoffice</p>
+                        <div class="cs-flow cs-flow-l cs-mt-s">
+                            <span class="cs-step cs-step-box">Conteúdo</span><span class="cs-arrow">→</span>
+                            <span class="cs-step cs-step-box">Backoffice</span><span class="cs-arrow">→</span>
+                            <span class="cs-step cs-step-primary">Interface</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 05 DESIGN × TECH -->
+                <section class="cs-panel" data-panel="tech">
+                    <p class="cs-eyebrow">05 · Design × Tech</p>
+                    <h2 class="cs-h2">O trabalho não terminou no Figma.</h2>
+
+                    <div class="cs-split cs-mt-l">
+                        <div>
+                            <p class="cs-label">Fluxo</p>
+                            <div class="cs-vflow cs-mt-s">
+                                <span>Discovery</span>
+                                <span>Figma</span>
+                                <span class="strong">Handoff</span>
+                                <span class="strong">Development</span>
+                                <span>Validação</span>
+                                <span>Design QA</span>
+                                <span class="final">Produto</span>
+                            </div>
+                        </div>
+                        <div class="cs-stack">
+                            <div class="cs-card cs-card-muted">
+                                <p class="cs-label">Design QA</p>
+                                <p class="cs-small cs-mt-xs">Após a implementação, acompanhei a interface para verificar consistência visual, componentes, espaçamentos, hierarquia, comportamento responsivo, estados e divergências entre design e implementação. Quando uma adaptação técnica fazia sentido, ela era discutida com Development em vez de exigir reprodução literal do arquivo.</p>
+                                <p class="cs-quote cs-mt-s">Meu papel não terminou no handoff. Acompanhei a implementação para garantir que a intenção de design fosse preservada no produto real.</p>
+                            </div>
+                            <div>
+                                <p class="cs-label">O que forneci durante a implementação</p>
+                                <div class="cs-tags cs-mt-xs">
+                                    <span class="cs-tag cs-tag-plain">Layouts</span><span class="cs-tag cs-tag-plain">Componentes</span><span class="cs-tag cs-tag-plain">Especificações</span><span class="cs-tag cs-tag-plain">Estados</span><span class="cs-tag cs-tag-plain">Comportamentos</span><span class="cs-tag cs-tag-plain">Assets</span><span class="cs-tag cs-tag-plain">Documentação</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 06 RESULTADO -->
+                <section class="cs-panel" data-panel="resultado">
+                    <p class="cs-eyebrow">06 · Resultado</p>
+                    <h2 class="cs-h2">O que mudou.</h2>
+
+                    <div class="cs-grid cs-cols-2 cs-mt-l">
+                        <div><p class="cs-cell-title">Experiência</p><p class="cs-small cs-mt-xs">A Home passou a apresentar o ecossistema de produtos de maneira mais estruturada e compreensível.</p></div>
+                        <div><p class="cs-cell-title">Descoberta</p><p class="cs-small cs-mt-xs">Os produtos passaram a ter uma apresentação mais informativa e acionável.</p></div>
+                        <div><p class="cs-cell-title">Sistema</p><p class="cs-small cs-mt-xs">O Design System criou uma base reutilizável para evolução da interface.</p></div>
+                        <div><p class="cs-cell-title">Operação</p><p class="cs-small cs-mt-xs">A integração com o backoffice permitiu que Marketing atualizasse conteúdos dentro das possibilidades definidas para o sistema.</p></div>
+                    </div>
+
+                    <div class="cs-grid cs-cols-3 cs-mt-s">
+                        <div>
+                            <p class="cs-status cs-status-live"><span class="cs-dot"></span>Em produção</p>
+                            <ul class="cs-list">
+                                <li>Home redesenhada</li>
+                                <li>Integração com backoffice</li>
+                                <li>Nova base de Design System</li>
+                                <li>Estrutura responsiva</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="cs-status cs-status-progress"><span class="cs-dot"></span>Em evolução</p>
+                            <ul class="cs-list">
+                                <li>Área logada</li>
+                                <li>Vagas já disponíveis</li>
+                                <li>Demais integrações conforme dependências dos parceiros</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="cs-status cs-status-future"><span class="cs-dot"></span>Futuro</p>
+                            <ul class="cs-list">
+                                <li>Cursos integrados</li>
+                                <li>Videoaulas</li>
+                                <li>Gamificação / evolução da aprendizagem</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="cs-body cs-measure-wide cs-mt-l">O projeto estabeleceu uma nova base de experiência e de interface para a evolução do ecossistema digital da Refuturiza. A principal transformação foi conectar uma experiência mais clara para o usuário a uma estrutura mais flexível para os times que mantêm o produto.</p>
+
+                    <div class="cs-learn cs-block">
+                        <div>
+                            <p class="cs-learn-num">01</p>
+                            <p class="cs-learn-title">Pesquisa muda a direção do design</p>
+                            <p class="cs-small cs-mt-xs">Os problemas mais relevantes não estavam na aparência, mas na forma como informação e produtos eram apresentados.</p>
+                        </div>
+                        <div>
+                            <p class="cs-learn-num">02</p>
+                            <p class="cs-learn-title">Design System é infraestrutura</p>
+                            <p class="cs-small cs-mt-xs">Um sistema eficiente apoia decisões e a evolução do produto, não apenas organiza componentes.</p>
+                        </div>
+                        <div>
+                            <p class="cs-learn-num">03</p>
+                            <p class="cs-learn-title">Design não termina no handoff</p>
+                            <p class="cs-small cs-mt-xs">Trabalhar próximo de Development equilibra intenção de experiência e viabilidade técnica.</p>
+                        </div>
+                    </div>
+
+                    <p class="cs-disclaimer cs-block">Não havia uma linha de base confiável de métricas históricas que permitisse atribuir ao redesign um impacto quantitativo. Por isso, o case apresenta os resultados observáveis da transformação e não estima métricas que não foram medidas.</p>
+
+                    <!-- Fechamento -->
+                    <div class="cs-closing">
+                        <p class="cs-closing-eyebrow">Fechamento</p>
+                        <p class="cs-closing-title">De uma Home desatualizada para uma base de produto estruturada.</p>
+                        <p class="cs-closing-sub">Product Design · UX Research · Design System · Design × Tech</p>
+                        <button type="button" class="btn-primary cs-mt-l" onclick="goToContact()">Vamos conversar</button>
+                    </div>
+                </section>
+            </main>
         </div>
     </div>
 
     <!-- ===== SOULCODE PAGE ===== -->
-    <div class="page" id="soulcode-page">
-        <div class="container">
-            <div class="page-header">
-                <div class="page-header-title">
-                    <h1>SoulCode Academy</h1>
-                    <p>LMS Redesign · Mobile First + Gamificação</p>
+    <div class="page cs-page" id="soulcode-page">
+        <div class="cs-layout">
+            <!-- SIDEBAR -->
+            <aside class="cs-sidebar">
+                <button class="btn-secondary" type="button" onclick="navigateToCase('home')">← Voltar</button>
+                <div class="cs-brand">
+                    <p class="cs-kicker">Dossiê de projeto</p>
+                    <p class="cs-brand-name">SoulCode Academy</p>
+                    <div class="cs-brand-rule"></div>
                 </div>
-                <button class="btn-secondary" onclick="navigateToCase('home')">← Voltar</button>
-            </div>
-
-            <div class="modal-section">
-                <h3 class="section-heading">Contexto</h3>
-                <div class="section-content">
-                    <p>LMS desatualizado com template genérico. Alunos reclamavam de lentidão, informações dispersas, falta de intuitividade. Escola necessitava de gamificação forte para manter engajamento, especialmente na vertente de games. Conexões lentas em regiões atendidas exigiam otimização severa.</p>
+                <nav class="cs-nav" aria-label="Seções do case">
+                    <p class="cs-kicker">Índice</p>
+                    <ul>
+                        <li><button type="button" class="cs-nav-btn active" data-tab="contexto" aria-current="true" onclick="showCaseTab('soulcode','contexto')"><span class="cs-nav-num">01</span><span>Contexto</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="discovery" onclick="showCaseTab('soulcode','discovery')"><span class="cs-nav-num">02</span><span>Discovery</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="decisoes" onclick="showCaseTab('soulcode','decisoes')"><span class="cs-nav-num">03</span><span>Decisões</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="experiencia" onclick="showCaseTab('soulcode','experiencia')"><span class="cs-nav-num">04</span><span>Experiência</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="tech" onclick="showCaseTab('soulcode','tech')"><span class="cs-nav-num">05</span><span>Design × Tech</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="resultado" onclick="showCaseTab('soulcode','resultado')"><span class="cs-nav-num">06</span><span>Resultado</span></button></li>
+                    </ul>
+                </nav>
+                <div class="cs-sidebar-foot">
+                    <p class="cs-kicker">Colaboração</p>
+                    <p class="cs-sidebar-note">Development · Professores · Alunos · Stakeholders</p>
                 </div>
-            </div>
+            </aside>
 
-            <div class="modal-section">
-                <h3 class="section-heading">Abordagem</h3>
-                <ul class="list-items">
-                    <li>Coleta de depoimentos de alunos, professores e time técnico</li>
-                    <li>Estratégia Mobile First — 78% dos acessos eram por celular</li>
-                    <li>Adoção de Material Design 3 como foundation do sistema</li>
-                    <li>Adaptação completa à identidade visual da marca SoulCode</li>
-                    <li>Criação de componentes customizados: badges, progress, achievement cards</li>
-                </ul>
-            </div>
-
-            <div class="modal-section">
-                <h3 class="section-heading">Resultado</h3>
-                <div class="section-content">
-                    <p>Plataforma completamente redesenhada com foco em performance e usabilidade móvel. Design System Material 3 customizado permitiu desenvolvimento ágil. Interface intuitiva reduziu curva de aprendizado dos alunos. Gamificação integrada tornou-se o principal driver de engajamento e retenção.</p>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3 class="section-heading">Principais Telas</h3>
-                <div class="screens-grid">
-                    <div class="screen-card" onclick="openImageModal('assets/images/SoulCode/Area logada Carreiras.png', 'Dashboard')">
-                        <div class="screen-image">
-                            <img src="assets/images/SoulCode/Area logada Carreiras.png" alt="Dashboard do SoulCode Academy mostrando cursos, pontos e ranking de alunos">
+            <!-- MAIN -->
+            <main class="cs-main">
+                <!-- barra mobile -->
+                <div class="cs-mobilebar">
+                    <div class="cs-mobilebar-top">
+                        <div class="cs-mobile-title">
+                            <button class="cs-back-mini" type="button" aria-label="Voltar" onclick="navigateToCase('home')">←</button>
+                            <span>SoulCode Academy</span>
                         </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>LMS</span>
-                            </div>
-                            <div class="screen-name">Dashboard</div>
-                            <p class="screen-description">Visão centralizada com cursos, pontos e ranking.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Cards</span>
-                                <span class="screen-tag">Rank</span>
-                            </div>
-                        </div>
+                        <p class="cs-kicker">Dossiê · 06 seções</p>
                     </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/SoulCode/Página do Curso.png', 'Conteúdo')">
-                        <div class="screen-image">
-                            <img src="assets/images/SoulCode/Página do curso.png" alt="Página de curso no SoulCode mostrando lista de módulos com status e indicador de progresso">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>LMS</span>
-                            </div>
-                            <div class="screen-name">Conteúdo</div>
-                            <p class="screen-description">Listagem de módulos com status e progresso.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Modules</span>
-                                <span class="screen-tag">Progress</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/SoulCode/Página da Aula.png', 'Aula')">
-                        <div class="screen-image">
-                            <img src="assets/images/SoulCode/Página da Aula.png" alt="Interface de aula no SoulCode com player de vídeo, sidebar de navegação e ranking de alunos">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>LMS</span>
-                            </div>
-                            <div class="screen-name">Aula</div>
-                            <p class="screen-description">Player de vídeo com sidebar e ranking.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Video</span>
-                                <span class="screen-tag">Rank</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/SoulCode/Ranking.png', 'Ranking')">
-                        <div class="screen-image">
-                            <img src="assets/images/SoulCode/Ranking.png" alt="Sistema de gamificação do SoulCode mostrando níveis de evolução, XP e badges conquistadas">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>LMS</span>
-                            </div>
-                            <div class="screen-name">Gamificação</div>
-                            <p class="screen-description">Níveis de evolução, XP e badges.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Levels</span>
-                                <span class="screen-tag">XP</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/SoulCode/Perfil.png', 'Perfil')">
-                        <div class="screen-image">
-                            <img src="assets/images/SoulCode/Perfil.png" alt="Perfil do aluno no SoulCode mostrando avatar, nível, frequência e certificados conquistados">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>LMS</span>
-                            </div>
-                            <div class="screen-name">Perfil</div>
-                            <p class="screen-description">Avatar, nível, frequência e certificados.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Avatar</span>
-                                <span class="screen-tag">Certs</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card"onclick="openImageModal('assets/images/SoulCode/Design System.png', 'Design System')">
-                        <div class="screen-image">
-                            <img src="assets/images/SoulCode/Design System.png" alt="design system soulcode academy">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>Design System</span>
-                            </div>
-                            <div class="screen-name">Design System</div>
-                            <p class="screen-description">Paleta de cores e componentes customizados.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">DS</span>
-                                <span class="screen-tag">Material 3</span>
-                            </div>
-                        </div>
+                    <div class="cs-tabs-scroll">
+                        <button type="button" class="cs-chip-tab active" data-tab="contexto" onclick="showCaseTab('soulcode','contexto')">01 Contexto</button>
+                        <button type="button" class="cs-chip-tab" data-tab="discovery" onclick="showCaseTab('soulcode','discovery')">02 Discovery</button>
+                        <button type="button" class="cs-chip-tab" data-tab="decisoes" onclick="showCaseTab('soulcode','decisoes')">03 Decisões</button>
+                        <button type="button" class="cs-chip-tab" data-tab="experiencia" onclick="showCaseTab('soulcode','experiencia')">04 Experiência</button>
+                        <button type="button" class="cs-chip-tab" data-tab="tech" onclick="showCaseTab('soulcode','tech')">05 Design × Tech</button>
+                        <button type="button" class="cs-chip-tab" data-tab="resultado" onclick="showCaseTab('soulcode','resultado')">06 Resultado</button>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal-section">
-                <h3 class="section-heading">Destaques</h3>
-                <div class="metrics-grid">
-                    <div class="metric">
-                        <div class="metric-label">Estratégia</div>
-                        <div class="metric-value">Mobile</div>
+                <!-- TAB 01 — CONTEXTO -->
+                <section class="cs-panel active" data-panel="contexto">
+                    <p class="cs-eyebrow">01 · Contexto</p>
+                    <h1 class="cs-h1 cs-h1-long">SoulCode Academy</h1>
+                    <p class="cs-subtitle">Redesign de um LMS para uma experiência de aprendizagem Mobile First</p>
+                    <p class="cs-lead cs-mt-s">Reestruturação da experiência de aprendizagem da SoulCode, partindo de uma plataforma baseada em template para uma experiência própria, responsiva e preparada para evolução.</p>
+
+                    <div class="cs-split cs-mt-l">
+                        <div>
+                            <p class="cs-label">Meu papel</p>
+                            <p class="cs-body cs-mt-xs">UX/UI Designer responsável pelo projeto, conduzindo discovery, experiência, prototipação, Design System e acompanhamento da implementação.</p>
+                        </div>
+                        <div>
+                            <p class="cs-label">Colaboração</p>
+                            <p class="cs-body cs-mt-xs">Development · Professores · Alunos · Stakeholders</p>
+                            <div class="cs-tags cs-mt-s">
+                                <span class="cs-tag">Product Design</span>
+                                <span class="cs-tag">UX Research</span>
+                                <span class="cs-tag">Mobile First</span>
+                                <span class="cs-tag">Design System</span>
+                                <span class="cs-tag cs-tag-accent">Design × Tech</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="metric">
-                        <div class="metric-label">Design System</div>
-                        <div class="metric-value">Material 3</div>
+
+                    <!-- 01 -->
+                    <div class="cs-block">
+                        <p class="cs-label">01 — O problema</p>
+                        <h2 class="cs-h3">O LMS não atendia mais ao contexto do produto</h2>
+                        <p class="cs-text cs-mt-s">Quando entrei no projeto, a plataforma utilizava um template que não correspondia às necessidades da SoulCode e de seus alunos.</p>
+                        <p class="cs-text cs-mt-s">Entre os principais problemas relatados estavam:</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div class="cs-problem"><span class="cs-num">01</span><p>problemas de carregamento;</p></div>
+                            <div class="cs-problem"><span class="cs-num">02</span><p>informações pouco claras;</p></div>
+                            <div class="cs-problem"><span class="cs-num">03</span><p>experiência pouco intuitiva;</p></div>
+                            <div class="cs-problem"><span class="cs-num">04</span><p>estrutura limitada pelo template existente;</p></div>
+                            <div class="cs-problem"><span class="cs-num">05</span><p>necessidade de uma experiência mais adequada ao uso mobile;</p></div>
+                            <div class="cs-problem"><span class="cs-num">06</span><p>necessidade de incorporar gamificação ao contexto de aprendizagem.</p></div>
+                        </div>
+
+                        <div class="cs-card cs-card-muted cs-mt-m">
+                            <p class="cs-label cs-label-accent">O contexto importava</p>
+                            <div class="cs-stack cs-stack-tight cs-mt-s">
+                                <p class="cs-small">A SoulCode tem como missão qualificar pessoas não óbvias para o mercado de tecnologia, desenvolver habilidades digitais e apoiar a geração de renda.</p>
+                                <p class="cs-small">A escola também possuía uma atuação relacionada a Games, com presença de um público jovem.</p>
+                                <p class="cs-small">Além disso, havia projetos em regiões onde o acesso a computadores podia ser limitado.</p>
+                            </div>
+                        </div>
+
+                        <p class="cs-label cs-mt-m">O desafio</p>
+                        <p class="cs-quote cs-mt-xs">Como criar uma experiência de aprendizagem mais simples de acessar, confortável de usar no celular e capaz de evoluir junto com o produto?</p>
                     </div>
-                    <div class="metric">
-                        <div class="metric-label">Performance</div>
-                        <div class="metric-value">+</div>
+
+                    <!-- 02 -->
+                    <div class="cs-block">
+                        <p class="cs-label">02 — Meu papel</p>
+                        <h2 class="cs-h3">Eu era o único responsável por UX no projeto.</h2>
+                        <p class="cs-text cs-mt-s">Minha atuação envolveu:</p>
+                        <div class="cs-grid cs-cols-3 cs-mt-s">
+                            <div><p class="cs-cell-title cs-cell-title-accent">Discovery</p><p class="cs-small cs-mt-xs">Coleta de relatos de alunos e entendimento das necessidades de professores e stakeholders.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">UX/UI</p><p class="cs-small cs-mt-xs">Estruturação da experiência, interfaces, prototipação e responsividade.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Design System</p><p class="cs-small cs-mt-xs">Adaptação do Material 3 à identidade da SoulCode e expansão da foundation para as necessidades do produto.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Design × Tech</p><p class="cs-small cs-mt-xs">Discussão de solução com Development, handoff e acompanhamento da implementação.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Design QA</p><p class="cs-small cs-mt-xs">Validação das telas e funcionalidades implementadas.</p></div>
+                        </div>
+                        <p class="cs-note cs-mt-m">Minha responsabilidade estava concentrada em Design, mas o trabalho acontecia diariamente em conjunto com Development para transformar as decisões de experiência em uma solução implementável.</p>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="modal-section">
-                <h3 class="section-heading">O Que Aprendi</h3>
-                <ul class="list-items">
-                    <li>Mobile First não é apenas responsive — é uma estratégia de priorizações</li>
-                    <li>Gamificação bem executada é poderosa, mas precisa de consistência visual</li>
-                    <li>Design system é fundamental para escalabilidade e autonomia do time dev</li>
-                </ul>
-            </div>
+                <!-- TAB 02 — DISCOVERY -->
+                <section class="cs-panel" data-panel="discovery">
+                    <p class="cs-eyebrow">02 · Discovery</p>
 
-            <div class="case-tags">
-                <span class="case-tag">Product Design</span>
-                <span class="case-tag">Mobile First</span>
-                <span class="case-tag">Design System</span>
-                <span class="case-tag">Gamificação</span>
-                <span class="case-tag">Material Design 3</span>
-            </div>
-        </div>
+                    <!-- 03 -->
+                    <p class="cs-label cs-mt-l">03 — Antes de desenhar, fomos ouvir</p>
+                    <h2 class="cs-h2 cs-mt-xs">O problema precisava ser entendido por quem utilizava e construía o produto.</h2>
+                    <p class="cs-text cs-mt-m">Minha primeira etapa foi reunir o máximo possível de relatos dos alunos sobre a experiência com o LMS, incluindo suas percepções e dificuldades.</p>
+                    <p class="cs-text cs-mt-s">Também considerei a perspectiva de:</p>
+                    <div class="cs-grid cs-cols-2 cs-mt-s">
+                        <div><p class="cs-cell-title">Alunos</p><p class="cs-small cs-mt-xs">Relatos sobre a experiência real de uso da plataforma.</p></div>
+                        <div><p class="cs-cell-title">Professores</p><p class="cs-small cs-mt-xs">Necessidades e problemas observados durante o processo de aprendizagem.</p></div>
+                        <div><p class="cs-cell-title">Development</p><p class="cs-small cs-mt-xs">Histórico de melhorias solicitadas por professores e stakeholders e discussão das possibilidades técnicas.</p></div>
+                        <div><p class="cs-cell-title">Stakeholders</p><p class="cs-small cs-mt-xs">Necessidades e expectativas relacionadas à evolução do produto.</p></div>
+                    </div>
+                    <p class="cs-label cs-mt-m">O objetivo era cruzar diferentes perspectivas:</p>
+                    <div class="cs-flow cs-flow-l cs-mt-xs">
+                        <span class="cs-step cs-step-box">quem aprende</span><span class="cs-arrow">→</span>
+                        <span class="cs-step cs-step-box">quem ensina</span><span class="cs-arrow">→</span>
+                        <span class="cs-step cs-step-primary">quem constrói</span>
+                    </div>
 
-        <div class="footer">
-            <div class="footer-container">
-                <div class="footer-name">Douglas Pereira</div>
-                <p class="footer-title">Product Designer — UX/UI · Design Systems · UX Engineering</p>
-            </div>
+                    <!-- 04 -->
+                    <div class="cs-block">
+                        <p class="cs-label">04 — O que precisávamos entender</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div><p class="cs-cell-title">Experiência</p><p class="cs-small cs-mt-xs">Onde os alunos encontravam dificuldade para utilizar o LMS?</p></div>
+                            <div><p class="cs-cell-title">Clareza</p><p class="cs-small cs-mt-xs">Como organizar informações de cursos, conteúdos e progresso de forma compreensível?</p></div>
+                            <div><p class="cs-cell-title">Acesso</p><p class="cs-small cs-mt-xs">Como garantir uma experiência confortável em dispositivos móveis e em diferentes contextos de acesso?</p></div>
+                            <div><p class="cs-cell-title">Evolução</p><p class="cs-small cs-mt-xs">Como construir uma base capaz de receber novas funcionalidades sem continuar presa ao template anterior?</p></div>
+                        </div>
+                    </div>
+
+                    <!-- 05 -->
+                    <div class="cs-block">
+                        <p class="cs-label">05 — Dos relatos aos direcionadores</p>
+                        <div class="cs-drivers cs-mt-s">
+                            <div class="cs-driver"><p class="cs-driver-from">Template limitado</p><div><p class="cs-label cs-label-accent">Necessidade</p><p class="cs-small cs-mt-xxs">Uma experiência própria para o contexto da SoulCode.</p></div></div>
+                            <div class="cs-driver-arrow" aria-hidden="true">↓</div>
+                            <div class="cs-driver"><p class="cs-driver-from">Experiência pouco intuitiva</p><div><p class="cs-label cs-label-accent">Necessidade</p><p class="cs-small cs-mt-xxs">Organizar conteúdo e ações de maneira mais clara.</p></div></div>
+                            <div class="cs-driver-arrow" aria-hidden="true">↓</div>
+                            <div class="cs-driver"><p class="cs-driver-from">Uso em dispositivos móveis</p><div><p class="cs-label cs-label-accent">Necessidade</p><p class="cs-small cs-mt-xxs">Priorizar Mobile First e simplicidade de interação.</p></div></div>
+                            <div class="cs-driver-arrow" aria-hidden="true">↓</div>
+                            <div class="cs-driver"><p class="cs-driver-from">Contextos com acesso limitado a computadores</p><div><p class="cs-label cs-label-accent">Necessidade</p><p class="cs-small cs-mt-xxs">Uma experiência leve e confortável para diferentes condições de acesso.</p></div></div>
+                            <div class="cs-driver-arrow" aria-hidden="true">↓</div>
+                            <div class="cs-driver"><p class="cs-driver-from">Gamificação como parte da proposta</p><div><p class="cs-label cs-label-accent">Necessidade</p><p class="cs-small cs-mt-xxs">Incorporar mecanismos de evolução à experiência de aprendizagem de forma coerente com o produto.</p></div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 03 — DECISÕES -->
+                <section class="cs-panel" data-panel="decisoes">
+                    <p class="cs-eyebrow">03 · Decisões</p>
+
+                    <!-- 06 -->
+                    <p class="cs-label cs-mt-l">06 — Mobile First</p>
+                    <h2 class="cs-h2 cs-mt-xs">Mobile First não foi apenas uma escolha visual.</h2>
+                    <p class="cs-text cs-mt-m">A decisão veio do contexto de uso:</p>
+                    <ul class="list-items cs-mt-s">
+                        <li>maioria dos acessos por celular;</li>
+                        <li>presença de um público jovem;</li>
+                        <li>projetos em regiões onde o acesso a computadores podia ser limitado;</li>
+                        <li>necessidade de permitir estudo com praticidade.</li>
+                    </ul>
+                    <div class="cs-callout cs-mt-s">
+                        <p class="cs-label cs-label-accent">Decisão</p>
+                        <p class="cs-body cs-mt-xs">Projetar a experiência começando pelo mobile e expandindo para telas maiores.</p>
+                    </div>
+                    <p class="cs-label cs-mt-m">Princípios</p>
+                    <div class="cs-grid cs-cols-2 cs-mt-s">
+                        <div><p class="cs-cell-title">Acesso</p><p class="cs-small cs-mt-xs">A experiência precisava funcionar onde o aluno estivesse.</p></div>
+                        <div><p class="cs-cell-title">Simplicidade</p><p class="cs-small cs-mt-xs">Reduzir complexidade desnecessária.</p></div>
+                        <div><p class="cs-cell-title">Legibilidade</p><p class="cs-small cs-mt-xs">Garantir leitura confortável em telas menores.</p></div>
+                        <div><p class="cs-cell-title">Performance</p><p class="cs-small cs-mt-xs">Priorizar uma experiência de carregamento adequada aos diferentes contextos de acesso.</p></div>
+                    </div>
+                    <div class="cs-card cs-card-muted cs-mt-s">
+                        <div class="cs-devices">
+                            <div class="cs-device"><span class="cs-device-frame cs-device-mobile"></span><p>Mobile</p></div>
+                            <span class="cs-arrow">→</span>
+                            <div class="cs-device"><span class="cs-device-frame cs-device-tablet"></span><p>Tablet</p></div>
+                            <span class="cs-arrow">→</span>
+                            <div class="cs-device"><span class="cs-device-frame cs-device-desktop"></span><p>Desktop</p></div>
+                        </div>
+                    </div>
+
+                    <!-- 07 -->
+                    <div class="cs-block">
+                        <p class="cs-label">07 — Uma experiência própria para o LMS</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div><p class="cs-label">Problema</p><p class="cs-small cs-mt-xs">O template existente limitava a experiência e não refletia as necessidades específicas da SoulCode.</p></div>
+                            <div><p class="cs-label cs-label-accent">Decisão</p><p class="cs-small cs-mt-xs">Deixar de tratar o LMS como uma simples adaptação de template e construir uma experiência própria baseada nas necessidades do produto.</p></div>
+                        </div>
+                        <p class="cs-label cs-mt-m">O que isso significou</p>
+                        <div class="cs-pills cs-mt-xs">
+                            <span class="cs-pill">nova linguagem visual;</span><span class="cs-pill">nova estrutura de interface;</span><span class="cs-pill">componentes próprios;</span><span class="cs-pill">adaptação para mobile;</span><span class="cs-pill">organização da experiência de aprendizagem;</span><span class="cs-pill">preparação para novas funcionalidades.</span>
+                        </div>
+                        <p class="cs-quote cs-mt-m">O objetivo não era apenas trocar o visual do LMS, mas criar uma base de produto que pudesse evoluir além das limitações do template anterior.</p>
+                    </div>
+
+                    <!-- 08 -->
+                    <div class="cs-block">
+                        <p class="cs-label">08 — Material 3 como foundation</p>
+                        <h2 class="cs-h3">Não começamos do zero.</h2>
+                        <p class="cs-text cs-mt-s">Com a nova identidade visual da SoulCode sendo desenvolvida em paralelo, foi necessário estabelecer uma base consistente para o produto.</p>
+                        <p class="cs-text cs-mt-s">A decisão foi utilizar:</p>
+                        <div class="cs-highlight cs-mt-s">
+                            <p class="cs-highlight-title">Material Design 3</p>
+                            <p class="cs-small">como foundation do Design System.</p>
+                        </div>
+                        <p class="cs-label cs-mt-m">A foundation precisou ser adaptada</p>
+                        <div class="cs-pills cs-mt-xs">
+                            <span class="cs-pill">cores;</span><span class="cs-pill">tipografia;</span><span class="cs-pill">formas;</span><span class="cs-pill">elevação;</span><span class="cs-pill">estados;</span><span class="cs-pill">linguagem visual;</span><span class="cs-pill">componentes;</span><span class="cs-pill">padrões específicos do produto.</span>
+                        </div>
+                        <div class="cs-callout cs-mt-m">
+                            <p class="cs-label cs-label-accent">A decisão</p>
+                            <p class="cs-body cs-mt-xs">Usar uma foundation existente sem tratá-la como uma solução pronta.</p>
+                        </div>
+                    </div>
+
+                    <!-- 09 -->
+                    <div class="cs-block">
+                        <p class="cs-label">09 — Expandindo o sistema</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div><p class="cs-label">Problema</p><p class="cs-small cs-mt-xs">A foundation existente não contemplava todas as necessidades específicas do LMS.</p></div>
+                            <div><p class="cs-label cs-label-accent">Decisão</p><p class="cs-small cs-mt-xs">Adaptar componentes existentes e criar novos componentes e padrões quando necessário.</p></div>
+                        </div>
+                        <div class="cs-split cs-mt-m">
+                            <div>
+                                <p class="cs-label">Estrutura</p>
+                                <div class="cs-vflow cs-mt-s">
+                                    <span>Material 3</span>
+                                    <span>SoulCode Brand</span>
+                                    <span class="strong">Necessidades do LMS</span>
+                                    <span class="strong">Componentes e padrões</span>
+                                    <span class="final">Interface</span>
+                                </div>
+                            </div>
+                            <figure class="cs-media">
+                                <img class="cs-img-top" src="assets/images/SoulCode/Design System.png" alt="Design System SoulCode: cores, tipografia, botões e cards" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                                <figcaption><p class="cs-label">Design System</p></figcaption>
+                            </figure>
+                        </div>
+                        <p class="cs-quote cs-mt-m">O Design System evoluiu de uma foundation visual para uma base capaz de sustentar as necessidades específicas da experiência de aprendizagem.</p>
+                    </div>
+
+                    <!-- 10 -->
+                    <div class="cs-block">
+                        <p class="cs-label">10 — Gamificação como parte da experiência</p>
+                        <h2 class="cs-h3">A gamificação fazia parte da proposta do produto.</h2>
+                        <p class="cs-text cs-mt-s">Ela era especialmente relevante pelo contexto da escola e sua atuação na área de Games.</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-m">
+                            <div><p class="cs-label">O desafio de Design</p><p class="cs-small cs-mt-xs">Não transformar gamificação em uma camada visual desconectada da experiência de aprendizagem.</p></div>
+                            <div><p class="cs-label cs-label-accent">Decisão</p><p class="cs-small cs-mt-xs">Projetar a linguagem de gamificação integrada ao produto e ao Design System.</p></div>
+                        </div>
+                        <p class="cs-label cs-mt-m">Na interface</p>
+                        <div class="cs-split cs-split-tight cs-mt-s">
+                            <figure class="cs-media">
+                                <img class="cs-img-top" src="assets/images/SoulCode/Ranking.png" alt="Tela de gamificação com níveis de evolução e XP" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                            <figure class="cs-media">
+                                <img class="cs-img-top" src="assets/images/SoulCode/Página da Aula.png" alt="Página da aula com ranking de alunos" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                        </div>
+                        <p class="cs-quote cs-mt-m">A gamificação foi incorporada como parte da experiência de evolução do produto, mantendo conexão com a linguagem visual e a experiência de aprendizagem.</p>
+                    </div>
+                </section>
+
+                <!-- TAB 04 — EXPERIÊNCIA -->
+                <section class="cs-panel" data-panel="experiencia">
+                    <p class="cs-eyebrow">04 · Experiência</p>
+
+                    <!-- 11 -->
+                    <p class="cs-label cs-mt-l">11 — Da entrada ao aprendizado</p>
+                    <div class="cs-journey cs-mt-s">
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/SoulCode/Area logada Carreiras.png" alt="Área logada com carreiras e cursos" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Entrada</p>
+                            <p class="cs-small cs-mt-xxs">O aluno acessa a plataforma.</p>
+                        </div>
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/SoulCode/Página do curso.png" alt="Página do curso com módulos e conteúdos" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Descoberta</p>
+                            <p class="cs-small cs-mt-xxs">Encontra seus cursos e conteúdos.</p>
+                        </div>
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/SoulCode/Página da Aula.png" alt="Página da aula" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Aprendizagem</p>
+                            <p class="cs-small cs-mt-xxs">Acessa módulos e aulas.</p>
+                        </div>
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/SoulCode/Perfil.png" alt="Perfil do aluno com carreiras em andamento e progresso" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Acompanhamento</p>
+                            <p class="cs-small cs-mt-xxs">Visualiza seu progresso e evolução.</p>
+                        </div>
+                        <div class="cs-journey-step cs-journey-last">
+                            <div class="cs-journey-loop" aria-hidden="true">↻</div>
+                            <p class="cs-cell-title cs-mt-s">Continuidade</p>
+                            <p class="cs-small cs-mt-xxs">Retorna para avançar no aprendizado.</p>
+                        </div>
+                    </div>
+                    <p class="cs-quote cs-mt-m">A experiência foi pensada como um conjunto conectado de momentos, e não como telas isoladas.</p>
+
+                    <!-- 12 -->
+                    <div class="cs-block">
+                        <p class="cs-label">12 — Área principal</p>
+                        <h2 class="cs-h3">O ponto de entrada da experiência</h2>
+                        <div class="cs-split cs-split-wide cs-mt-m">
+                            <figure class="cs-media">
+                                <img class="cs-img-top cs-img-tall" src="assets/images/SoulCode/Area logada Carreiras.png" alt="Área principal do LMS" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                            <div>
+                                <p class="cs-text">A área principal organiza os elementos necessários para que o aluno entenda:</p>
+                                <ul class="list-items cs-mt-s">
+                                    <li>onde está;</li>
+                                    <li>o que está estudando;</li>
+                                    <li>quais conteúdos estão disponíveis;</li>
+                                    <li>quais são os próximos caminhos dentro da plataforma.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 13 -->
+                    <div class="cs-block">
+                        <p class="cs-label">13 — Conteúdo e aprendizagem</p>
+                        <div class="cs-split cs-split-tight cs-mt-s">
+                            <figure class="cs-media">
+                                <img class="cs-img-top" src="assets/images/SoulCode/Página do curso.png" alt="Página do curso com módulos, conteúdos e progresso" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                            <figure class="cs-media">
+                                <img class="cs-img-top" src="assets/images/SoulCode/Página da Aula.png" alt="Página da aula" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                        </div>
+                        <div class="cs-card cs-mt-s">
+                            <p class="cs-label">Organização</p>
+                            <p class="cs-small cs-mt-xs cs-measure">A estrutura do conteúdo foi pensada para reduzir a complexidade de navegação e permitir que o aluno avance pelo curso sem depender de uma interface excessivamente carregada.</p>
+                            <div class="cs-flow cs-flow-l cs-mt-s">
+                                <span class="cs-step cs-step-box">Curso</span><span class="cs-arrow">→</span>
+                                <span class="cs-step cs-step-box">Módulo</span><span class="cs-arrow">→</span>
+                                <span class="cs-step cs-step-box">Conteúdo</span><span class="cs-arrow">→</span>
+                                <span class="cs-step cs-step-box">Aula</span><span class="cs-arrow">→</span>
+                                <span class="cs-step cs-step-primary">Progresso</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 14 -->
+                    <div class="cs-block">
+                        <p class="cs-label">14 — Responsividade</p>
+                        <h2 class="cs-h3">O Mobile First continua no produto inteiro.</h2>
+                        <div class="cs-card cs-card-muted cs-mt-m">
+                            <div class="cs-devices">
+                                <div class="cs-device"><span class="cs-device-frame cs-device-mobile"></span><p>Mobile</p></div>
+                                <span class="cs-arrow">→</span>
+                                <div class="cs-device"><span class="cs-device-frame cs-device-tablet"></span><p>Tablet</p></div>
+                                <span class="cs-arrow">→</span>
+                                <div class="cs-device"><span class="cs-device-frame cs-device-desktop"></span><p>Desktop</p></div>
+                            </div>
+                        </div>
+                        <p class="cs-label cs-mt-m">Adaptações</p>
+                        <div class="cs-pills cs-mt-xs">
+                            <span class="cs-pill">navegação;</span><span class="cs-pill">conteúdo;</span><span class="cs-pill">cards;</span><span class="cs-pill">hierarquia;</span><span class="cs-pill">espaçamento;</span><span class="cs-pill">ações;</span><span class="cs-pill">legibilidade.</span>
+                        </div>
+                        <p class="cs-quote cs-mt-m">Responsive não foi tratado como uma etapa posterior. As decisões começaram no contexto mobile e foram expandidas para telas maiores.</p>
+                    </div>
+
+                    <!-- 15 -->
+                    <div class="cs-block">
+                        <p class="cs-label">15 — Design System aplicado</p>
+                        <h2 class="cs-h3">Uma foundation adaptada ao produto</h2>
+                        <div class="cs-flow cs-flow-l cs-mt-m">
+                            <span class="cs-step cs-step-box">Material 3</span><span class="cs-arrow">→</span>
+                            <span class="cs-step cs-step-box">Tokens</span><span class="cs-arrow">→</span>
+                            <span class="cs-step cs-step-box">Componentes</span><span class="cs-arrow">→</span>
+                            <span class="cs-step cs-step-box">Estados</span><span class="cs-arrow">→</span>
+                            <span class="cs-step cs-step-primary">Telas</span>
+                        </div>
+                        <p class="cs-text cs-mt-m">O Design System começou com Material 3 como foundation e foi adaptado à identidade da SoulCode e às necessidades específicas do LMS.</p>
+                        <p class="cs-text cs-mt-s">A partir das lacunas identificadas, novos componentes e padrões foram incorporados para permitir uma experiência mais consistente e preparada para evolução.</p>
+                    </div>
+                </section>
+
+                <!-- TAB 05 — DESIGN × TECH -->
+                <section class="cs-panel" data-panel="tech">
+                    <p class="cs-eyebrow">05 · Design × Tech</p>
+
+                    <!-- 16 -->
+                    <p class="cs-label cs-mt-l">16 — Design e tecnologia desde o início</p>
+                    <h2 class="cs-h2 cs-mt-xs">A solução foi discutida em conjunto com Development.</h2>
+                    <div class="cs-split cs-mt-l">
+                        <div>
+                            <p class="cs-label">Stack</p>
+                            <div class="cs-tags cs-mt-xs">
+                                <span class="cs-tag cs-tag-plain">React</span>
+                                <span class="cs-tag cs-tag-plain">Stripe</span>
+                            </div>
+                            <p class="cs-small cs-mt-s cs-measure">A definição da solução aconteceu em colaboração com Development, considerando as necessidades da experiência e a viabilidade de implementação.</p>
+                        </div>
+                        <div class="cs-card cs-card-muted">
+                            <p class="cs-label">Meu papel</p>
+                            <p class="cs-small cs-mt-xs">Traduzir necessidades de experiência em decisões de Design e trabalhar com Development para encontrar uma implementação viável.</p>
+                            <p class="cs-xsmall cs-mt-s">Não atuei como responsável pelo desenvolvimento da aplicação.</p>
+                        </div>
+                    </div>
+
+                    <!-- 17 -->
+                    <div class="cs-block">
+                        <p class="cs-label">17 — Handoff como colaboração contínua</p>
+                        <h2 class="cs-h3">O handoff não era uma entrega única.</h2>
+                        <div class="cs-split cs-mt-m">
+                            <div>
+                                <p class="cs-label">O trabalho acontecia em ciclo:</p>
+                                <div class="cs-vflow cs-mt-s">
+                                    <span>Figma</span>
+                                    <span class="strong">Handoff</span>
+                                    <span class="strong">Daily com Development</span>
+                                    <span>Implementação</span>
+                                    <span>Validação</span>
+                                    <span class="final">Ajustes</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="cs-label">Acompanhamento</p>
+                                <p class="cs-small cs-mt-xs">O projeto era acompanhado tela por tela, discutindo:</p>
+                                <div class="cs-pills cs-mt-s">
+                                    <span class="cs-pill">decisões;</span><span class="cs-pill">dúvidas;</span><span class="cs-pill">comportamentos;</span><span class="cs-pill">componentes;</span><span class="cs-pill">estados;</span><span class="cs-pill">implementação;</span><span class="cs-pill">divergências.</span>
+                                </div>
+                                <p class="cs-quote cs-mt-m">A proximidade diária com Development permitiu resolver questões de implementação durante o processo, em vez de tratar o handoff como o fim do trabalho de Design.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 18 -->
+                    <div class="cs-block">
+                        <p class="cs-label">18 — Design QA</p>
+                        <h2 class="cs-h3">Do Figma para o produto real</h2>
+                        <p class="cs-text cs-mt-s">Após a implementação, a interface era validada considerando:</p>
+                        <div class="cs-tags cs-mt-s">
+                            <span class="cs-tag cs-tag-plain">componentes;</span><span class="cs-tag cs-tag-plain">interface;</span><span class="cs-tag cs-tag-plain">comportamento;</span><span class="cs-tag cs-tag-plain">estados;</span><span class="cs-tag cs-tag-plain">consistência visual;</span><span class="cs-tag cs-tag-plain">funcionalidades.</span>
+                        </div>
+                        <div class="cs-card cs-card-muted cs-mt-m">
+                            <p class="cs-label">Design QA</p>
+                            <p class="cs-quote cs-mt-s">Meu objetivo era garantir que a intenção de experiência e interface fosse preservada na implementação, identificando e alinhando divergências com Development.</p>
+                            <p class="cs-xsmall cs-mt-s">O Design QA não substituía o QA de software; era a etapa de validação específica de Design.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 06 — RESULTADO -->
+                <section class="cs-panel" data-panel="resultado">
+                    <p class="cs-eyebrow">06 · Resultado</p>
+
+                    <!-- 19 -->
+                    <p class="cs-label cs-mt-l">19 — O que mudou</p>
+                    <div class="cs-grid cs-cols-3 cs-mt-s">
+                        <div><p class="cs-cell-title">Experiência</p><p class="cs-small cs-mt-xs">O LMS deixou de depender de um template genérico e passou a ter uma experiência própria.</p></div>
+                        <div><p class="cs-cell-title">Acesso</p><p class="cs-small cs-mt-xs">A experiência passou a ser projetada com Mobile First, considerando o contexto real de uso.</p></div>
+                        <div><p class="cs-cell-title">Sistema</p><p class="cs-small cs-mt-xs">Material 3 foi adaptado e expandido para atender às necessidades específicas do produto.</p></div>
+                        <div><p class="cs-cell-title">Evolução</p><p class="cs-small cs-mt-xs">A nova base de Design System e a colaboração próxima com Development prepararam a interface para evolução.</p></div>
+                        <div><p class="cs-cell-title">Produto</p><p class="cs-small cs-mt-xs">A gamificação passou a fazer parte da experiência projetada do LMS, integrada à linguagem do produto.</p></div>
+                    </div>
+
+                    <!-- 20 -->
+                    <div class="cs-block">
+                        <p class="cs-label">20 — Antes → Depois</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div class="cs-before">
+                                <p class="cs-label">Antes</p>
+                                <ul class="cs-list">
+                                    <li>Template genérico</li>
+                                    <li>Experiência pouco intuitiva</li>
+                                    <li>Problemas de carregamento</li>
+                                    <li>Estrutura limitada</li>
+                                    <li>Interface pouco adequada ao contexto do produto</li>
+                                </ul>
+                            </div>
+                            <div class="cs-after">
+                                <p class="cs-label cs-label-accent">Depois</p>
+                                <ul class="cs-list cs-list-strong">
+                                    <li>Experiência própria</li>
+                                    <li>Mobile First</li>
+                                    <li>Design System baseado em Material 3</li>
+                                    <li>Componentes e padrões adaptados</li>
+                                    <li>Gamificação integrada à experiência</li>
+                                    <li>Colaboração contínua com Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 21 -->
+                    <div class="cs-block">
+                        <p class="cs-label">21 — O que foi transformado</p>
+                        <div class="cs-grid cs-cols-3 cs-mt-s">
+                            <div><p class="cs-cell-title cs-cell-title-accent">Contexto</p><p class="cs-small cs-mt-xs">A experiência passou a considerar o ambiente real em que os alunos estudavam.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Produto</p><p class="cs-small cs-mt-xs">O LMS ganhou uma experiência própria, além das limitações do template anterior.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Sistema</p><p class="cs-small cs-mt-xs">Material 3 foi adaptado e expandido para atender ao produto.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Experiência</p><p class="cs-small cs-mt-xs">Mobile First, aprendizagem e gamificação passaram a fazer parte de uma mesma linguagem de produto.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Tecnologia</p><p class="cs-small cs-mt-xs">Design e Development trabalharam de forma contínua durante a implementação.</p></div>
+                        </div>
+                    </div>
+
+                    <!-- 22 -->
+                    <div class="cs-block">
+                        <p class="cs-label">22 — Meu papel no projeto</p>
+                        <h2 class="cs-h3">Ownership</h2>
+                        <div class="cs-grid cs-cols-3 cs-mt-m">
+                            <div><p class="cs-cell-title">UX Research</p><p class="cs-small cs-mt-xs">Coleta e organização dos relatos dos alunos.</p></div>
+                            <div><p class="cs-cell-title">Product Design</p><p class="cs-small cs-mt-xs">Experiência, estrutura, prototipação e UI.</p></div>
+                            <div><p class="cs-cell-title">Design System</p><p class="cs-small cs-mt-xs">Foundation, adaptação e expansão dos componentes.</p></div>
+                            <div><p class="cs-cell-title">Mobile First</p><p class="cs-small cs-mt-xs">Definição da experiência considerando o contexto mobile.</p></div>
+                            <div><p class="cs-cell-title">Gamificação</p><p class="cs-small cs-mt-xs">Integração da camada de evolução à experiência.</p></div>
+                            <div><p class="cs-cell-title">Design × Tech</p><p class="cs-small cs-mt-xs">Handoff, daily, acompanhamento e Design QA.</p></div>
+                        </div>
+                        <p class="cs-note cs-mt-m">Fui o único responsável por UX no projeto, conduzindo o trabalho de Design desde o entendimento do problema até o acompanhamento da implementação.</p>
+                    </div>
+
+                    <!-- 23 -->
+                    <div class="cs-block">
+                        <p class="cs-label">23 — Aprendizados</p>
+                        <div class="cs-learn cs-mt-m">
+                            <div>
+                                <p class="cs-learn-num">01</p>
+                                <p class="cs-learn-title">Contexto muda a solução</p>
+                                <p class="cs-small cs-mt-xs">Projetar para um LMS não significa apenas organizar conteúdo. O dispositivo, o acesso e o contexto em que o aluno estuda influenciam diretamente as decisões de experiência.</p>
+                            </div>
+                            <div>
+                                <p class="cs-learn-num">02</p>
+                                <p class="cs-learn-title">Design System precisa servir ao produto</p>
+                                <p class="cs-small cs-mt-xs">Material 3 ofereceu uma foundation, mas as necessidades específicas do LMS exigiram adaptação e expansão.</p>
+                            </div>
+                            <div>
+                                <p class="cs-learn-num">03</p>
+                                <p class="cs-learn-title">Design e tecnologia precisam conversar cedo</p>
+                                <p class="cs-small cs-mt-xs">A proximidade diária com Development tornou possível discutir viabilidade e resolver divergências durante a implementação.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conclusão -->
+                    <div class="cs-closing">
+                        <p class="cs-closing-eyebrow">Conclusão</p>
+                        <p class="cs-closing-title">De um template genérico para uma experiência de aprendizagem própria.</p>
+                        <p class="cs-closing-text">O projeto não foi apenas um redesign visual do LMS.</p>
+                        <p class="cs-closing-text">Foi a construção de uma nova base de experiência considerando:</p>
+                        <div class="cs-closing-chips">
+                            <span>Mobile First</span><span>Contexto de aprendizagem</span><span>Design System</span><span>Gamificação</span><span>Design × Tech</span>
+                        </div>
+                        <p class="cs-closing-text">O resultado foi uma experiência própria para a SoulCode, construída para o contexto de seus alunos e preparada para continuar evoluindo junto com o produto.</p>
+                        <p class="cs-closing-brand">SoulCode Academy</p>
+                        <p class="cs-closing-sub">Product Design · Mobile First · Design System · Gamificação · Design × Tech</p>
+                    </div>
+                </section>
+            </main>
         </div>
     </div>
 
     <!-- ===== PETROPÓLIS PAGE ===== -->
-    <div class="page" id="petropolis-page">
-        <div class="container">
-            <div class="page-header">
-                <div class="page-header-title">
-                    <h1>Grupo Petropólis</h1>
-                    <p>Web Design · Website Corporativo</p>
+    <div class="page cs-page" id="petropolis-page">
+        <div class="cs-layout">
+            <!-- SIDEBAR -->
+            <aside class="cs-sidebar">
+                <button class="btn-secondary" type="button" onclick="navigateToCase('home')">← Voltar</button>
+                <div class="cs-brand">
+                    <p class="cs-kicker">Dossiê de projeto</p>
+                    <p class="cs-brand-name">Grupo Petrópolis</p>
+                    <div class="cs-brand-rule"></div>
                 </div>
-                <button class="btn-secondary" onclick="navigateToCase('home')">← Voltar</button>
-            </div>
-
-            <div class="modal-section">
-                <h3 class="section-heading">Contexto</h3>
-                <div class="section-content">
-                    <p>O Grupo Petropólis é líder no mercado cervejeiro brasileiro, com múltiplas marcas, fábricas em diferentes estados e experiências únicas. Necessitava de um website que apresentasse sua história, infraestrutura, inovações e oferecesse navegação clara para diferentes públicos.</p>
+                <nav class="cs-nav" aria-label="Seções do case">
+                    <p class="cs-kicker">Índice</p>
+                    <ul>
+                        <li><button type="button" class="cs-nav-btn active" data-tab="contexto" aria-current="true" onclick="showCaseTab('petropolis','contexto')"><span class="cs-nav-num">01</span><span>Contexto</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="arquitetura" onclick="showCaseTab('petropolis','arquitetura')"><span class="cs-nav-num">02</span><span>Arquitetura</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="decisoes" onclick="showCaseTab('petropolis','decisoes')"><span class="cs-nav-num">03</span><span>Decisões</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="interface" onclick="showCaseTab('petropolis','interface')"><span class="cs-nav-num">04</span><span>Interface</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="implementacao" onclick="showCaseTab('petropolis','implementacao')"><span class="cs-nav-num">05</span><span>Implementação</span></button></li>
+                        <li><button type="button" class="cs-nav-btn" data-tab="resultado" onclick="showCaseTab('petropolis','resultado')"><span class="cs-nav-num">06</span><span>Resultado</span></button></li>
+                    </ul>
+                </nav>
+                <div class="cs-sidebar-foot">
+                    <p class="cs-kicker">Meu papel</p>
+                    <p class="cs-sidebar-note">Atuação em UX/UI, arquitetura da informação, interface e experiência responsiva.</p>
                 </div>
-            </div>
+            </aside>
 
-            <div class="modal-section">
-                <h3 class="section-heading">Abordagem</h3>
-                <ul class="list-items">
-                    <li>Análise profunda da identidade visual e valores do Grupo</li>
-                    <li>Estruturação de informações de forma hierárquica e intuitiva</li>
-                    <li>Design responsivo com foco em performance e acessibilidade</li>
-                    <li>Criação de experiências visuais que destacam as marcas e inovações</li>
-                    <li>Integração de storytelling para conectar usuário com a marca</li>
-                </ul>
-            </div>
-
-            <div class="modal-section">
-                <h3 class="section-heading">Resultado</h3>
-                <div class="section-content">
-                    <p>Website corporativo moderno que apresenta de forma clara a história de 30+ anos do Grupo, suas 8 fábricas em 6 estados, múltiplas marcas líderes de mercado, e oferece experiências imersivas como o Centro Cervejeiro da Serra e o Mundo da Cerveja.</p>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3 class="section-heading">Principais Telas</h3>
-                <div class="screens-grid">
-                    <div class="screen-card" onclick="openImageModal('assets/images/Grupo-Petropolis/Home.png', 'Home')">
-                        <div class="screen-image">
-                            <img src="assets/images/Grupo-Petropolis/Home.png" alt="home">
+            <!-- MAIN -->
+            <main class="cs-main">
+                <!-- barra mobile -->
+                <div class="cs-mobilebar">
+                    <div class="cs-mobilebar-top">
+                        <div class="cs-mobile-title">
+                            <button class="cs-back-mini" type="button" aria-label="Voltar" onclick="navigateToCase('home')">←</button>
+                            <span>Grupo Petrópolis</span>
                         </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>Web Design</span>
-                            </div>
-                            <div class="screen-name">Home</div>
-                            <p class="screen-description">Landing page com apresentação do grupo e marcas.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Hero</span>
-                                <span class="screen-tag">Brand</span>
-                            </div>
-                        </div>
+                        <p class="cs-kicker">Dossiê · 06 seções</p>
                     </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/Grupo-Petropolis/Onde estamos.png', 'Onde Estamos')">
-                        <div class="screen-image">
-                            <img src="assets/images/Grupo-Petropolis/Onde estamos.png" alt="Onde estamos">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>Web Design</span>
-                            </div>
-                            <div class="screen-name">Onde Estamos</div>
-                            <p class="screen-description">Mapa interativo com localização de fábricas.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Map</span>
-                                <span class="screen-tag">Locations</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/Grupo-Petropolis/Centro Cervejeiro da Serra.png', 'Centro Cervejeiro da Serra')">
-                        <div class="screen-image">
-                            <img src="assets/images/Grupo-Petropolis/Centro Cervejeiro da Serra.png" alt="Centro cervejeiro da serra">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>Web Design</span>
-                            </div>
-                            <div class="screen-name">Centro Cervejeiro</div>
-                            <p class="screen-description">Apresentação da microcervejaria com galeria.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Gallery</span>
-                                <span class="screen-tag">Tour</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/Grupo-Petropolis/Mundo da Cerveja.png', 'Mundo da Cerveja')">
-                        <div class="screen-image">
-                            <img src="assets/images/Grupo-Petropolis/Mundo da Cerveja.png" alt="Sistema de gamificação do SoulCode mostrando níveis de evolução, XP e badges conquistadas">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>Web Design</span>
-                            </div>
-                            <div class="screen-name">Mundo da Cerveja</div>
-                            <p class="screen-description">Série de vídeos educativos com 5 módulos.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Video</span>
-                                <span class="screen-tag">Educational</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/Grupo-Petropolis/Itaipava v.1.png', 'Itaipava')">
-                        <div class="screen-image">
-                            <img src="assets/images/Grupo-Petropolis/Itaipava v.1.png" alt="Sistema de gamificação do SoulCode mostrando níveis de evolução, XP e badges conquistadas">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>Web Design</span>
-                            </div>
-                            <div class="screen-name">Itaipava</div>
-                            <p class="screen-description">Página de marca com produtos e história.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">Brand</span>
-                                <span class="screen-tag">Products</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="screen-card" onclick="openImageModal('assets/images/Grupo-Petropolis/Design System.png', 'Design System')">
-                        <div class="screen-image">
-                            <img src="assets/images/Grupo-Petropolis/Design System.png" alt="Sistema de gamificação do SoulCode mostrando níveis de evolução, XP e badges conquistadas">
-                        </div>
-                        <div class="screen-content">
-                            <div class="screen-meta">
-                                <span></span>
-                                <span>Design System</span>
-                            </div>
-                            <div class="screen-name">Design System</div>
-                            <p class="screen-description">Biblioteca de componentes documentados.</p>
-                            <div class="screen-tags">
-                                <span class="screen-tag">DS</span>
-                                <span class="screen-tag">Docs</span>
-                            </div>
-                        </div>
+                    <div class="cs-tabs-scroll">
+                        <button type="button" class="cs-chip-tab active" data-tab="contexto" onclick="showCaseTab('petropolis','contexto')">01 Contexto</button>
+                        <button type="button" class="cs-chip-tab" data-tab="arquitetura" onclick="showCaseTab('petropolis','arquitetura')">02 Arquitetura</button>
+                        <button type="button" class="cs-chip-tab" data-tab="decisoes" onclick="showCaseTab('petropolis','decisoes')">03 Decisões</button>
+                        <button type="button" class="cs-chip-tab" data-tab="interface" onclick="showCaseTab('petropolis','interface')">04 Interface</button>
+                        <button type="button" class="cs-chip-tab" data-tab="implementacao" onclick="showCaseTab('petropolis','implementacao')">05 Implementação</button>
+                        <button type="button" class="cs-chip-tab" data-tab="resultado" onclick="showCaseTab('petropolis','resultado')">06 Resultado</button>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal-section">
-                <h3 class="section-heading">Destaques</h3>
-                <div class="metrics-grid">
-                    <div class="metric">
-                        <div class="metric-label">Páginas</div>
-                        <div class="metric-value">8+</div>
+                <!-- TAB 01 — CONTEXTO -->
+                <section class="cs-panel active" data-panel="contexto">
+                    <p class="cs-eyebrow">01 · Contexto</p>
+                    <h1 class="cs-h1 cs-h1-long">Grupo Petrópolis</h1>
+                    <p class="cs-subtitle">Estruturação de uma experiência digital para diferentes conteúdos e públicos</p>
+                    <p class="cs-lead cs-mt-s">Organização da experiência digital do Grupo Petrópolis, conectando arquitetura da informação, interface, identidade visual e responsividade em uma experiência institucional estruturada.</p>
+
+                    <div class="cs-split cs-mt-l">
+                        <div>
+                            <p class="cs-label">Meu papel</p>
+                            <p class="cs-body cs-mt-xs">Atuação em UX/UI, arquitetura da informação, interface e experiência responsiva.</p>
+                        </div>
+                        <div>
+                            <div class="cs-tags">
+                                <span class="cs-tag">UX/UI</span>
+                                <span class="cs-tag">Arquitetura da Informação</span>
+                                <span class="cs-tag">UI Design</span>
+                                <span class="cs-tag cs-tag-accent">Responsive Design</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="metric">
-                        <div class="metric-label">Performance</div>
-                        <div class="metric-value">A+</div>
+
+                    <!-- 01 -->
+                    <div class="cs-block">
+                        <p class="cs-label">01 — O desafio</p>
+                        <h2 class="cs-h3">Organizar complexidade sem perder clareza</h2>
+                        <p class="cs-text cs-mt-s">O Grupo Petrópolis reúne diferentes tipos de conteúdo dentro de uma mesma experiência digital:</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div class="cs-problem"><span class="cs-num">01</span><p>informações institucionais;</p></div>
+                            <div class="cs-problem"><span class="cs-num">02</span><p>marcas;</p></div>
+                            <div class="cs-problem"><span class="cs-num">03</span><p>produtos;</p></div>
+                            <div class="cs-problem"><span class="cs-num">04</span><p>unidades;</p></div>
+                            <div class="cs-problem"><span class="cs-num">05</span><p>conteúdos relacionados à empresa;</p></div>
+                            <div class="cs-problem"><span class="cs-num">06</span><p>experiências e iniciativas.</p></div>
+                        </div>
+                        <p class="cs-label cs-mt-m">O desafio de experiência</p>
+                        <p class="cs-quote cs-mt-xs">Como estruturar esse volume e essa diversidade de informações de forma que diferentes públicos consigam encontrar e compreender o conteúdo sem tornar a navegação complexa?</p>
+                        <p class="cs-label cs-mt-m">A interface precisava equilibrar:</p>
+                        <div class="cs-flow cs-flow-l cs-mt-xs">
+                            <span class="cs-step cs-step-box">conteúdo</span><span class="cs-arrow">+</span>
+                            <span class="cs-step cs-step-box">navegação</span><span class="cs-arrow">+</span>
+                            <span class="cs-step cs-step-box">identidade de marca</span><span class="cs-arrow">+</span>
+                            <span class="cs-step cs-step-primary">clareza</span>
+                        </div>
                     </div>
-                    <div class="metric">
-                        <div class="metric-label">Responsivo</div>
-                        <div class="metric-value">100%</div>
+
+                    <!-- 02 -->
+                    <div class="cs-block">
+                        <p class="cs-label">02 — Meu papel</p>
+                        <h2 class="cs-h3">Onde eu atuei</h2>
+                        <div class="cs-grid cs-cols-3 cs-mt-m">
+                            <div><p class="cs-cell-title cs-cell-title-accent">Arquitetura da Informação</p><p class="cs-small cs-mt-xs">Organização da informação e estrutura das páginas.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">UX/UI</p><p class="cs-small cs-mt-xs">Definição da experiência e construção das interfaces.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Interface</p><p class="cs-small cs-mt-xs">Aplicação da identidade visual ao ambiente digital.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Responsividade</p><p class="cs-small cs-mt-xs">Adaptação da experiência para diferentes tamanhos de tela.</p></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Handoff</p><p class="cs-small cs-mt-xs">Preparação das interfaces para implementação.</p></div>
+                        </div>
+                        <p class="cs-note cs-mt-m">Minha atuação esteve concentrada em transformar conteúdo e requisitos do projeto em uma experiência digital estruturada, navegável e visualmente consistente.</p>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="modal-section">
-                <h3 class="section-heading">O Que Aprendi</h3>
-                <ul class="list-items">
-                    <li>Storytelling visual é essencial para criar conexão emocional</li>
-                    <li>Estrutura clara facilita navegação em sites corporativos complexos</li>
-                    <li>Performance e acessibilidade são diferenciais competitivos</li>
-                </ul>
-            </div>
+                <!-- TAB 02 — ARQUITETURA -->
+                <section class="cs-panel" data-panel="arquitetura">
+                    <p class="cs-eyebrow">02 · Arquitetura</p>
 
-            <div class="case-tags">
-                <span class="case-tag">Web Design</span>
-                <span class="case-tag">UX/UI</span>
-                <span class="case-tag">Responsive</span>
-                <span class="case-tag">Branding</span>
-                <span class="case-tag">Performance</span>
-            </div>
-        </div>
+                    <!-- 03 -->
+                    <p class="cs-label cs-mt-l">03 — Entender o conteúdo antes da interface</p>
+                    <h2 class="cs-h2 cs-mt-xs">A interface precisava partir da estrutura da informação</h2>
+                    <p class="cs-text cs-mt-m">Antes de definir a composição visual, era necessário entender como diferentes conteúdos poderiam coexistir dentro da mesma experiência.</p>
+                    <p class="cs-label cs-mt-m">O conteúdo precisava contemplar</p>
+                    <div class="cs-drivers cs-mt-s">
+                        <div class="cs-driver"><p class="cs-driver-from">Institucional</p><p class="cs-small">Quem é o Grupo Petrópolis?</p></div>
+                        <div class="cs-driver-arrow" aria-hidden="true">↓</div>
+                        <div class="cs-driver"><p class="cs-driver-from">Marcas</p><p class="cs-small">Quais marcas fazem parte do grupo?</p></div>
+                        <div class="cs-driver-arrow" aria-hidden="true">↓</div>
+                        <div class="cs-driver"><p class="cs-driver-from">Produtos</p><p class="cs-small">Como os produtos são apresentados?</p></div>
+                        <div class="cs-driver-arrow" aria-hidden="true">↓</div>
+                        <div class="cs-driver"><p class="cs-driver-from">Presença</p><p class="cs-small">Onde a empresa está?</p></div>
+                        <div class="cs-driver-arrow" aria-hidden="true">↓</div>
+                        <div class="cs-driver"><p class="cs-driver-from">Experiências e iniciativas</p><p class="cs-small">Quais outros conteúdos fazem parte do ecossistema?</p></div>
+                    </div>
+                    <p class="cs-quote cs-mt-m">A arquitetura precisava transformar diferentes tipos de conteúdo em caminhos compreensíveis dentro de uma mesma experiência.</p>
 
-        <div class="footer">
-            <div class="footer-container">
-                <div class="footer-name">Douglas Pereira</div>
-                <p class="footer-title">Product Designer — UX/UI · Design Systems · UX Engineering</p>
-            </div>
+                    <!-- 04 -->
+                    <div class="cs-block">
+                        <p class="cs-label">04 — Arquitetura da Informação</p>
+                        <h2 class="cs-h3">Do conteúdo à navegação</h2>
+                        <div class="cs-flow cs-flow-l cs-mt-m">
+                            <span class="cs-step cs-step-box">Conteúdo</span><span class="cs-arrow">→</span>
+                            <span class="cs-step cs-step-box">Categorias</span><span class="cs-arrow">→</span>
+                            <span class="cs-step cs-step-box">Navegação</span><span class="cs-arrow">→</span>
+                            <span class="cs-step cs-step-box">Páginas</span><span class="cs-arrow">→</span>
+                            <span class="cs-step cs-step-primary">Interface</span>
+                        </div>
+                        <div class="cs-sitemap cs-mt-m">
+                            <div class="cs-sitemap-root">Home</div>
+                            <div class="cs-sitemap-level">
+                                <span>Quem somos</span><span>Nossas Marcas</span><span>Qualidade</span><span>Sustentabilidade</span><span>Beer Tour</span><span>Comunicação</span><span>Ética e Integridade</span><span>Carreiras</span>
+                            </div>
+                        </div>
+                        <div class="cs-callout cs-mt-m">
+                            <p class="cs-label cs-label-accent">Princípio</p>
+                            <p class="cs-body cs-mt-xs">A interface não foi tratada como uma coleção de páginas independentes. A organização do conteúdo veio antes da composição visual.</p>
+                        </div>
+                    </div>
+
+                    <!-- 05 -->
+                    <div class="cs-block">
+                        <p class="cs-label">05 — Diferentes caminhos dentro da mesma experiência</p>
+                        <p class="cs-text cs-mt-s">A experiência precisava permitir que diferentes intenções encontrassem caminhos próprios.</p>
+                        <div class="cs-paths cs-mt-s">
+                            <div class="cs-path"><span class="cs-path-from">Conhecer a empresa</span><span class="cs-arrow">→</span><span class="cs-path-to">Conteúdo institucional</span></div>
+                            <div class="cs-path"><span class="cs-path-from">Conhecer as marcas</span><span class="cs-arrow">→</span><span class="cs-path-to">Marcas</span></div>
+                            <div class="cs-path"><span class="cs-path-from">Explorar produtos</span><span class="cs-arrow">→</span><span class="cs-path-to">Produtos</span></div>
+                            <div class="cs-path"><span class="cs-path-from">Encontrar presença física</span><span class="cs-arrow">→</span><span class="cs-path-to">Localização / unidades</span></div>
+                            <div class="cs-path"><span class="cs-path-from">Explorar outros conteúdos</span><span class="cs-arrow">→</span><span class="cs-path-to">Experiências e iniciativas</span></div>
+                        </div>
+                        <p class="cs-quote cs-mt-m">A arquitetura cria diferentes pontos de entrada sem fragmentar a experiência como um todo.</p>
+                    </div>
+                </section>
+
+                <!-- TAB 03 — DECISÕES -->
+                <section class="cs-panel" data-panel="decisoes">
+                    <p class="cs-eyebrow">03 · Decisões</p>
+
+                    <!-- 06 -->
+                    <p class="cs-label cs-mt-l">06 — Estruturar antes de decorar</p>
+                    <div class="cs-grid cs-cols-2 cs-mt-s">
+                        <div><p class="cs-label">Problema</p><p class="cs-small cs-mt-xs">O projeto precisava acomodar diferentes categorias de conteúdo dentro de uma mesma experiência.</p></div>
+                        <div><p class="cs-label cs-label-accent">Decisão</p><p class="cs-small cs-mt-xs">Organizar primeiro a estrutura de informação e depois traduzir essa estrutura para a interface.</p></div>
+                    </div>
+                    <div class="cs-split cs-mt-m">
+                        <div>
+                            <p class="cs-label">Processo</p>
+                            <div class="cs-vflow cs-mt-s">
+                                <span>Conteúdo</span>
+                                <span class="strong">Arquitetura</span>
+                                <span class="strong">Hierarquia</span>
+                                <span class="final">Interface</span>
+                            </div>
+                        </div>
+                        <div class="cs-card cs-card-muted">
+                            <p class="cs-label">Por que isso importa</p>
+                            <p class="cs-small cs-mt-xs">A interface não foi construída apenas a partir de composição visual. A organização do conteúdo orientou a experiência.</p>
+                        </div>
+                    </div>
+
+                    <!-- 07 -->
+                    <div class="cs-block">
+                        <p class="cs-label">07 — Transformar identidade em interface</p>
+                        <h2 class="cs-h3">Como levar uma marca para o ambiente digital?</h2>
+                        <p class="cs-text cs-mt-s">A identidade visual do Grupo Petrópolis serviu como ponto de partida para construir a linguagem da interface.</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-m">
+                            <div>
+                                <p class="cs-label">Identidade</p>
+                                <ul class="cs-list"><li>Cores</li><li>Tipografia</li><li>Elementos gráficos</li><li>Linguagem visual</li></ul>
+                                <img class="cs-shot cs-img-top" src="assets/images/Grupo-Petropolis/Design System.png" alt="Cores, tipografia e botões da identidade do Grupo Petrópolis" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </div>
+                            <div class="cs-after">
+                                <p class="cs-label cs-label-accent">Interface</p>
+                                <ul class="cs-list cs-list-strong"><li>Componentes</li><li>Hierarquia</li><li>Navegação</li><li>Páginas</li></ul>
+                                <img class="cs-shot cs-img-top" src="assets/images/Grupo-Petropolis/Home.png" alt="Home do Grupo Petrópolis com a identidade aplicada" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </div>
+                        </div>
+                        <div class="cs-callout cs-mt-m">
+                            <p class="cs-label cs-label-accent">Direção</p>
+                            <p class="cs-body cs-mt-xs">A identidade da marca precisava funcionar como linguagem de interface, e não apenas como aplicação estética.</p>
+                        </div>
+                    </div>
+
+                    <!-- 08 -->
+                    <div class="cs-block">
+                        <p class="cs-label">08 — Hierarquia visual</p>
+                        <h2 class="cs-h3">Diferentes conteúdos exigem diferentes níveis de importância</h2>
+                        <div class="cs-split cs-split-wide cs-mt-m">
+                            <figure class="cs-media">
+                                <img class="cs-img-top" src="assets/images/Grupo-Petropolis/Mundo da Cerveja.png" alt="Página Mundo da Cerveja" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                            <div>
+                                <p class="cs-text">A interface precisava permitir que o usuário identificasse rapidamente:</p>
+                                <div class="cs-levels cs-mt-s">
+                                    <div><span class="cs-cell-num">01</span><p>Informação principal</p></div>
+                                    <div><span class="cs-cell-num">02</span><p>Contexto</p></div>
+                                    <div><span class="cs-cell-num">03</span><p>Conteúdo complementar</p></div>
+                                    <div><span class="cs-cell-num">04</span><p>Próxima ação</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cs-callout cs-mt-m">
+                            <p class="cs-label cs-label-accent">Objetivo</p>
+                            <p class="cs-body cs-mt-xs">Criar uma hierarquia capaz de orientar a leitura e facilitar a exploração sem sobrecarregar a interface.</p>
+                        </div>
+                    </div>
+
+                    <!-- 09 -->
+                    <div class="cs-block">
+                        <p class="cs-label">09 — Responsividade desde a estrutura</p>
+                        <h2 class="cs-h3">O conteúdo precisava funcionar em diferentes contextos</h2>
+                        <p class="cs-text cs-mt-s">A experiência foi estruturada para diferentes tamanhos de tela.</p>
+                        <div class="cs-card cs-card-muted cs-mt-s">
+                            <div class="cs-devices">
+                                <div class="cs-device"><span class="cs-device-frame cs-device-desktop cs-device-shot"><img src="assets/images/Grupo-Petropolis/Home.png" alt="" loading="lazy"></span><p>Desktop</p></div>
+                                <span class="cs-arrow">→</span>
+                                <div class="cs-device"><span class="cs-device-frame cs-device-tablet cs-device-shot"><img src="assets/images/Grupo-Petropolis/Home.png" alt="" loading="lazy"></span><p>Tablet</p></div>
+                                <span class="cs-arrow">→</span>
+                                <div class="cs-device"><span class="cs-device-frame cs-device-mobile cs-device-shot"><img src="assets/images/Grupo-Petropolis/Home.png" alt="" loading="lazy"></span><p>Mobile</p></div>
+                            </div>
+                        </div>
+                        <p class="cs-label cs-mt-m">As adaptações consideraram</p>
+                        <div class="cs-pills cs-mt-xs">
+                            <span class="cs-pill">hierarquia;</span><span class="cs-pill">espaçamento;</span><span class="cs-pill">navegação;</span><span class="cs-pill">imagens;</span><span class="cs-pill">conteúdo;</span><span class="cs-pill">ações;</span><span class="cs-pill">legibilidade.</span>
+                        </div>
+                        <p class="cs-quote cs-mt-m">Responsividade foi tratada como parte da experiência, e não apenas como uma adaptação visual posterior.</p>
+                    </div>
+                </section>
+
+                <!-- TAB 04 — INTERFACE -->
+                <section class="cs-panel" data-panel="interface">
+                    <p class="cs-eyebrow">04 · Interface</p>
+
+                    <!-- 10 -->
+                    <p class="cs-label cs-mt-l">10 — A experiência final</p>
+                    <div class="cs-journey cs-journey-4 cs-mt-s">
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/Grupo-Petropolis/Home.png" alt="Home do Grupo Petrópolis" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Home</p>
+                            <p class="cs-small cs-mt-xxs">Entrada no ecossistema</p>
+                        </div>
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/Grupo-Petropolis/Centro Cervejeiro da Serra.png" alt="Página institucional Centro Cervejeiro da Serra" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Página institucional</p>
+                            <p class="cs-small cs-mt-xxs">Conteúdo e narrativa</p>
+                        </div>
+                        <div class="cs-journey-step">
+                            <img class="cs-shot cs-img-top" src="assets/images/Grupo-Petropolis/Itaipava v.1.png" alt="Página da marca Itaipava" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            <p class="cs-cell-title cs-mt-s">Página de marca/produto</p>
+                            <p class="cs-small cs-mt-xxs">Apresentação e exploração</p>
+                        </div>
+                        <div class="cs-journey-step cs-journey-last">
+                            <div class="cs-journey-device"><span class="cs-device-frame cs-device-mobile cs-device-shot"><img src="assets/images/Grupo-Petropolis/Home.png" alt="" loading="lazy"></span></div>
+                            <p class="cs-cell-title cs-mt-s">Mobile</p>
+                            <p class="cs-small cs-mt-xxs">Adaptação da experiência</p>
+                        </div>
+                    </div>
+
+                    <!-- 11 -->
+                    <div class="cs-block">
+                        <p class="cs-label">11 — Home</p>
+                        <h2 class="cs-h3">O ponto de entrada da experiência</h2>
+                        <p class="cs-text cs-mt-s">A Home funciona como porta de entrada para diferentes caminhos dentro do ecossistema digital.</p>
+                        <div class="cs-split cs-split-wide cs-mt-m">
+                            <figure class="cs-media">
+                                <img class="cs-img-top cs-img-tall" src="assets/images/Grupo-Petropolis/Home.png" alt="Home completa do Grupo Petrópolis" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                            <div>
+                                <p class="cs-label">Estrutura</p>
+                                <div class="cs-vflow cs-mt-s">
+                                    <span>Entrada</span>
+                                    <span class="strong">Contexto</span>
+                                    <span class="strong">Exploração</span>
+                                    <span class="final">Próximos caminhos</span>
+                                </div>
+                                <p class="cs-quote cs-mt-m">A Home precisava apresentar o universo da marca sem competir visualmente com os diferentes caminhos de conteúdo disponíveis.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 12 -->
+                    <div class="cs-block">
+                        <p class="cs-label">12 — Conteúdo institucional</p>
+                        <h2 class="cs-h3">Informação também é experiência</h2>
+                        <p class="cs-text cs-mt-s">Conteúdos institucionais precisam combinar:</p>
+                        <div class="cs-flow cs-flow-l cs-mt-s">
+                            <span class="cs-step cs-step-box">informação</span><span class="cs-arrow">+</span>
+                            <span class="cs-step cs-step-box">contexto</span><span class="cs-arrow">+</span>
+                            <span class="cs-step cs-step-box">hierarquia</span><span class="cs-arrow">+</span>
+                            <span class="cs-step cs-step-primary">narrativa visual</span>
+                        </div>
+                        <div class="cs-split cs-split-tight cs-mt-m">
+                            <figure class="cs-media">
+                                <img class="cs-img-top" src="assets/images/Grupo-Petropolis/Centro Cervejeiro da Serra.png" alt="Página institucional Centro Cervejeiro da Serra" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                            <figure class="cs-media">
+                                <img class="cs-img-top" src="assets/images/Grupo-Petropolis/Onde estamos.png" alt="Página institucional Onde Estamos" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                        </div>
+                        <div class="cs-callout cs-mt-m">
+                            <p class="cs-label cs-label-accent">Decisão</p>
+                            <p class="cs-body cs-mt-xs">A composição foi utilizada para organizar diferentes níveis de informação, permitindo uma leitura progressiva em vez de apresentar todo o conteúdo com o mesmo peso visual.</p>
+                        </div>
+                    </div>
+
+                    <!-- 13 -->
+                    <div class="cs-block">
+                        <p class="cs-label">13 — Marcas e produtos</p>
+                        <h2 class="cs-h3">Diferentes conteúdos, mesma linguagem</h2>
+                        <div class="cs-split cs-split-tight cs-mt-m">
+                            <figure class="cs-media">
+                                <img class="cs-img-top" src="assets/images/Grupo-Petropolis/Itaipava v.1.png" alt="Página da marca Itaipava" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                            <figure class="cs-media">
+                                <img class="cs-img-top cs-img-mid" src="assets/images/Grupo-Petropolis/Home.png" alt="Seção Nossas Marcas na Home" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </figure>
+                        </div>
+                        <p class="cs-quote cs-mt-m">A consistência visual permite que diferentes tipos de conteúdo pertençam ao mesmo ecossistema sem perder suas características específicas.</p>
+                    </div>
+
+                    <!-- 14 -->
+                    <div class="cs-block">
+                        <p class="cs-label">14 — Sistema visual</p>
+                        <h2 class="cs-h3">Uma linguagem consistente para diferentes páginas</h2>
+                        <div class="cs-split cs-mt-m">
+                            <div>
+                                <p class="cs-label">Design System</p>
+                                <div class="cs-tags cs-mt-s">
+                                    <span class="cs-tag cs-tag-plain">Tipografia</span><span class="cs-tag cs-tag-plain">Cores</span><span class="cs-tag cs-tag-plain">Botões</span><span class="cs-tag cs-tag-plain">Cards</span><span class="cs-tag cs-tag-plain">Navegação</span><span class="cs-tag cs-tag-plain">Componentes</span><span class="cs-tag cs-tag-plain">Espaçamentos</span>
+                                </div>
+                            </div>
+                            <figure class="cs-media">
+                                <img class="cs-img-top" src="assets/images/Grupo-Petropolis/Design System.png" alt="Design System Grupo Petrópolis" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                                <figcaption><p class="cs-label">Design System</p></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- 15 -->
+                    <div class="cs-block">
+                        <p class="cs-label">15 — Responsividade</p>
+                        <h2 class="cs-h3">Uma experiência, diferentes telas</h2>
+                        <div class="cs-card cs-card-muted cs-mt-m">
+                            <div class="cs-devices">
+                                <div class="cs-device"><span class="cs-device-frame cs-device-desktop cs-device-shot"><img src="assets/images/Grupo-Petropolis/Itaipava v.1.png" alt="" loading="lazy"></span><p>Desktop</p></div>
+                                <span class="cs-arrow">→</span>
+                                <div class="cs-device"><span class="cs-device-frame cs-device-tablet cs-device-shot"><img src="assets/images/Grupo-Petropolis/Itaipava v.1.png" alt="" loading="lazy"></span><p>Tablet</p></div>
+                                <span class="cs-arrow">→</span>
+                                <div class="cs-device"><span class="cs-device-frame cs-device-mobile cs-device-shot"><img src="assets/images/Grupo-Petropolis/Itaipava v.1.png" alt="" loading="lazy"></span><p>Mobile</p></div>
+                            </div>
+                        </div>
+                        <p class="cs-label cs-mt-m">O que muda</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div><p class="cs-cell-title">Layout</p><p class="cs-small cs-mt-xs">A composição se adapta à largura disponível.</p></div>
+                            <div><p class="cs-cell-title">Hierarquia</p><p class="cs-small cs-mt-xs">O conteúdo mantém seus níveis de importância.</p></div>
+                            <div><p class="cs-cell-title">Navegação</p><p class="cs-small cs-mt-xs">Elementos são reorganizados para o contexto de uso.</p></div>
+                            <div><p class="cs-cell-title">Conteúdo</p><p class="cs-small cs-mt-xs">Textos e imagens preservam legibilidade.</p></div>
+                        </div>
+                        <p class="cs-quote cs-mt-m">A responsividade foi construída a partir da experiência, e não apenas da redução proporcional do layout desktop.</p>
+                    </div>
+                </section>
+
+                <!-- TAB 05 — IMPLEMENTAÇÃO -->
+                <section class="cs-panel" data-panel="implementacao">
+                    <p class="cs-eyebrow">05 · Implementação</p>
+
+                    <!-- 16 -->
+                    <p class="cs-label cs-mt-l">16 — Do design para a implementação</p>
+                    <h2 class="cs-h2 cs-mt-xs">O trabalho precisava ser traduzido para desenvolvimento</h2>
+                    <div class="cs-split cs-mt-l">
+                        <div>
+                            <p class="cs-text">As interfaces foram preparadas para implementação considerando:</p>
+                            <ul class="list-items cs-mt-s">
+                                <li>layouts;</li>
+                                <li>componentes;</li>
+                                <li>espaçamentos;</li>
+                                <li>estados;</li>
+                                <li>comportamentos;</li>
+                                <li>assets;</li>
+                                <li>especificações necessárias.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="cs-label">Fluxo</p>
+                            <div class="cs-vflow cs-mt-s">
+                                <span>Design</span>
+                                <span class="strong">Handoff</span>
+                                <span class="strong">Development</span>
+                                <span class="final">Implementação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 17 -->
+                    <div class="cs-block">
+                        <p class="cs-label">17 — Handoff</p>
+                        <h2 class="cs-h3">Mais do que entregar telas</h2>
+                        <p class="cs-text cs-mt-s">O objetivo do handoff era tornar as decisões de Design compreensíveis para quem iria implementá-las.</p>
+                        <p class="cs-label cs-mt-m">O que precisava estar claro</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div><p class="cs-cell-title">Estrutura</p><p class="cs-small cs-mt-xs">Como os elementos são organizados.</p></div>
+                            <div><p class="cs-cell-title">Comportamento</p><p class="cs-small cs-mt-xs">Como a interface deve funcionar.</p></div>
+                            <div><p class="cs-cell-title">Estados</p><p class="cs-small cs-mt-xs">Como os componentes se comportam em diferentes situações.</p></div>
+                            <div><p class="cs-cell-title">Responsividade</p><p class="cs-small cs-mt-xs">Como a interface se adapta entre telas.</p></div>
+                        </div>
+                        <p class="cs-quote cs-mt-m">O handoff transformou decisões visuais em informações utilizáveis para implementação.</p>
+                    </div>
+                </section>
+
+                <!-- TAB 06 — RESULTADO -->
+                <section class="cs-panel" data-panel="resultado">
+                    <p class="cs-eyebrow">06 · Resultado</p>
+
+                    <!-- 18 -->
+                    <p class="cs-label cs-mt-l">18 — O que mudou</p>
+                    <div class="cs-grid cs-cols-2 cs-mt-s">
+                        <div><p class="cs-cell-title">Estrutura</p><p class="cs-small cs-mt-xs">Diferentes tipos de conteúdo passaram a estar organizados dentro de uma arquitetura digital coerente.</p></div>
+                        <div><p class="cs-cell-title">Experiência</p><p class="cs-small cs-mt-xs">A interface passou a apresentar diferentes conteúdos através de uma hierarquia visual consistente.</p></div>
+                        <div><p class="cs-cell-title">Marca</p><p class="cs-small cs-mt-xs">A identidade do Grupo Petrópolis foi traduzida para uma experiência digital própria.</p></div>
+                        <div><p class="cs-cell-title">Responsividade</p><p class="cs-small cs-mt-xs">A experiência foi estruturada para diferentes tamanhos de tela.</p></div>
+                    </div>
+
+                    <!-- 19 -->
+                    <div class="cs-block">
+                        <p class="cs-label">19 — Antes → Depois</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div class="cs-before">
+                                <p class="cs-label">Antes</p>
+                                <p class="cs-cell-title cs-mt-xs">Experiência anterior</p>
+                            </div>
+                            <div class="cs-after">
+                                <p class="cs-label cs-label-accent">Depois</p>
+                                <p class="cs-cell-title cs-mt-xs">Nova experiência digital</p>
+                                <img class="cs-shot cs-img-top" src="assets/images/Grupo-Petropolis/Home.png" alt="Nova Home do Grupo Petrópolis" loading="lazy" onclick="openImageModal(this.src, this.alt)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 20 -->
+                    <div class="cs-block">
+                        <p class="cs-label">20 — O que foi entregue</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div><p class="cs-cell-title cs-cell-title-accent">UX</p><ul class="cs-list"><li>Arquitetura da informação</li><li>Estrutura de páginas</li><li>Hierarquia de conteúdo</li></ul></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">UI</p><ul class="cs-list"><li>Interfaces</li><li>Componentes</li><li>Linguagem visual</li><li>Responsividade</li></ul></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Design</p><ul class="cs-list"><li>Aplicação da identidade</li><li>Prototipação</li><li>Especificações</li></ul></div>
+                            <div><p class="cs-cell-title cs-cell-title-accent">Implementação</p><ul class="cs-list"><li>Handoff</li></ul></div>
+                        </div>
+                    </div>
+
+                    <!-- 21 -->
+                    <div class="cs-block">
+                        <p class="cs-label">21 — Impacto da transformação</p>
+                        <p class="cs-body cs-measure-wide cs-mt-s">O projeto transformou diferentes conteúdos e necessidades de comunicação em uma experiência digital estruturada, permitindo que a identidade do Grupo Petrópolis fosse traduzida para uma interface responsiva e organizada.</p>
+                        <p class="cs-label cs-mt-m">Principais transformações</p>
+                        <div class="cs-grid cs-cols-2 cs-mt-s">
+                            <div><p class="cs-cell-title">Arquitetura</p><p class="cs-small cs-mt-xs">Conteúdo organizado em uma estrutura navegável.</p></div>
+                            <div><p class="cs-cell-title">Interface</p><p class="cs-small cs-mt-xs">Hierarquia visual aplicada aos diferentes tipos de informação.</p></div>
+                            <div><p class="cs-cell-title">Marca</p><p class="cs-small cs-mt-xs">Identidade traduzida para o ambiente digital.</p></div>
+                            <div><p class="cs-cell-title">Responsividade</p><p class="cs-small cs-mt-xs">Experiência adaptada a diferentes telas.</p></div>
+                        </div>
+                    </div>
+
+                    <!-- 22 -->
+                    <div class="cs-block">
+                        <p class="cs-label">22 — Aprendizados</p>
+                        <div class="cs-learn cs-mt-m">
+                            <div>
+                                <p class="cs-learn-num">01</p>
+                                <p class="cs-learn-title">Conteúdo também é UX</p>
+                                <p class="cs-small cs-mt-xs">Quando uma experiência possui diferentes tipos de informação, organizar o conteúdo é tão importante quanto desenhar a interface.</p>
+                            </div>
+                            <div>
+                                <p class="cs-learn-num">02</p>
+                                <p class="cs-learn-title">Marca precisa funcionar como experiência</p>
+                                <p class="cs-small cs-mt-xs">Traduzir uma identidade para o digital exige mais do que reproduzir elementos visuais. É necessário transformá-los em uma linguagem de interface.</p>
+                            </div>
+                            <div>
+                                <p class="cs-learn-num">03</p>
+                                <p class="cs-learn-title">Responsividade começa na arquitetura</p>
+                                <p class="cs-small cs-mt-xs">Decisões de estrutura e hierarquia influenciam diretamente a forma como a experiência se comporta em diferentes telas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conclusão -->
+                    <div class="cs-closing">
+                        <p class="cs-closing-eyebrow">Conclusão</p>
+                        <p class="cs-closing-title">De um conjunto de conteúdos para uma experiência digital estruturada.</p>
+                        <p class="cs-closing-text">O projeto combinou:</p>
+                        <div class="cs-closing-chips">
+                            <span>Arquitetura da Informação</span><span>UX/UI</span><span>Identidade Visual</span><span>Responsive Design</span>
+                        </div>
+                        <p class="cs-closing-text">para construir uma experiência digital capaz de acomodar diferentes conteúdos e caminhos de navegação.</p>
+                        <p class="cs-closing-text">O resultado foi uma interface que conecta conteúdo, marca e navegação dentro de uma experiência digital consistente e responsiva.</p>
+                        <p class="cs-closing-brand">Grupo Petrópolis</p>
+                        <p class="cs-closing-sub">UX/UI · Arquitetura da Informação · UI Design · Responsive Design</p>
+                    </div>
+                </section>
+            </main>
         </div>
     </div>
 

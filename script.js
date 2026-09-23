@@ -219,3 +219,32 @@
         }
 
         document.addEventListener('DOMContentLoaded', loadPreferences);
+
+        // ===== CASE STUDY: navegação por tópicos (menu lateral) =====
+        function showCaseTab(caseId, tabId) {
+            const page = document.getElementById(caseId + '-page');
+            if (!page) return;
+            page.querySelectorAll('[data-panel]').forEach(function (panel) {
+                panel.classList.toggle('active', panel.dataset.panel === tabId);
+            });
+            page.querySelectorAll('[data-tab]').forEach(function (btn) {
+                const isActive = btn.dataset.tab === tabId;
+                btn.classList.toggle('active', isActive);
+                if (isActive) {
+                    btn.setAttribute('aria-current', 'true');
+                } else {
+                    btn.removeAttribute('aria-current');
+                }
+            });
+            window.scrollTo(0, 0);
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function goToContact() {
+            navigateToCase('home');
+            setTimeout(function () {
+                const contact = document.getElementById('contato');
+                if (contact) contact.scrollIntoView({ behavior: 'smooth' });
+            }, 50);
+        }
