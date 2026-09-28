@@ -1,0 +1,22 @@
+chore: update modal to fullscreen with scroll support
+
+- Change .image-modal-content to use 100vw x 100vh (fullscreen)
+- Add overflow-y and overflow-x auto for scrollable content
+- Update .image-modal-close to position: fixed for persistent visibility
+- Adjust image sizing to respect aspect ratio with max-width: 100%
+- Add padding-top to prevent close button overlap
+
+This enables the modal to display full-size images with proper scrolling
+for images larger than the viewport height.
+
+Changes:
+  * .image-modal-content: fullscreen layout with flexbox alignment
+  * .image-modal img: aspect ratio maintained with auto width
+  * .image-modal-close: fixed positioning for persistent access during scroll
+
+Benefits:
+  ✓ Images display at full viewport size
+  ✓ Automatic scrolling for images taller than viewport
+  ✓ Close button always accessible
+  ✓ Maintains image aspect ratio
+  ✓ Backward compatible - no HTML or JS changes needed
