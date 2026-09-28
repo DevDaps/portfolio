@@ -848,7 +848,7 @@
             align-items: center;
             gap: 12px;
             padding: 8px 16px;
-            background: rgba(109, 40, 217, 0.1);
+            background: rgba(209, 189, 241, 0.1);
             border: 1px solid rgba(109, 40, 217, 0.3);
             border-radius: 24px;
             transition: all 0.3s ease;
@@ -856,14 +856,14 @@
 
         .hero-intro:hover {
             background: rgba(109, 40, 217, 0.15);
-            border-color: var(--purple-600);
+            border-color: var(--purple-100);
         }
 
         .hero-intro::before {
             content: '◆';
             display: inline-block;
             font-size: 10px;
-            color: var(--purple-600);
+            color: var(--purple-100);
         }
 
         .hero-title {
