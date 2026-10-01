@@ -1270,9 +1270,21 @@
             transition: all 0.3s ease;
         }
 
+        .ia-node-icon img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            filter: brightness(1);
+            transition: filter 0.3s ease;
+        }
+
         .ia-node:hover .ia-node-icon {
             background: rgba(109, 40, 217, 0.2);
             transform: scale(1.1);
+        }
+
+        .ia-node:hover .ia-node-icon img {
+            filter: brightness(1.2);
         }
 
         .ia-node-icon-you {
