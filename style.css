@@ -1184,12 +1184,254 @@
             outline-offset: 2px;
         }
 
-        /* ===== HERO BUTTONS ===== */
-        .hero-buttons {
+        /* ===== IA NO PROCESSO SECTION ===== */
+        .ia-processo-section {
+            background: var(--black-900);
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 96px 32px;
+            margin-bottom: 0;
+        }
+
+        .ia-processo-title {
+            font-family: var(--space);
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--white-100);
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+
+        .ia-processo-intro {
+            font-family: var(--inter);
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--gray-400);
+            max-width: 800px;
+            margin-bottom: 64px;
+        }
+
+        .ia-fluxo-container {
+            position: relative;
+            margin-bottom: 64px;
+        }
+
+        .ia-fluxo-svg {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            color: var(--purple-600);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .ia-fluxo-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 24px;
+            position: relative;
+            z-index: 1;
+            padding-top: 40px;
+        }
+
+        .ia-node {
+            background: var(--black-950);
+            border: 1px solid var(--black-800);
+            border-radius: 12px;
+            padding: 24px 20px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
             display: flex;
-            gap: 12px;
+            flex-direction: column;
             align-items: center;
-            flex-wrap: wrap;
+            gap: 12px;
+            min-height: 240px;
+            justify-content: flex-start;
+        }
+
+        .ia-node:hover {
+            border-color: var(--purple-600);
+            background: rgba(109, 40, 217, 0.05);
+            transform: translateY(-4px);
+        }
+
+        .ia-node-icon {
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background: rgba(109, 40, 217, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .ia-node:hover .ia-node-icon {
+            background: rgba(109, 40, 217, 0.2);
+            transform: scale(1.1);
+        }
+
+        .ia-node-icon-you {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .ia-node:hover .ia-node-icon-you {
+            background: rgba(99, 102, 241, 0.2);
+        }
+
+        .ia-node-icon-final {
+            background: rgba(34, 197, 94, 0.1);
+        }
+
+        .ia-node:hover .ia-node-icon-final {
+            background: rgba(34, 197, 94, 0.2);
+        }
+
+        .ia-node-title {
+            font-family: var(--space);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--white-100);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+        }
+
+        .ia-node-label {
+            font-family: var(--inter);
+            font-size: 12px;
+            color: var(--purple-600);
+            font-weight: 600;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .ia-node-description {
+            font-family: var(--inter);
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--gray-400);
+            margin: 0;
+            flex-grow: 1;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .ia-node-final {
+            grid-column: 7 / 8;
+        }
+
+        .ia-processo-conclusion {
+            font-family: var(--inter);
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--white-100);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 500;
+            padding-top: 32px;
+            border-top: 1px solid var(--black-800);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .ia-node {
+                transition: none;
+            }
+            .ia-node:hover {
+                transform: none;
+            }
+            .ia-node:hover .ia-node-icon {
+                transform: none;
+            }
+        }
+
+        /* Mobile Responsivo */
+        @media (max-width: 1200px) {
+            .ia-fluxo-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+
+            .ia-fluxo-svg {
+                display: none;
+            }
+
+            .ia-node-final {
+                grid-column: auto;
+            }
+
+            .ia-processo-title {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ia-processo-section {
+                padding: 64px 24px;
+            }
+
+            .ia-fluxo-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .ia-node {
+                min-height: 200px;
+                padding: 20px 16px;
+            }
+
+            .ia-node-icon {
+                width: 48px;
+                height: 48px;
+                font-size: 28px;
+            }
+
+            .ia-processo-title {
+                font-size: 28px;
+                margin-bottom: 24px;
+            }
+
+            .ia-processo-intro {
+                font-size: 14px;
+                margin-bottom: 48px;
+            }
+
+            .ia-processo-conclusion {
+                font-size: 14px;
+            }
+
+            .ia-fluxo-container {
+                margin-bottom: 48px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ia-processo-section {
+                padding: 48px 16px;
+            }
+
+            .ia-fluxo-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .ia-node {
+                min-height: 180px;
+            }
+
+            .ia-processo-title {
+                font-size: 24px;
+            }
+
+            .section-label {
+                font-size: 11px;
+            }
         }
 
         /* ===== PAGE HEADER ===== */
