@@ -1184,6 +1184,14 @@
             outline-offset: 2px;
         }
 
+        /* ===== HERO BUTTONS ===== */
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
         /* ===== PAGE HEADER ===== */
         .page-header {
             display: flex;
