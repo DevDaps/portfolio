@@ -1,0 +1,23 @@
+# Robots.txt — Instruções para bots de busca
+# Localização: D:\portfolio\robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /*.json
+Allow: /index.html
+
+# Sitemaps
+Sitemap: https://portfolio-dapsux.vercel.app/sitemap.xml
+
+# Delay para bots (em segundos)
+Crawl-delay: 1
+
+# Bots específicos
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
